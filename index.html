@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nicolas Schulze: Unity Developer and Software Engineer. Industrial and training simulation, vehicle physics, hardware integration, reporting and performance.">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Nicolas Schulze</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Tokens from the "Nicolas Schulze" design system (dark theme, the brand's primary). */
+:root{
+  color-scheme:dark;
+  --surface-0:#0F0E17; --surface-raised:#17152A; --line-c:#2C2942; --line-strong:#4A4663;
+  --ink-c:#EDEBF5; --ink-body:#C9C5DA; --ink-muted:#A9A4BF;
+  --estudo:#9D7CFF; --estudo-soft:#231F3D; --on-estudo:#0F0E17;
+  --andamento:#F28A2E; --andamento-soft:#2A1D12; --on-andamento:#0A1520;
+  --entregue:#3CC2B2; --entregue-soft:#10302E; --on-entregue:#072322;
+  --world-estudo:#0F0E17; --wire-ink:#E4DCFF;
+  --radius-sm:8px; --radius-md:12px; --radius-lg:16px; --radius-xl:20px; --radius-2xl:24px;
+  --series:var(--estudo); --on-series:var(--on-estudo); --series-soft:var(--estudo-soft);
+  /* aliases used by the page styles */
+  --bg:var(--surface-0); --surface:var(--surface-raised); --raised:var(--surface-raised); --ink:var(--ink-c); --muted:var(--ink-muted); --line:var(--line-c);
+  --brass:var(--series); --pending-bg:var(--series-soft);
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:Barlow,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --gut:clamp(16px,4vw,72px);
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --surface-0:#F2EFE8; --surface-raised:#FBF9F4; --line-c:#C8C1B2; --line-strong:#9A94AD;
+  --ink-c:#0F0E17; --ink-body:#3E3A52; --ink-muted:#5E5A73;
+  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#F2EFE8;
+  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#F2EFE8;
+  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#F2EFE8;
+}}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --surface-0:#F2EFE8; --surface-raised:#FBF9F4; --line-c:#C8C1B2; --line-strong:#9A94AD;
+  --ink-c:#0F0E17; --ink-body:#3E3A52; --ink-muted:#5E5A73;
+  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#F2EFE8;
+  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#F2EFE8;
+  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#F2EFE8;
+}
+:root[data-theme="dark"]{color-scheme:dark}
+.ns-estudo{--series:var(--estudo);--on-series:var(--on-estudo);--series-soft:var(--estudo-soft)}
+.ns-andamento{--series:var(--andamento);--on-series:var(--on-andamento);--series-soft:var(--andamento-soft)}
+.ns-entregue{--series:var(--entregue);--on-series:var(--on-entregue);--series-soft:var(--entregue-soft)}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;padding-inline:var(--gut)}
+.wrap{max-width:1200px;margin:0 auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+img{display:block;width:100%;height:auto}
+button{font:inherit;color:inherit}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.label.brass{color:var(--brass)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(30px,4.6vw,52px);font-weight:760;font-stretch:72%;text-transform:uppercase}
+h3{font-size:21px;font-weight:700;font-stretch:86%}
+p{margin:0;max-width:65ch}
+.muted{color:var(--muted)}
+.pending{font-family:var(--mono);font-size:11px;background:var(--pending-bg);color:var(--brass);padding:2px 8px;white-space:nowrap}
+code{font-family:var(--mono);font-size:.92em;color:var(--brass)}
+
+html:not(.lang-pt) .pt{display:none!important}
+html.lang-pt .en{display:none!important}
+.view[hidden],.full-block[hidden],.drawer[hidden],.lb[hidden]{display:none!important}
+
+/* segmented controls */
+.seg{display:inline-flex;border:1px solid var(--line)}
+.seg button{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--muted);border:0;padding:6px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--brass);color:var(--bg)}
+.seg.big button{font-size:13px;padding:10px 18px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:12px 20px;border:1px solid var(--ink);background:transparent;cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--brass);border-color:var(--brass);color:var(--bg)}
+.btn:hover{border-color:var(--brass)}
+.btn.small{font-size:14px;padding:8px 14px}
+.linkish{background:none;border:0;padding:0;cursor:pointer;font-family:var(--mono);font-size:13px;color:var(--brass)}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:calc(-1*var(--gut));padding:12px var(--gut)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px 20px;flex-wrap:wrap}
+.bar .name{font-family:var(--display);font-weight:800;font-stretch:70%;text-transform:uppercase;font-size:19px;background:none;border:0;padding:0;cursor:pointer;color:var(--ink)}
+.bar .name b{color:var(--brass)}
+.bar nav{display:flex;gap:4px 18px;flex-wrap:wrap}
+.bar nav button{background:none;border:0;padding:4px 0;font-size:14px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}
+.bar nav button:hover{color:var(--ink)}
+.bar nav button[aria-current="page"]{color:var(--ink);border-bottom-color:var(--brass)}
+.bar .right{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap}
+
+section{padding-block:clamp(56px,8vw,104px)}
+section.tight{padding-top:0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px 56px;align-items:end;margin-bottom:40px}
+@media (max-width:820px){.head{grid-template-columns:1fr}}
+.kicker{display:block;margin-bottom:12px}
+
+/* ---------- HOME ---------- */
+.home-hero{padding-block:clamp(48px,8vw,104px) clamp(32px,5vw,56px);display:grid;gap:20px}
+.home-hero .role{display:flex;gap:10px;align-items:center}
+.home-hero .role i{width:10px;height:10px;background:var(--brass)}
+.home-hero > *{min-width:0}
+.home-hero h1{font-size:clamp(42px,11vw,150px);overflow-wrap:break-word;font-weight:820;font-stretch:62%;text-transform:uppercase;line-height:.86}
+.titles{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 20px;font-family:var(--display);font-stretch:66%;text-transform:uppercase;font-weight:760;font-size:clamp(30px,5.6vw,72px);line-height:1}
+.titles .t1{color:var(--brass)}
+.titles .t2{color:var(--ink)}
+.titles .sep{color:var(--line);font-weight:400}
+.home-hero .lede{font-size:clamp(18px,2vw,22px);line-height:1.5;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--line);background:var(--surface);white-space:nowrap}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
+@media (max-width:900px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+.pillar{padding:24px 24px 28px 0;display:grid;gap:10px;align-content:start}
+.pillar + .pillar{padding-left:24px;border-left:1px solid var(--line)}
+@media (max-width:900px){.pillar:nth-child(3){padding-left:0;border-left:0}.pillar{border-top:1px solid var(--line)}}
+@media (max-width:520px){.pillar,.pillar + .pillar{padding-left:0;border-left:0}}
+.pillar p{color:var(--muted);font-size:15px}
+
+/* skills grid (home) */
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-left:1px solid var(--line)}
+@media (max-width:1000px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+.skill{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start;grid-template-rows:auto auto 1fr auto auto}
+.skill p{color:var(--muted);font-size:15px}
+.skill .refs{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;padding-top:10px;border-top:1px dashed var(--line)}
+/* project cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:820px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr}
+.card.feature{grid-column:1 / -1;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);grid-template-rows:auto}
+@media (max-width:820px){.card.feature{grid-template-columns:1fr}}
+.cover{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:var(--raised);border-bottom:1px solid var(--line)}
+.card.feature .cover{aspect-ratio:auto;min-height:320px;border-bottom:0;border-right:1px solid var(--line)}
+@media (max-width:820px){.card.feature .cover{aspect-ratio:16/9;min-height:0;border-right:0;border-bottom:1px solid var(--line)}}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted);padding:16px}
+.ph b{display:block;color:var(--brass);font-weight:500;letter-spacing:.08em}
+.ph::before,.ph::after{content:"";position:absolute;width:24px;height:24px;border:2px solid var(--brass)}
+.ph::before{top:10px;left:10px;border-right:0;border-bottom:0}
+.ph::after{bottom:10px;right:10px;border-left:0;border-top:0}
+.status{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;background:rgba(10,8,6,.78);color:#EDE6DC;border:1px solid rgba(237,230,220,.2);z-index:2}
+.status.ready{color:#9FD8A9;border-color:#3F6B47}
+.status.draft{color:var(--brass);border-color:#6B5424}
+.card .body{padding:22px;display:grid;gap:12px;align-content:start}
+.card .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card p{color:var(--muted);font-size:15px}
+.card .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+
+.about-teaser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;border-top:2px solid var(--ink);padding-top:32px}
+@media (max-width:820px){.about-teaser{grid-template-columns:1fr}}
+
+/* ---------- PROJECTS LIST ---------- */
+.plist{border-top:2px solid var(--ink)}
+.prow{display:grid;grid-template-columns:220px minmax(0,1fr) auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center}
+@media (max-width:820px){.prow{grid-template-columns:1fr}}
+.prow .thumb{position:relative;aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--raised);border:1px solid var(--line)}
+.prow .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.prow .txt{display:grid;gap:8px}
+.prow .txt p{color:var(--muted);font-size:15px}
+.prow .actions{display:flex;flex-direction:column;gap:8px}
+@media (max-width:820px){.prow .actions{flex-direction:row;flex-wrap:wrap}}
+
+/* ---------- ABOUT ---------- */
+.about-hero{padding-block:clamp(48px,7vw,88px) 24px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end}
+@media (max-width:820px){.about-hero{grid-template-columns:1fr}}
+.about-hero h1{font-size:clamp(48px,8vw,104px);font-weight:820;font-stretch:62%;text-transform:uppercase;line-height:.9}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:16px 16px 16px 0;display:grid;gap:4px;align-content:start}
+.facts div + div{padding-left:16px;border-left:1px solid var(--line)}
+@media (max-width:760px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+.timeline{border-left:2px solid var(--ink);margin-left:6px}
+.stage{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 32px;padding:0 0 36px 28px;position:relative}
+.stage::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--bg);border:2px solid var(--ink)}
+.stage.now::before{background:var(--brass);border-color:var(--brass)}
+.stage.unknown::before{border-style:dashed;border-color:var(--muted)}
+.stage .when{font-family:var(--display);font-weight:750;font-stretch:72%;font-size:26px;line-height:1.1;text-transform:uppercase}
+.stage p{color:var(--muted)}
+.stage h3{font-size:19px;margin-bottom:6px}
+@media (max-width:640px){.stage{grid-template-columns:1fr}}
+.wsteps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--ink)}
+@media (max-width:900px){.wsteps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wsteps li{padding:16px 16px 20px 0;border-bottom:1px solid var(--line);display:grid;gap:4px;align-content:start}
+.wsteps li > span{font-family:var(--mono);font-size:12px;color:var(--brass)}
+.wsteps li strong{font-family:var(--display);font-stretch:85%;font-size:18px}
+.wsteps li small{color:var(--muted);font-size:14px;line-height:1.45}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:40px}
+@media (max-width:720px){.split{grid-template-columns:1fr}}
+.split > div{padding:24px;border:1px solid var(--line);background:var(--surface)}
+.split > div.mine{border:2px solid var(--brass)}
+.split ul{margin:12px 0 0;padding-left:18px}
+.growth{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px}
+@media (max-width:720px){.growth{grid-template-columns:1fr}}
+.growth ul{margin:0;padding-left:18px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:start}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(36px,6vw,72px);font-stretch:66%}
+.links{display:grid;border-top:2px solid var(--ink)}
+.links div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+
+/* ---------- PROJECT PAGE ---------- */
+.p-hero{position:relative;margin-inline:calc(-1*var(--gut))}
+.p-hero .img{position:relative;height:min(70vh,680px);min-height:340px;background:var(--raised)}
+.p-hero .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.p-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--bg) 100%);pointer-events:none}
+.p-copy{position:relative;z-index:2;margin-top:-170px;display:grid;gap:14px}
+.p-copy h1{font-size:clamp(42px,11vw,140px);overflow-wrap:break-word;font-weight:820;font-stretch:62%;text-transform:uppercase;line-height:.86}
+.p-copy .lede{font-size:clamp(18px,2.1vw,22px);line-height:1.5;max-width:46ch}
+.back{margin-top:24px}
+.modebar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:24px}
+.p-facts{margin-top:32px}
+
+/* quick view (shared by drawer and project page) */
+.quick{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.drawer .quick{grid-template-columns:1fr;gap:28px}
+@media (max-width:860px){.quick{grid-template-columns:1fr}}
+.hl{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--line)}
+.hl li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;font-size:15px}
+.hl li .label{padding-top:3px}
+@media (max-width:480px){.hl li{grid-template-columns:1fr;gap:2px}}
+.strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:32px}
+.drawer .strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cta-full{display:flex;justify-content:center;margin-top:40px}
+.note{font-size:14px;border-left:3px solid var(--brass);padding:4px 0 4px 12px}
+
+/* zoomable thumbs */
+.zoom{display:block;width:100%;padding:0;border:1px solid var(--line);background:var(--surface);cursor:zoom-in;position:relative;overflow:hidden}
+.zoom img{aspect-ratio:16/9;object-fit:cover;transition:transform .35s ease}
+.zoom:hover img{transform:scale(1.03)}
+.zoom.free img{aspect-ratio:auto}
+@media (prefers-reduced-motion: reduce){.zoom img{transition:none}.zoom:hover img{transform:none}}
+
+/* House Farm full-case blocks */
+.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+@media (max-width:820px){.tracks{grid-template-columns:1fr}}
+.track{padding:24px 24px 8px 0;display:grid;gap:10px;align-content:start}
+.track + .track{padding-left:24px;border-left:1px solid var(--line)}
+@media (max-width:820px){.track + .track{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+.track .num{font-family:var(--display);font-weight:800;font-stretch:64%;font-size:48px;color:var(--brass);line-height:1}
+.track p{color:var(--muted);font-size:15px}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.stages{grid-template-columns:1fr}}
+figure{margin:0}
+figcaption{display:flex;gap:10px;align-items:baseline;padding-top:10px;font-size:14px;color:var(--muted)}
+figcaption b{font-family:var(--mono);font-weight:500;color:var(--brass);font-size:12px}
+.compares{display:grid;gap:48px}
+.cmp-block{display:grid;gap:12px}
+.cmp-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.compare{position:relative;aspect-ratio:1600/781;max-width:100%;overflow:hidden;border:1px solid var(--line);user-select:none;background:var(--surface);touch-action:pan-y}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .top{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--brass);transform:translateX(-1px);pointer-events:none}
+.compare .handle::after{content:"◂ ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--brass);color:var(--bg);font-size:13px;padding:6px 10px;white-space:nowrap;font-weight:600}
+.compare .tag{position:absolute;top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(10,8,6,.72);color:#EDE6DC;padding:4px 8px;pointer-events:none}
+.compare .tag.l{left:12px}.compare .tag.r{right:12px}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.cmp-note{font-size:14px;color:var(--muted)}
+.principles{display:grid;gap:clamp(48px,7vw,88px)}
+.pr{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px 48px;align-items:center}
+.pr.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+.pr.flip figure{order:2}
+@media (max-width:820px){.pr,.pr.flip{grid-template-columns:1fr}.pr.flip figure{order:0}}
+.pr .txt{display:grid;gap:12px}
+.pr .txt p{color:var(--muted)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.evo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.evo{grid-template-columns:1fr}}
+.tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+@media (max-width:900px){.tool{grid-template-columns:1fr}}
+.steps{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.steps li > span:first-child{font-family:var(--mono);color:var(--brass);font-size:12px;padding-top:3px}
+.table-wrap{overflow-x:auto;margin-top:48px;border-top:2px solid var(--ink)}
+table{width:100%;border-collapse:collapse;min-width:680px}
+th,td{text-align:left;vertical-align:top;padding:14px 20px 14px 0;border-bottom:1px solid var(--line);font-size:15px}
+th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-family:var(--display);font-stretch:86%;font-weight:700;font-size:17px}
+td:nth-child(2){color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--line);padding:6px 12px;cursor:pointer}
+.filters button[aria-pressed="true"]{border-color:var(--brass);color:var(--brass)}
+.filters button small{opacity:.7;margin-left:4px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.grid .zoom:first-child{grid-column:span 2;grid-row:span 2}
+.grid .zoom:first-child img{height:100%}
+.next{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;border-top:2px solid var(--ink);padding-top:32px}
+@media (max-width:760px){.next{grid-template-columns:1fr}}
+.credits{display:grid;gap:10px;font-size:14px;color:var(--muted);align-content:start}
+.credits div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px;flex-wrap:wrap}
+.credits div > span:last-child{color:var(--ink);text-align:right}
+
+/* draft case template */
+.fields{display:grid;grid-template-columns:200px minmax(0,1fr);border-top:2px solid var(--ink)}
+@media (max-width:640px){.fields{grid-template-columns:1fr}}
+.fields dt,.fields dd{margin:0;padding:18px 24px 18px 0;border-bottom:1px solid var(--line)}
+.fields dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:640px){.fields dt{border-bottom:0;padding-bottom:0}}
+.fields dd ul{margin:0;padding-left:18px}
+.fields dd p + p{margin-top:8px}
+.budget{display:grid;gap:14px;max-width:640px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 70px;gap:12px;align-items:center;font-size:14px}
+@media (max-width:520px){.bar-row{grid-template-columns:96px minmax(0,1fr) 60px;font-size:13px}}
+.trk{position:relative;height:18px;background:var(--bg);border:1px solid var(--line)}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
+.fill.scripts{background:var(--brass)}
+.fill.pend{background:repeating-linear-gradient(-45deg,var(--line) 0 4px,transparent 4px 8px)}
+.mark{position:absolute;top:-6px;bottom:-6px;width:0;border-left:1px dashed var(--muted)}
+.val{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.axis{display:grid;grid-template-columns:150px minmax(0,1fr) 70px;gap:12px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+@media (max-width:520px){.axis{grid-template-columns:96px minmax(0,1fr) 60px}}
+.axis .scale{position:relative;height:16px}
+.axis .scale span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);margin-top:8px}
+.metrics div{padding:14px;display:grid;gap:2px}
+.metrics div + div{border-left:1px solid var(--line)}
+.metrics strong{font-family:var(--display);font-stretch:80%;font-size:26px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.metrics{grid-template-columns:1fr}.metrics div + div{border-left:0;border-top:1px solid var(--line)}}
+
+/* drawer (preview) */
+.drawer{position:fixed;inset:0;z-index:60;display:grid;grid-template-columns:minmax(0,1fr) min(620px,100%)}
+.drawer .scrim{background:rgba(8,6,4,.72);border:0;cursor:pointer}
+.drawer .panel{background:var(--bg);border-left:1px solid var(--line);overflow-y:auto;overscroll-behavior:contain;padding:calc(16px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));display:grid;gap:20px;align-content:start}
+@media (max-width:620px){.drawer{grid-template-columns:0 1fr}.drawer .panel{padding-inline:16px}}
+.drawer .ptop{display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;top:-16px;background:var(--bg);padding-block:8px;z-index:2}
+.drawer .cover{border:1px solid var(--line)}
+.drawer h2{font-size:clamp(34px,6vw,52px)}
+.drawer .quick h2{font-size:24px}
+.drawer .pactions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,6,4,.95);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lb-stage{display:grid;place-items:center;min-height:0;padding-block:12px}
+.lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lb-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;max-width:1200px;width:100%;margin:0 auto}
+.lb button{font-family:var(--mono);font-size:13px;background:transparent;color:#EDE6DC;border:1px solid #5A4F43;padding:8px 14px;cursor:pointer}
+.lb button:hover{border-color:var(--brass);color:var(--brass)}
+.lb .cap{font-size:14px;color:#CFC5B8}
+
+footer{padding-block:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:48px}
+
+/* logo placements */
+.hero-mark{width:clamp(56px,6vw,80px);height:auto;aspect-ratio:1037/1065;color:var(--series);display:block}
+.foot-mark{width:22px;height:23px;color:var(--series);flex:none}
+/* ===== Design system components (Nicolas Schulze) ===== */
+body{line-height:1.6;font-size:17px}
+p{color:var(--ink-body)}
+.muted,p.muted{color:var(--ink-muted)}
+h1,h2,h3{font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+h2{font-size:clamp(32px,4.4vw,48px);line-height:.95;font-stretch:normal}
+h3{font-size:clamp(22px,2.4vw,28px);line-height:1;font-stretch:normal}
+.label{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:4px;line-height:1.2;color:var(--ink-muted)}
+.label.brass,.kicker{color:var(--series)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--series);outline-offset:2px}
+.chip{font-family:var(--body);font-weight:500;font-size:13px;border-radius:var(--radius-sm);background:transparent;border-color:var(--line-strong);color:var(--ink-body);padding:4px 10px}
+.pending{white-space:normal;display:inline-block;max-width:100%;font-family:var(--body);font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:var(--radius-sm);background:var(--series-soft);color:var(--series);padding:3px 8px}
+/* logo lockup */
+.ns-logo{display:inline-flex;align-items:center;gap:14px;color:var(--ink);background:none;border:0;padding:0;cursor:pointer}
+.ns-logo__mark{width:34px;height:35px;display:block;color:var(--series);flex:none}
+.ns-logo__div{width:1px;height:30px;background:var(--line-strong)}
+.ns-logo__name{font-family:var(--body);font-weight:500;font-size:12px;line-height:1.35;letter-spacing:6px;text-align:left}
+/* buttons */
+.btn{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;padding:12px 22px;border-radius:var(--radius-sm);border:1px solid var(--series);background:transparent;color:var(--series)}
+.btn.primary{background:var(--series);color:var(--on-series);border-color:var(--series)}
+.btn:hover{filter:brightness(1.08);border-color:var(--series)}
+.btn.small{padding:9px 16px;font-size:12px}
+.linkish{font-family:var(--body);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--series)}
+.seg{border-radius:var(--radius-sm);overflow:hidden;border-color:var(--line-strong)}
+.seg button{font-family:var(--body);font-weight:600;letter-spacing:3px}
+.seg button[aria-pressed="true"]{background:var(--series);color:var(--on-series)}
+.bar{background:var(--surface-0);backdrop-filter:none}
+.bar nav button{font-family:var(--body);font-weight:500;font-size:15px}
+.bar nav button[aria-current="page"]{border-bottom-color:var(--series)}
+/* series badge */
+.ns-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:var(--radius-sm);background:var(--series);color:var(--on-series);font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+.evid{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-muted)}
+/* image frames: every mid-page image uses radius-xl with a 1px line */
+.zoom,.compare,.cover,.prow .thumb,.p-hero .img,.drawer .cover{border-radius:var(--radius-xl);border:1px solid var(--line);overflow:hidden;background:var(--surface-raised)}
+.zoom img{transition:transform .35s ease}
+.ns-tag{position:absolute;left:12px;bottom:12px;padding:6px 10px;border-radius:var(--radius-sm);background:var(--surface-0);color:var(--ink);font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:3px;text-transform:uppercase;pointer-events:none;z-index:2}
+.ns-tag b{color:var(--series);font-weight:600}
+.compare .tag{border-radius:var(--radius-sm);background:var(--surface-0);color:var(--ink);font-family:var(--body);font-weight:600;letter-spacing:3px;font-size:11px}
+.compare .handle{background:var(--series)}
+.compare .handle::after{background:var(--series);color:var(--on-series);border-radius:var(--radius-sm)}
+.ph::before,.ph::after{border-color:var(--series)}
+.ph b{color:var(--series)}
+/* quote */
+.ns-quote{border-left:4px solid var(--series);padding:4px 0 4px 22px;font-family:var(--display);font-weight:700;font-size:clamp(22px,2.6vw,28px);line-height:1.1;color:var(--ink);max-width:36ch;text-transform:none}
+/* problem / solution / result */
+.psr-list{display:grid;gap:16px;margin-top:40px}
+.ns-psr{display:grid;grid-template-columns:minmax(0,.8fr) repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.ns-psr h3{font-size:22px;align-self:center}
+.ns-psr__box{background:var(--surface-raised);border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px 22px}
+.ns-psr__k{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:3px;color:var(--series);text-transform:uppercase;margin-bottom:6px}
+.ns-psr__box p{margin:0;font-size:16px;line-height:1.45}
+@media (max-width:860px){.ns-psr{grid-template-columns:1fr}}
+/* section opener */
+.ns-num{font-family:var(--display);font-weight:700;font-size:clamp(64px,8vw,96px);line-height:.8;color:var(--series);display:block;margin-bottom:12px}
+.ns-rule{width:72px;height:4px;background:var(--series);margin-top:16px}
+/* home hero with cover art */
+.home-hero{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:40px;align-items:end}
+.home-hero > *{grid-column:1}
+html,body{overflow-x:clip}
+.home-hero{grid-template-columns:minmax(0,1fr);position:relative;padding-block:clamp(72px,10vw,140px) clamp(64px,8vw,112px);isolation:isolate}
+.home-hero > *:not(.hero-bg){position:relative;z-index:1;max-width:760px}
+.hero-bg{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:0;overflow:hidden;background:var(--surface-0)}
+.sc-layer{position:absolute;inset:0;display:grid;gap:4px;opacity:0;transition:opacity 1.2s ease}
+.sc-layer.is-on{opacity:1}
+.sc-layer.two{grid-template-columns:1fr 1fr}
+.sc-layer.four{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.sc-cell{position:relative;overflow:hidden}
+.sc-cell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 8s ease-out}
+.sc-layer.is-on .sc-cell img{transform:scale(1)}
+.hero-scrim{position:absolute;inset:0;background:color-mix(in srgb,var(--surface-0) 64%,transparent)}
+.sc-cap{position:absolute;right:max(16px,calc(50vw - 600px));bottom:20px;display:flex;gap:8px;align-items:center;z-index:2;background:none;border:0;padding:0;cursor:pointer}
+.sc-count{font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:3px;text-transform:uppercase;background:var(--surface-0);color:var(--ink);padding:6px 10px;border-radius:var(--radius-sm)}
+@media (max-width:700px){.sc-cap{right:16px;bottom:12px}}
+@media (prefers-reduced-motion: reduce){.sc-layer{transition:none}.sc-cell img{transition:none;transform:none}}
+.home-hero h1{font-stretch:normal;line-height:.9}
+.titles{font-stretch:normal;font-weight:700}
+.titles .t1{color:var(--series)}
+.titles .sep{color:var(--line-strong)}
+/* skills as raised cards */
+.skills{border:0;gap:16px}
+.skill{background:var(--surface-raised);border:1px solid var(--line);border-radius:var(--radius-lg)}
+.skill .refs{border-top-color:var(--line)}
+/* project cards, DS ProjectCard: 4:5 frame, badge, title, meta */
+.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card,.card.feature{background:none;border:0;display:flex;flex-direction:column;gap:12px;grid-column:auto}
+.card .cover,.card.feature .cover{aspect-ratio:4/5;min-height:0;border:1px solid var(--line)}
+.card .body{padding:0;gap:10px}
+.card .body h3{font-size:28px}
+.status{display:none}
+/* project list */
+.prow{border-bottom-color:var(--line)}
+.plist{border-top:1px solid var(--line)}
+/* project page hero: full-bleed image + surface panel (radius-2xl), no gradients */
+.p-hero{margin-inline:0;margin-top:24px}
+.p-hero::after{display:none}
+.p-hero .img{height:min(64vh,620px);min-height:320px}
+.p-copy{margin-top:-120px;margin-left:clamp(12px,3vw,40px);margin-right:clamp(12px,3vw,40px);background:var(--surface-0);border-radius:var(--radius-2xl);padding:clamp(20px,3vw,32px);max-width:820px;border:1px solid var(--line)}
+.p-copy h1{font-stretch:normal;line-height:.92}
+.home-hero h1,.about-hero h1{font-stretch:normal;overflow-wrap:normal}
+.home-hero h1{font-size:clamp(42px,8.4vw,120px)}
+.p-copy h1{font-size:clamp(42px,8vw,112px);overflow-wrap:normal}
+.about-hero > *{min-width:0}
+.about-hero h1{font-size:clamp(38px,7vw,96px)}
+.facts{border-color:var(--line)}
+/* tracks / timeline accents */
+.tracks,.wsteps,.pillars,.next,.about-teaser,.links,.fields,.table-wrap{border-top-color:var(--line-strong)}
+.stage.now::before{background:var(--series);border-color:var(--series)}
+.split > div{border-radius:var(--radius-lg);background:var(--surface-raised)}
+.split > div.mine{border-color:var(--series)}
+.metrics{border-radius:var(--radius-lg)}
+.filters button{border-radius:var(--radius-sm);font-family:var(--body);font-weight:600;letter-spacing:2px}
+.filters button[aria-pressed="true"]{border-color:var(--series);color:var(--series)}
+.drawer .panel{background:var(--surface-0)}
+.drawer .ptop{background:var(--surface-0)}
+.lb{background:rgba(15,14,23,.96);color:#EDEBF5}
+.lb .label{color:#A9A4BF}
+.lb button{border-radius:var(--radius-sm);border-color:var(--line-strong)}
+.fill.scripts{background:var(--series)}
+figcaption b{font-family:var(--body);font-weight:600;letter-spacing:2px;color:var(--series)}
+code{color:var(--series)}
+th{font-family:var(--body);font-weight:600;letter-spacing:3px}
+td:first-child{font-family:var(--body);font-weight:600;font-size:16px;text-transform:none}
+footer{border-top-color:var(--line)}
+</style>
+<script>
+(function(){
+  var l='en';
+  try{ var s=localStorage.getItem('ns-lang'); if(s==='pt'||s==='en'){l=s}else if((navigator.language||'').toLowerCase().indexOf('pt')===0){l='pt'}
+       var h=location.hash.slice(1); if(/\.pt$/.test(h))l='pt'; if(/\.en$/.test(h))l='en'; }catch(e){}
+  if(l==='pt')document.documentElement.classList.add('lang-pt');
+  try{ var th=localStorage.getItem('ns-theme'); if(th==='light'||th==='dark') document.documentElement.setAttribute('data-theme',th); }catch(e){}
+})();
+</script>
+
+</head>
+<body>
+<div class="bar">
+  <div class="wrap">
+    <button class="ns-logo" type="button" data-go="home" aria-label="Nicolas Schulze · Home"><svg class="ns-logo__mark" viewBox="586 322 1037 1065" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M586 322H854L1148 660L1623 1184V1387H1378L828 697V1153H956L1135 1387H586Z M1090 322H1623V1000L1382 746V553H1268Z"/></svg><span class="ns-logo__div"></span><span class="ns-logo__name">NICOLAS<br>SCHULZE</span></button>
+    <div class="right">
+      <nav aria-label="Main">
+        <button type="button" data-go="home" data-nav="home"><span class="en">Home</span><span class="pt">Início</span></button>
+        <button type="button" data-go="projects" data-nav="projects"><span class="en">Projects</span><span class="pt">Projetos</span></button>
+        <button type="button" data-go="about" data-nav="about"><span class="en">About me</span><span class="pt">Sobre mim</span></button>
+        <button type="button" data-go="about" data-scroll="contact"><span class="en">Contact</span><span class="pt">Contato</span></button>
+      </nav>
+      <div class="seg" role="group" aria-label="Theme / Tema" data-kind="theme">
+        <button type="button" data-set="dark" aria-pressed="false"><span class="en">Dark</span><span class="pt">Escuro</span></button>
+        <button type="button" data-set="light" aria-pressed="false"><span class="en">Light</span><span class="pt">Claro</span></button>
+      </div>
+      <div class="seg" role="group" aria-label="Language / Idioma" data-kind="lang">
+        <button type="button" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" data-set="pt" aria-pressed="false">PT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- =================== HOME =================== -->
+<div class="view" id="v-home">
+  <div class="home-hero">
+    <div class="hero-bg" id="showcase">
+      <div class="sc-layer is-on"></div><div class="sc-layer"></div>
+      <div class="hero-scrim"></div>
+      <button class="sc-cap" type="button" id="sc-open"><span class="ns-badge" id="sc-badge"></span><span id="sc-count" class="sc-count"></span></button>
+    </div>
+    <svg class="hero-mark" viewBox="586 322 1037 1065" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M586 322H854L1148 660L1623 1184V1387H1378L828 697V1153H956L1135 1387H586Z M1090 322H1623V1000L1382 746V553H1268Z"/></svg>
+    <div class="role label"><i></i><span class="en">Industrial &amp; training simulation · ~5 years</span><span class="pt">Simulação industrial e de treinamento · ~5 anos</span></div>
+    <h1>Nicolas Schulze</h1>
+    <div class="titles" role="doc-subtitle">
+      <span class="t1"><span class="en">Unity Developer</span><span class="pt">Desenvolvedor Unity</span></span>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="t2"><span class="en">Software Engineer</span><span class="pt">Engenheiro de Software</span></span>
+    </div>
+    <p class="lede en">I build and maintain the systems behind industrial and agricultural training simulators: vehicle physics, physical hardware controls, lessons and evaluation, reporting and performance. Most of that work happens inside large, shared codebases.</p>
+    <p class="lede pt">Construo e mantenho os sistemas por trás de simuladores de treinamento industriais e agrícolas: física de veículos, controles físicos, lições e avaliação, relatórios e performance. A maior parte desse trabalho acontece dentro de bases de código grandes e compartilhadas.</p>
+    <div class="chips"><span class="chip">Unity 6</span><span class="chip">C#</span><span class="chip">HDRP</span><span class="chip">Rewired</span><span class="chip">Input System</span><span class="chip">Rigidbody</span><span class="chip">JSON → PDF</span><span class="chip">Profiler</span></div>
+    <div class="cta">
+      <button class="btn primary" type="button" data-scroll="home-projects"><span class="en">Preview projects</span><span class="pt">Pré-visualizar projetos</span></button>
+      <button class="btn" type="button" data-scroll="home-skills"><span class="en">Skills</span><span class="pt">Skills</span></button>
+      <button class="btn" type="button" data-go="about"><span class="en">All about me</span><span class="pt">Tudo sobre mim</span></button>
+    </div>
+  </div>
+
+  <section id="home-skills" style="padding-top:clamp(24px,4vw,48px)">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Skills &amp; abilities</span><span class="pt">Skills e habilidades</span></span><h2><span class="en">What I can build</span><span class="pt">O que eu sei construir</span></h2></div>
+      <p class="muted"><span class="en">Each skill links to the project where you can see it. Click a project name to open its preview.</span><span class="pt">Cada skill aponta para o projeto onde ela aparece. Clique no nome do projeto para abrir a pré-visualização.</span></p>
+    </div>
+    <div class="skills">
+    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button></div></article>
+    <article class="skill"><span class="label brass">02</span><h3><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></h3><p><span class="en">Rigidbodies, joints, trailers, implements, forklift and bin physics.</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira e física de bins.</span></p><div class="chips"><span class="chip">Rigidbody</span><span class="chip">Joints</span><span class="chip">Colliders</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
+    <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-performance">Yellow · 4K ↗</button></div></article>
+    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button></div></article>
+    <article class="skill"><span class="label brass">07</span><h3><span class="en">C# tooling</span><span class="pt">Ferramentas em C#</span></h3><p><span class="en">Custom Inspectors and editor tools that remove friction from production.</span><span class="pt">Inspectors customizados e ferramentas de editor que tiram atrito da produção.</span></p><div class="chips"><span class="chip">Editor</span><span class="chip">Unity Recorder</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
+    <article class="skill"><span class="label brass">08</span><h3>Level design</h3><p><span class="en">Composition, set dressing and light used as a layout tool.</span><span class="pt">Composição, set dressing e luz usada como ferramenta de layout.</span></p><div class="chips"><span class="chip">Composition</span><span class="chip">Lighting</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    </div>
+  </section>
+
+  <section id="home-projects" class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Projects</span><span class="pt">Projetos</span></span><h2 class="en">Preview or see everything</h2><h2 class="pt">Pré-visualize ou veja tudo</h2></div>
+      <p class="muted en">Each project opens a quick preview right here, or a full case page with process, evidence and images.</p>
+      <p class="muted pt">Cada projeto abre uma pré-visualização rápida aqui mesmo, ou uma página de case completo com processo, evidências e imagens.</p>
+    </div>
+    <div class="cards" id="home-cards"></div>
+    <div class="cta-full"><button class="btn" type="button" data-go="projects"><span class="en">All projects →</span><span class="pt">Todos os projetos →</span></button></div>
+  </section>
+
+  <div class="about-teaser">
+    <div><span class="label kicker"><span class="en">About me</span><span class="pt">Sobre mim</span></span>
+      <h2 class="en">Five years, from environments to runtime systems</h2><h2 class="pt">Cinco anos, de ambientes a sistemas de runtime</h2></div>
+    <div style="display:grid;gap:16px;align-content:end">
+      <p class="muted en">Trajectory, how I work, how I use AI, skills with evidence and what I am still developing.</p>
+      <p class="muted pt">Trajetória, como trabalho, como uso IA, skills com evidência e o que ainda estou desenvolvendo.</p>
+      <div><button class="btn" type="button" data-go="about"><span class="en">All about me →</span><span class="pt">Tudo sobre mim →</span></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== PROJECTS =================== -->
+<div class="view" id="v-projects" hidden>
+  <section>
+    <div class="head">
+      <div><span class="label kicker"><span class="en">All projects</span><span class="pt">Todos os projetos</span></span><h2 class="en">Everything about the projects</h2><h2 class="pt">Tudo sobre os projetos</h2></div>
+      <p class="muted en">Status shows how much evidence each case has. Drafts use only facts already confirmed; missing parts are marked PENDING.</p>
+      <p class="muted pt">O status mostra quanta evidência cada case já tem. Rascunhos usam só fatos já confirmados; o que falta está marcado como PENDENTE.</p>
+    </div>
+    <div class="plist" id="plist"></div>
+  </section>
+</div>
+
+<!-- =================== ABOUT =================== -->
+<div class="view" id="v-about" hidden>
+  <div class="about-hero">
+    <div><span class="label kicker brass"><span class="en">About me</span><span class="pt">Sobre mim</span></span><h1 class="en">Unity Developer &amp; Software Engineer</h1><h1 class="pt">Desenvolvedor Unity e Engenheiro de Software</h1></div>
+    <div style="display:grid;gap:12px">
+      <p class="en">About five years of Unity development, moving from level implementation to owning runtime systems in training simulators. My strongest work is integration: physics, hardware, lessons, reports and performance inside existing architectures.</p>
+      <p class="pt">Cerca de cinco anos de desenvolvimento na Unity, saindo da implementação de níveis até assumir sistemas de runtime em simuladores de treinamento. Meu trabalho mais forte é integração: física, hardware, lições, relatórios e performance dentro de arquiteturas já existentes.</p>
+    </div>
+  </div>
+  <div class="facts">
+    <div><span class="label"><span class="en">Experience</span><span class="pt">Experiência</span></span><span><span class="en">~5 years</span><span class="pt">~5 anos</span></span></div>
+    <div><span class="label"><span class="en">Focus</span><span class="pt">Foco</span></span><span><span class="en">Industrial &amp; training simulation</span><span class="pt">Simulação industrial e de treinamento</span></span></div>
+    <div><span class="label">Stack</span><span>Unity 6 · C# · HDRP · Rewired</span></div>
+    <div><span class="label"><span class="en">Role</span><span class="pt">Função</span></span><span><span class="en">Senior Unity Developer · Software Engineer</span><span class="pt">Desenvolvedor Unity Sênior · Engenheiro de Software</span></span></div>
+  </div>
+
+  <section>
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Trajectory</span><span class="pt">Trajetória</span></span><h2 class="en">How the work evolved</h2><h2 class="pt">Como o trabalho evoluiu</h2></div>
+      <p class="muted en">Each stage built on the previous one. The order matters more than any single title.</p>
+      <p class="muted pt">Cada etapa se apoiou na anterior. A ordem importa mais do que qualquer título.</p>
+    </div>
+    <div class="timeline">
+      <div class="stage unknown"><div class="when"><span class="en">Before 2024</span><span class="pt">Antes de 2024</span></div><div><h3 class="en">Earlier work</h3><h3 class="pt">Trabalhos anteriores</h3><p><span class="pending"><span class="en">PENDING: roles, companies and projects</span><span class="pt">PENDENTE: funções, empresas e projetos</span></span></p></div></div>
+      <div class="stage"><div class="when">2024</div><div><h3 class="en">Environments, UI and vehicles</h3><h3 class="pt">Ambientes, UI e veículos</h3><p class="en">Apple Farm and Schio Storage environments, main menu, garage and vehicle selection, then vehicle and implement integration and physics.</p><p class="pt">Ambientes Apple Farm e Schio Storage, menu principal, garagem e seleção de veículos; depois integração de veículos e implementos, e física.</p></div></div>
+      <div class="stage"><div class="when">2025</div><div><h3 class="en">Lessons, users and reports</h3><h3 class="pt">Lições, usuários e relatórios</h3><p class="en">Extended the inherited lesson and task systems. Built user registration and search, training statistics and JSON-to-PDF reports. House Farm study in parallel.</p><p class="pt">Estendi os sistemas de lição e tarefa herdados. Construí cadastro e busca de usuários, estatísticas de treinamento e relatórios de JSON para PDF. Estudo House Farm em paralelo.</p></div></div>
+      <div class="stage"><div class="when">2025–26</div><div><h3 class="en">Hardware and hard bugs</h3><h3 class="pt">Hardware e bugs difíceis</h3><p class="en">Physical controls, bin and forklift physics debugging, industrial silo refinement, HDRP migration and XR cleanup.</p><p class="pt">Controles físicos, depuração de física de bins e empilhadeira, refinamento do silo industrial, migração para HDRP e limpeza de XR.</p></div></div>
+      <div class="stage now"><div class="when">2026</div><div><h3 class="en">Ownership and performance</h3><h3 class="pt">Ownership e performance</h3><p class="en">Yellow and RDLesson: mirrors, Control Mapper, lesson restart, rollover failure and 4K performance, with an agent-assisted workflow.</p><p class="pt">Yellow e RDLesson: espelhos, Control Mapper, reinício de lição, falha por capotamento e performance em 4K, com fluxo de trabalho assistido por agentes.</p></div></div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">How I work</span><span class="pt">Como trabalho</span></span><h2 class="en">Understand first, change the minimum</h2><h2 class="pt">Entender primeiro, mudar o mínimo</h2></div>
+      <p class="muted en">I read the existing implementation before replacing it, and I read the final diff before anything is committed, including prefabs and serialized references.</p>
+      <p class="muted pt">Leio a implementação existente antes de substituí-la, e leio o diff final antes de qualquer commit, incluindo prefabs e referências serializadas.</p>
+    </div>
+    <ol class="wsteps">
+      <li><span>01</span><strong class="en">Investigate</strong><strong class="pt">Investigar</strong><small class="en">Read-only first</small><small class="pt">Primeiro só leitura</small></li>
+      <li><span>02</span><strong>Baseline</strong><small class="en">Measure current behavior</small><small class="pt">Medir o comportamento atual</small></li>
+      <li><span>03</span><strong class="en">Root cause</strong><strong class="pt">Causa raiz</strong><small class="en">Not the first symptom</small><small class="pt">Não o primeiro sintoma</small></li>
+      <li><span>04</span><strong class="en">Scope</strong><strong class="pt">Escopo</strong><small class="en">What will not change</small><small class="pt">O que não vai mudar</small></li>
+      <li><span>05</span><strong class="en">Minimal change</strong><strong class="pt">Mudança mínima</strong><small class="en">No unrelated refactors</small><small class="pt">Sem refactors paralelos</small></li>
+      <li><span>06</span><strong class="en">Test</strong><strong class="pt">Testar</strong><small class="en">Against the baseline</small><small class="pt">Contra o baseline</small></li>
+      <li><span>07</span><strong class="en">Audit</strong><strong class="pt">Auditar</strong><small class="en">Look for regressions</small><small class="pt">Procurar regressões</small></li>
+      <li><span>08</span><strong class="en">Fix &amp; retest</strong><strong class="pt">Corrigir e retestar</strong><small class="en">What the audit found</small><small class="pt">O que a auditoria achou</small></li>
+      <li><span>09</span><strong class="en">Diff review</strong><strong class="pt">Revisar o diff</strong><small class="en">Prefabs and serialized refs included</small><small class="pt">Incluindo prefabs e refs serializadas</small></li>
+      <li><span>10</span><strong class="en">Commit decision</strong><strong class="pt">Decisão de commit</strong><small class="en">Made by me</small><small class="pt">Tomada por mim</small></li>
+    </ol>
+    <div class="split">
+      <div><span class="label"><span class="en">AI agents handle</span><span class="pt">Agentes de IA fazem</span></span>
+        <ul class="en"><li>Repository investigation and Git history analysis</li><li>Implementation and debugging</li><li>Regression and performance audits</li><li>Code review and documentation</li></ul>
+        <ul class="pt"><li>Investigação do repositório e análise do histórico Git</li><li>Implementação e depuração</li><li>Auditorias de regressão e performance</li><li>Code review e documentação</li></ul></div>
+      <div class="mine"><span class="label brass"><span class="en">I keep</span><span class="pt">Eu mantenho</span></span>
+        <ul class="en"><li>Objectives and scope</li><li>Architecture and invariants</li><li>Risk and acceptance criteria</li><li>Every final Git decision</li></ul>
+        <ul class="pt"><li>Objetivos e escopo</li><li>Arquitetura e invariantes</li><li>Risco e critérios de aceite</li><li>Toda decisão final no Git</li></ul></div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker">Skills</span><h2 class="en">Skills, with evidence</h2><h2 class="pt">Skills, com evidência</h2></div>
+      <p class="muted en">Every skill points to the projects where it can be checked.</p>
+      <p class="muted pt">Cada skill aponta para os projetos onde pode ser verificada.</p>
+    </div>
+    <div class="table-wrap" style="margin-top:0">
+      <table>
+        <thead><tr><th><span class="en">Area</span><span class="pt">Área</span></th><th><span class="en">Includes</span><span class="pt">Inclui</span></th><th><span class="en">Shown in</span><span class="pt">Onde aparece</span></th></tr></thead>
+        <tbody>
+          <tr><td>Unity runtime</td><td><span class="en">Scene and prefab architecture, prefab variants, serialized references, loading and scene transitions</span><span class="pt">Arquitetura de cenas e prefabs, prefab variants, referências serializadas, loading e transição de cenas</span></td><td>Schio · Yellow</td></tr>
+          <tr><td><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></td><td><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions, restart</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações, reinício</span></td><td>Schio · Yellow · RDLesson</td></tr>
+          <tr><td><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></td><td><span class="en">Rigidbodies, joints, trailers, implements, forklift, bin physics</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira, física de bins</span></td><td>Schio · Yellow</td></tr>
+          <tr><td><span class="en">Hardware input</span><span class="pt">Input de hardware</span></td><td><span class="en">Rewired, Input System, calibration, inversion, persistent mapping</span><span class="pt">Rewired, Input System, calibração, inversão, mapeamento persistente</span></td><td>Schio · Yellow</td></tr>
+          <tr><td>Rendering</td><td><span class="en">HDRP, multi-camera, RenderTextures, mirrors, lighting</span><span class="pt">HDRP, multi-câmera, RenderTextures, espelhos, iluminação</span></td><td>Yellow · House Farm · Schio</td></tr>
+          <tr><td><span class="en">Data and reporting</span><span class="pt">Dados e relatórios</span></td><td><span class="en">Telemetry, statistics, JSON, report UI, PDF export, safe overwrite</span><span class="pt">Telemetria, estatísticas, JSON, UI de relatório, exportação em PDF, sobrescrita segura</span></td><td>Schio · RDLesson</td></tr>
+          <tr><td>Performance</td><td><span class="en">Profiling, GC allocation, startup vs steady state</span><span class="pt">Profiling, alocação de GC, startup vs steady state</span></td><td>Yellow</td></tr>
+          <tr><td><span class="en">Tooling</span><span class="pt">Ferramentas</span></td><td><span class="en">Custom Inspectors, capture and recording tools</span><span class="pt">Inspectors customizados, ferramentas de captura e gravação</span></td><td>House Farm</td></tr>
+          <tr><td>Level design</td><td><span class="en">Composition, set dressing, lighting, HDRP materials</span><span class="pt">Composição, set dressing, iluminação, materiais HDRP</span></td><td>House Farm · Schio</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="growth">
+      <div><span class="label"><span class="en">Currently developing</span><span class="pt">Em desenvolvimento</span></span></div>
+      <ul class="en"><li>More automated testing in Unity projects, less manual validation</li><li>Spreading system knowledge so ownership does not sit with one person</li><li>Mentoring and delegation</li><li>Keeping process proportional to the risk of the change</li></ul>
+      <ul class="pt"><li>Mais testes automatizados em projetos Unity, menos validação manual</li><li>Distribuir conhecimento dos sistemas para que o ownership não fique com uma pessoa só</li><li>Mentoria e delegação</li><li>Manter o processo proporcional ao risco da mudança</li></ul>
+    </div>
+  </section>
+
+  <section id="contact" class="tight">
+    <div class="contact">
+      <div><span class="label"><span class="en">Contact</span><span class="pt">Contato</span></span>
+        <h2 class="en" style="margin-top:12px">Building a simulator?</h2><h2 class="pt" style="margin-top:12px">Construindo um simulador?</h2>
+        <p class="muted en" style="margin-top:16px">Open to Senior roles in simulation, training and industrial Unity projects.</p>
+        <p class="muted pt" style="margin-top:16px">Aberto a vagas Senior em projetos Unity de simulação, treinamento e indústria.</p></div>
+      <div class="links">
+        <div><span class="label">Email</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+        <div><span class="label">LinkedIn</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+        <div><span class="label">GitHub</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+        <div><span class="label">CV (PDF)</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =================== PROJECT PAGE =================== -->
+<div class="view" id="v-project" hidden>
+  <div class="p-hero"><div class="img" id="p-cover"></div></div>
+  <div class="p-copy">
+    <div class="label brass" id="p-kicker"></div>
+    <h1 id="p-title"></h1>
+    <div id="p-lede"></div>
+  </div>
+  <div class="facts p-facts" id="p-facts"></div>
+  <div class="modebar">
+    <div class="seg big" role="group" aria-label="View mode" data-kind="mode">
+      <button type="button" data-set="quick" aria-pressed="true"><span class="en">Preview</span><span class="pt">Pré-visualizar</span></button>
+      <button type="button" data-set="full" aria-pressed="false"><span class="en">See everything</span><span class="pt">Ver tudo</span></button>
+    </div>
+    <button class="linkish" type="button" data-go="projects"><span class="en">← All projects</span><span class="pt">← Todos os projetos</span></button>
+  </div>
+  <div id="p-quick"></div>
+  <div id="p-full">
+
+<!-- ---------- SCHIO (draft) ---------- -->
+<div class="full-block" data-project="schio" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">23 months inside one simulator</h2><h2 class="pt">23 meses dentro de um simulador</h2></div>
+      <p class="muted en">Built only from confirmed facts. Screenshots, videos and lessons learned are still missing.</p>
+      <p class="muted pt">Montado só com fatos confirmados. Ainda faltam screenshots, vídeos e lições aprendidas.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
+      <dd><p class="en">Schio is an industrial and agricultural training simulator. Repository period June 2024 – September 2026; my active contribution ran from about July 2024 to May 2026, in a team of about seven contributors.</p><p class="pt">O Schio é um simulador de treinamento industrial e agrícola. O repositório vai de junho de 2024 a setembro de 2026; minha contribuição ativa foi de cerca de julho de 2024 a maio de 2026, em um time de cerca de sete pessoas.</p></dd>
+      <dt><span class="en">My responsibility</span><span class="pt">Minha responsabilidade</span></dt>
+      <dd><ul class="en"><li>Environments: Apple Farm, Schio Farm, Schio Storage, Industrial Silo</li><li>Main menu, garage, vehicle selection, scene management</li><li>Vehicle and implement physics: trailers, forklift, bin dumpers, box and bin physics, BinFallDetector</li><li>Lesson and task progression, completion percentage, collision systems</li><li>User registration and search, training statistics, JSON-to-PDF reports and report UI</li><li>Physical hardware controls, HDRP migration, VR/XR cleanup, maintenance</li></ul>
+        <ul class="pt"><li>Ambientes: Apple Farm, Schio Farm, Schio Storage, Silo Industrial</li><li>Menu principal, garagem, seleção de veículos, gerenciamento de cenas</li><li>Física de veículos e implementos: reboques, empilhadeira, basculadores de bins, física de caixas e bins, BinFallDetector</li><li>Progressão de lições e tarefas, porcentagem de conclusão, sistemas de colisão</li><li>Cadastro e busca de usuários, estatísticas de treinamento, relatórios de JSON para PDF e UI de relatório</li><li>Controles físicos, migração para HDRP, limpeza de VR/XR, manutenção</li></ul></dd>
+      <dt><span class="en">Inherited vs built</span><span class="pt">Herdado vs construído</span></dt>
+      <dd><p class="en">SchioTaskManager, ColliderController and the LessonManager ecosystem had foundational work by another engineer (Vini MB). I later extended, debugged, integrated and maintained large parts of them.</p><p class="pt">SchioTaskManager, ColliderController e o ecossistema do LessonManager tiveram a base feita por outro engenheiro (Vini MB). Depois eu estendi, depurei, integrei e mantive grande parte deles.</p></dd>
+      <dt><span class="en">Evolution</span><span class="pt">Evolução</span></dt>
+      <dd><ul class="en"><li><b>2024</b> environments, UI, vehicle selection → implements → physics</li><li><b>2025</b> lesson and task systems → reporting → user systems</li><li><b>2025–26</b> maintenance, hardware, complex physics debugging, cleanup</li></ul><ul class="pt"><li><b>2024</b> ambientes, UI, seleção de veículos → implementos → física</li><li><b>2025</b> sistemas de lição e tarefa → relatórios → sistemas de usuário</li><li><b>2025–26</b> manutenção, hardware, depuração de física complexa, limpeza</li></ul></dd>
+      <dt><span class="en">Git context</span><span class="pt">Contexto do Git</span></dt>
+      <dd><div class="metrics"><div><span class="label">Commits</span><strong>1,013 / 1,855</strong></div><div><span class="label"><span class="en">Non-merge</span><span class="pt">Sem merge</span></span><strong>936</strong></div><div><span class="label"><span class="en">C# scripts touched</span><span class="pt">Scripts C# tocados</span></span><strong>555</strong></div></div><p class="muted en" style="margin-top:10px">Volume context only. Commit counts do not measure seniority.</p><p class="muted pt" style="margin-top:10px">Apenas contexto de volume. Número de commits não mede senioridade.</p></dd>
+      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
+      <dd><span class="pending"><span class="en">PENDING: screenshots, videos, report PDF sample (anonymized)</span><span class="pt">PENDENTE: screenshots, vídeos, exemplo de PDF de relatório (anonimizado)</span></span></dd>
+      <dt><span class="en">Lessons</span><span class="pt">Lições</span></dt>
+      <dd><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></dd>
+    </dl>
+  </section>
+</div>
+
+<!-- ---------- YELLOW MIRRORS (draft) ---------- -->
+<div class="full-block" data-project="yellow-mirrors" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Mirrors a driver can trust</h2><h2 class="pt">Espelhos em que o operador pode confiar</h2></div>
+      <p class="muted en">Built only from confirmed facts. Original authorship of the mirror system is still to be confirmed.</p>
+      <p class="muted pt">Montado só com fatos confirmados. A autoria original do sistema de espelhos ainda precisa ser confirmada.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
+      <dd><p class="en">Yellow is a Unity 6 HDRP heavy-equipment simulator using Rewired and the Unity Input System. Operators need working rear-view mirrors, both on screen and on physical mirror surfaces.</p><p class="pt">O Yellow é um simulador de equipamento pesado em Unity 6 HDRP, com Rewired e Unity Input System. O operador precisa de retrovisores funcionando, tanto na tela quanto em superfícies de espelho físico.</p></dd>
+      <dt><span class="en">Technical work</span><span class="pt">Trabalho técnico</span></dt>
+      <dd><ul class="en"><li>Per-vehicle mirror cameras rendered to RenderTextures</li><li>Camera positioning and UV cropping</li><li>UI mirrors and physical mirror materials</li><li>Runtime adjustment through Rewired, persisted between sessions</li><li>Grayscale adjustment mode</li><li>Per-vehicle configuration, including large haul trucks</li></ul>
+        <ul class="pt"><li>Câmeras de espelho por veículo renderizando em RenderTextures</li><li>Posicionamento de câmera e recorte de UV</li><li>Espelhos de UI e materiais de espelho físico</li><li>Ajuste em runtime pelo Rewired, persistido entre sessões</li><li>Modo de ajuste em escala de cinza</li><li>Configuração por veículo, incluindo caminhões fora de estrada</li></ul></dd>
+      <dt><span class="en">Performance link</span><span class="pt">Ligação com performance</span></dt>
+      <dd><p class="en">Mirror views were part of the 4K performance work: recurring GetComponentsInChildren calls from MirrorView were brought to zero.</p><p class="pt">As vistas de espelho fizeram parte do trabalho de performance em 4K: as chamadas recorrentes de GetComponentsInChildren vindas do MirrorView foram zeradas.</p></dd>
+      <dt><span class="en">Responsibility</span><span class="pt">Responsabilidade</span></dt>
+      <dd><span class="pending"><span class="en">PENDING: what existed before, what I built, who else worked on it</span><span class="pt">PENDENTE: o que já existia, o que eu construí, quem mais trabalhou</span></span></dd>
+      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
+      <dd><span class="pending"><span class="en">PENDING: cabin view with mirrors, adjustment mode video</span><span class="pt">PENDENTE: vista da cabine com espelhos, vídeo do modo de ajuste</span></span></dd>
+    </dl>
+  </section>
+</div>
+
+<!-- ---------- YELLOW PERFORMANCE (draft) ---------- -->
+<div class="full-block" data-project="yellow-performance" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Profiling a simulator for 4K</h2><h2 class="pt">Profiling de um simulador para 4K</h2></div>
+      <p class="muted en">The measured numbers are real and project-specific. The baseline before optimization is still missing, so no improvement percentage is claimed.</p>
+      <p class="muted pt">Os números medidos são reais e específicos do projeto. Ainda falta o baseline de antes da otimização, então nenhuma porcentagem de melhoria é declarada.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Problem</span><span class="pt">Problema</span></dt>
+      <dd><p class="en">Reach about 60 FPS at 3840×2160 without lowering visual quality or changing simulation behavior.</p><p class="pt">Chegar a cerca de 60 FPS em 3840×2160 sem reduzir a qualidade visual nem mudar o comportamento da simulação.</p></dd>
+      <dt><span class="en">Process</span><span class="pt">Processo</span></dt>
+      <dd><ul class="en"><li>Profile startup and steady state separately</li><li>Measure garbage allocation per frame</li><li>Isolate rendering, physics and terrain cost</li><li>Change one thing at a time, then audit for regressions</li></ul><ul class="pt"><li>Medir startup e steady state separadamente</li><li>Medir alocação de lixo por frame</li><li>Isolar custo de renderização, física e terreno</li><li>Mudar uma coisa por vez e auditar regressões</li></ul></dd>
+      <dt><span class="en">Areas investigated</span><span class="pt">Áreas investigadas</span></dt>
+      <dd><p class="en">Expensive scene searches, vehicle initialization, terrain and Digger systems, mirror cameras, GetComponentsInChildren allocations, HDRP multi-camera cost, startup and loading.</p><p class="pt">Buscas caras na cena, inicialização de veículos, terreno e sistemas Digger, câmeras de espelho, alocações de GetComponentsInChildren, custo de multi-câmera no HDRP, startup e loading.</p></dd>
+      <dt><span class="en">Measured</span><span class="pt">Medido</span></dt>
+      <dd>
+        <div class="budget" role="img" aria-label="Frame time: 29.5 ms frame, 10.1 ms scripts, 60 FPS budget 16.7 ms">
+          <div class="bar-row"><span>Baseline</span><div class="trk"><div class="fill pend" style="width:100%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">—</span></div>
+          <div class="bar-row"><span><span class="en">Frame after</span><span class="pt">Frame depois</span></span><div class="trk"><div class="fill" style="width:84.3%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">29.5 ms</span></div>
+          <div class="bar-row"><span><span class="en">Main-thread scripts</span><span class="pt">Scripts main thread</span></span><div class="trk"><div class="fill scripts" style="width:28.9%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">10.1 ms</span></div>
+          <div class="axis"><span></span><div class="scale"><span style="left:0">0</span><span style="left:47.7%">16.7 ms · 60 FPS</span><span style="left:95.1%">33.3</span></div><span></span></div>
+        </div>
+        <p class="muted en" style="margin-top:12px;font-size:14px">3840×2160, tested environment. Also: startup lesson logic ≈0.98 ms; 0 recurring GetComponentsInChildren calls from MirrorView; 0 B steady-state GC in audited paths.</p>
+        <p class="muted pt" style="margin-top:12px;font-size:14px">3840×2160, ambiente testado. Também: lógica de startup da lição ≈0,98 ms; 0 chamadas recorrentes de GetComponentsInChildren do MirrorView; 0 B de GC em steady state nos caminhos auditados.</p>
+      </dd>
+      <dt><span class="en">Remaining gap</span><span class="pt">O que falta</span></dt>
+      <dd><p class="en">29.5 ms is about 34 FPS, so the 60 FPS target was not reached in this environment.</p><p class="pt">29,5 ms equivalem a cerca de 34 FPS, então a meta de 60 FPS não foi atingida neste ambiente.</p> <span class="pending"><span class="en">PENDING: where the remaining cost sits</span><span class="pt">PENDENTE: onde está o custo restante</span></span></dd>
+      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
+      <dd><span class="pending"><span class="en">PENDING: profiler captures before and after</span><span class="pt">PENDENTE: capturas do profiler antes e depois</span></span></dd>
+    </dl>
+  </section>
+</div>
+
+<!-- ---------- ROLLOVER (draft) ---------- -->
+<div class="full-block" data-project="rollover" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Rollover ends the lesson, everywhere</h2><h2 class="pt">Capotou, a lição termina, em todo lugar</h2></div>
+      <p class="muted en">A change that crossed two repositories: the shared RDLesson framework and the Yellow project that uses it.</p>
+      <p class="muted pt">Uma mudança que atravessou dois repositórios: o framework compartilhado RDLesson e o projeto Yellow que o utiliza.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Problem</span><span class="pt">Problema</span></dt>
+      <dd><p class="en">A vehicle rollover had to be treated as a lesson failure consistently, across different lesson types.</p><p class="pt">O capotamento do veículo precisava ser tratado como falha da lição de forma consistente, em diferentes tipos de lição.</p></dd>
+      <dt><span class="en">Result</span><span class="pt">Resultado</span></dt>
+      <dd><ul class="en"><li>Records the rollover infraction</li><li>Terminates the lesson</li><li>Sets the failure status</li><li>Carries the failure into the report</li></ul><ul class="pt"><li>Registra a infração de capotamento</li><li>Encerra a lição</li><li>Define o status de falha</li><li>Leva a falha para o relatório</li></ul></dd>
+      <dt><span class="en">Difficulty</span><span class="pt">Dificuldade</span></dt>
+      <dd><p class="en">Changes in the shared framework had to stay compatible with Yellow-specific behavior, so regressions had to be checked on both sides of the repository boundary.</p><p class="pt">Mudanças no framework compartilhado precisavam continuar compatíveis com o comportamento específico do Yellow, então as regressões tinham que ser verificadas dos dois lados da fronteira entre repositórios.</p></dd>
+      <dt><span class="en">Related work</span><span class="pt">Trabalho relacionado</span></dt>
+      <dd><p class="en">Lesson restart (fresh session, previous report kept, runtime state reset) and safe PDF re-save with overwrite confirmation.</p><p class="pt">Reinício de lição (sessão nova, relatório anterior preservado, estado de runtime resetado) e novo salvamento seguro de PDF com confirmação de sobrescrita.</p></dd>
+      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
+      <dd><span class="pending"><span class="en">PENDING: rollover clip, report screenshot with failure status</span><span class="pt">PENDENTE: vídeo do capotamento, screenshot do relatório com status de falha</span></span></dd>
+    </dl>
+  </section>
+</div>
+<div class="full-block" data-project="house-farm" hidden>
+  <section>
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Overview</span><span class="pt">Visão geral</span></span>
+        <h2 class="en">An environment, and the tools to photograph it</h2><h2 class="pt">Um ambiente, e as ferramentas para fotografá-lo</h2></div>
+      <p class="muted en">The goal was a space that feels lived in, not a scene made of isolated assets. Capturing it well led to building my own camera and recording tool inside the project.</p>
+      <p class="muted pt">O objetivo era um espaço com cara de habitado, não uma cena feita de assets isolados. Capturá-lo bem me levou a construir minha própria ferramenta de câmera e gravação dentro do projeto.</p>
+    </div>
+    <div class="tracks">
+      <div class="track"><span class="num">01</span><h3 class="en">Build the environment</h3><h3 class="pt">Construir o ambiente</h3>
+        <p class="en">Room layout, set dressing, materials and HDRP lighting, built up in stages.</p><p class="pt">Layout dos cômodos, set dressing, materiais e iluminação HDRP, construídos em etapas.</p></div>
+      <div class="track"><span class="num">02</span><h3 class="en">Add life</h3><h3 class="pt">Dar vida</h3>
+        <p class="en">A rigged character walking through the house with an Animator, to reinforce scale. In progress, not in these images.</p><p class="pt">Um personagem com rig andando pela casa com Animator, para reforçar a escala. Em andamento, ainda não aparece nestas imagens.</p></div>
+      <div class="track"><span class="num">03</span><h3 class="en">Build the capture tool</h3><h3 class="pt">Criar a ferramenta de captura</h3>
+        <p class="en">Free camera, offscreen 4K screenshots and multi-camera video recording, controlled from the Inspector.</p><p class="pt">Câmera livre, screenshots 4K offscreen e gravação de vídeo com várias câmeras, controlados pelo Inspector.</p></div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Process</span><span class="pt">Processo</span></span>
+        <h2 class="en">Built in stages</h2><h2 class="pt">Construído em etapas</h2></div>
+      <p class="muted en">Structure and materials came first. Then furniture, kitchen, vegetation and doors. Then HDRP lighting and reflection probes, and finally set dressing and the capture tool. Detail was added to a space only after its main composition worked.</p>
+      <p class="muted pt">Primeiro vieram a estrutura e os materiais. Depois móveis, cozinha, vegetação e portas. Em seguida a iluminação HDRP e os reflection probes e, por fim, o set dressing e a ferramenta de captura. O detalhe só entrou em cada espaço depois que a composição principal funcionava.</p>
+    </div>
+    <div class="stages">
+      <figure><button class="zoom" type="button" data-full="img/full/cmp_room_wire.jpg" data-cap-en="01 · Structure, wireframe" data-cap-pt="01 · Estrutura, wireframe"><img src="img/thumb/cmp_room_wire.jpg" alt="" loading="lazy"><span class="ns-tag"><b>01</b> <span class="en">Structure</span><span class="pt">Estrutura</span></span></button></figure>
+      <figure><button class="zoom" type="button" data-full="img/full/cmp_room_unlit.jpg" data-cap-en="02 · Composition, before final lighting" data-cap-pt="02 · Composição, antes da iluminação final"><img src="img/thumb/cmp_room_unlit.jpg" alt="" loading="lazy"><span class="ns-tag"><b>02</b> <span class="en">Before final lighting</span><span class="pt">Sem luz final</span></span></button></figure>
+      <figure><button class="zoom" type="button" data-full="img/full/cmp_room_lit.jpg" data-cap-en="03 · Complete scene" data-cap-pt="03 · Cena completa"><img src="img/thumb/cmp_room_lit.jpg" alt="" loading="lazy"><span class="ns-tag"><b>03</b> <span class="en">Complete scene</span><span class="pt">Cena completa</span></span></button></figure>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Compare</span><span class="pt">Comparar</span></span>
+        <h2 class="en">Drag to see the difference</h2><h2 class="pt">Arraste para ver a diferença</h2></div>
+      <p class="muted en">Editor captures of the same views at different stages. The first two use the same camera and geometry; only lighting changes.</p>
+      <p class="muted pt">Capturas do editor das mesmas vistas em etapas diferentes. As duas primeiras usam a mesma câmera e a mesma geometria; só a iluminação muda.</p>
+    </div>
+    <div class="compares">
+      <div class="cmp-block">
+        <div class="cmp-title"><h3 class="en">Hallway · lighting</h3><h3 class="pt">Corredor · iluminação</h3><span class="label">01 / 03</span></div>
+        <div class="compare" style="--pos:50%">
+          <img src="img/full/cmp_hall_unlit.jpg" data-alt-en="Hallway without HDRP lighting" data-alt-pt="Corredor sem iluminação HDRP" alt="">
+          <img class="top" src="img/full/cmp_hall_lit.jpg" data-alt-en="Same hallway with HDRP lighting" data-alt-pt="Mesmo corredor com iluminação HDRP" alt="">
+          <span class="tag l"><span class="en">With HDRP lighting</span><span class="pt">Com iluminação HDRP</span></span><span class="tag r"><span class="en">Without</span><span class="pt">Sem</span></span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" data-aria-en="Drag to compare the hallway lighting" data-aria-pt="Arraste para comparar a iluminação do corredor" aria-label="">
+        </div>
+        <span class="cmp-note"><span class="en">Same camera, same geometry. Warm lamps and a band of daylight separate the hall from the brighter rooms beyond.</span><span class="pt">Mesma câmera, mesma geometria. Luminárias quentes e uma faixa de luz do dia separam o corredor dos cômodos mais claros ao fundo.</span></span>
+      </div>
+      <div class="cmp-block">
+        <div class="cmp-title"><h3 class="en">Living room · lighting</h3><h3 class="pt">Sala · iluminação</h3><span class="label">02 / 03</span></div>
+        <div class="compare" style="--pos:50%">
+          <img src="img/full/cmp_room_unlit.jpg" data-alt-en="Living room before final lighting" data-alt-pt="Sala antes da iluminação final" alt="">
+          <img class="top" src="img/full/cmp_room_lit.jpg" data-alt-en="Living room with final HDRP lighting" data-alt-pt="Sala com a iluminação HDRP final" alt="">
+          <span class="tag l"><span class="en">Final lighting</span><span class="pt">Iluminação final</span></span><span class="tag r"><span class="en">Before</span><span class="pt">Antes</span></span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" data-aria-en="Drag to compare the living room lighting" data-aria-pt="Arraste para comparar a iluminação da sala" aria-label="">
+        </div>
+        <span class="cmp-note"><span class="en">Same camera, same geometry. Daylight through the window and the lamp on the dresser set the focal points.</span><span class="pt">Mesma câmera, mesma geometria. A luz da janela e a luminária da cômoda definem os pontos focais.</span></span>
+      </div>
+      <div class="cmp-block">
+        <div class="cmp-title"><h3 class="en">Living room · structure</h3><h3 class="pt">Sala · estrutura</h3><span class="label">03 / 03</span></div>
+        <div class="compare" style="--pos:50%">
+          <img src="img/full/cmp_room_wire.jpg" data-alt-en="Living room in wireframe" data-alt-pt="Sala em wireframe" alt="">
+          <img class="top" src="img/full/cmp_room_lit2.jpg" data-alt-en="Living room, final scene" data-alt-pt="Sala, cena final" alt="">
+          <span class="tag l"><span class="en">Final scene</span><span class="pt">Cena final</span></span><span class="tag r">Wireframe</span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" data-aria-en="Drag to compare wireframe and final scene" data-aria-pt="Arraste para comparar wireframe e cena final" aria-label="">
+        </div>
+        <span class="cmp-note"><span class="en">Near-identical view, aligned from two editor captures. Shows the geometry and prop density behind the final frame.</span><span class="pt">Vista quase idêntica, alinhada a partir de duas capturas do editor. Mostra a geometria e a densidade de props por trás do quadro final.</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker">Level design</span>
+        <h2 class="en">Decisions behind the rooms</h2><h2 class="pt">As decisões por trás dos cômodos</h2></div>
+      <p class="muted en">Light, props and doorways were treated as composition tools, not as things added after the layout was done.</p>
+      <p class="muted pt">Luz, props e portas foram tratados como ferramentas de composição, e não como algo adicionado depois do layout pronto.</p>
+    </div>
+    <div class="principles">
+      <div class="pr">
+        <figure><button class="zoom free" type="button" data-full="img/full/render_07.jpg" data-cap-en="Composition" data-cap-pt="Composição"><img src="img/thumb/render_07.jpg" alt="" loading="lazy"></button></figure>
+        <div class="txt"><span class="label brass"><span class="en">Composition</span><span class="pt">Composição</span></span>
+          <h3 class="en">One main element, many supporting ones</h3><h3 class="pt">Um elemento principal, vários de apoio</h3>
+          <p class="en">Each framing has a clear subject. Table, cabinets, stove, paintings and rugs build visual layers around it and keep telling how the space is used.</p>
+          <p class="pt">Cada enquadramento tem um assunto claro. Mesa, armários, fogão, quadros e tapetes criam camadas visuais ao redor dele e continuam contando como o espaço é usado.</p></div>
+      </div>
+      <div class="pr flip">
+        <figure><button class="zoom free" type="button" data-full="img/full/render_03.jpg" data-cap-en="Props as storytelling" data-cap-pt="Props como narrativa"><img src="img/thumb/render_03.jpg" alt="" loading="lazy"></button></figure>
+        <div class="txt"><span class="label brass"><span class="en">Props as storytelling</span><span class="pt">Props como narrativa</span></span>
+          <h3 class="en">Signs of occupation</h3><h3 class="pt">Sinais de ocupação</h3>
+          <p class="en">Books, lamps, dishes, clocks, a gramophone and firewood turn the architecture into a space with a history. The dresser, globe, gramophone and lamp form a focal point without any UI to guide the eye.</p>
+          <p class="pt">Livros, luminárias, louças, relógios, um gramofone e lenha transformam a arquitetura em um espaço com história. Cômoda, globo, gramofone e luminária formam um ponto focal sem nenhuma interface guiando o olhar.</p></div>
+      </div>
+      <div class="pr">
+        <figure><button class="zoom free" type="button" data-full="img/full/render_02.jpg" data-cap-en="Light as level design" data-cap-pt="Luz como level design"><img src="img/thumb/render_02.jpg" alt="" loading="lazy"></button></figure>
+        <div class="txt"><span class="label brass"><span class="en">Light as level design</span><span class="pt">Luz como level design</span></span>
+          <h3 class="en">Paths drawn with light</h3><h3 class="pt">Caminhos desenhados com luz</h3>
+          <p class="en">Warm interior lamps against strong incoming daylight create highlights, deep shadows and paths through the room. Light on the rug and furniture points attention to specific parts of the house.</p>
+          <p class="pt">Luminárias quentes contra a luz forte do dia criam áreas de destaque, sombras profundas e caminhos pelo cômodo. A luz sobre o tapete e os móveis direciona a atenção para partes específicas da casa.</p></div>
+      </div>
+      <div class="pr flip">
+        <figure class="pair">
+          <button class="zoom" type="button" data-full="img/full/render_09.jpg" data-cap-en="Contrast between spaces" data-cap-pt="Contraste entre espaços"><img src="img/thumb/render_09.jpg" alt="" loading="lazy"></button>
+          <button class="zoom" type="button" data-full="img/full/render_10.jpg" data-cap-en="Connecting spaces" data-cap-pt="Conexão entre espaços"><img src="img/thumb/render_10.jpg" alt="" loading="lazy"></button>
+        </figure>
+        <div class="txt"><span class="label brass"><span class="en">Contrast and connection</span><span class="pt">Contraste e conexão</span></span>
+          <h3 class="en">Rooms that belong to one house</h3><h3 class="pt">Cômodos que pertencem à mesma casa</h3>
+          <p class="en">Wood-paneled rooms stay warm and low-lit, while adjacent spaces use lighter materials and higher exposure, so each transition reads at once. Doorways frame the next room, giving depth instead of one isolated space.</p>
+          <p class="pt">Os cômodos com lambri ficam quentes e com pouca luz, enquanto os espaços vizinhos usam materiais mais claros e exposição maior, e cada transição é percebida na hora. As portas enquadram o próximo cômodo e dão profundidade, em vez de um espaço isolado.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Iteration</span><span class="pt">Iteração</span></span>
+        <h2 class="en">Earlier version vs final</h2><h2 class="pt">Versão anterior vs final</h2></div>
+      <p class="muted en">An earlier pass had flat, cool lighting and brighter materials. The final version reworked palette, exposure and light sources to reach the atmosphere the references called for.</p>
+      <p class="muted pt">Uma versão anterior tinha iluminação chapada e fria e materiais mais claros. A versão final retrabalhou paleta, exposição e fontes de luz para chegar à atmosfera que as referências pediam.</p>
+    </div>
+    <div class="evo">
+      <figure><button class="zoom" type="button" data-full="img/full/early_1.jpg" data-cap-en="Before · earlier version" data-cap-pt="Antes · versão anterior"><img src="img/thumb/early_1.jpg" alt="" loading="lazy"><span class="ns-tag"><b><span class="en">BEFORE</span><span class="pt">ANTES</span></b> · <span class="en">Earlier version</span><span class="pt">Versão anterior</span></span></button></figure>
+      <figure><button class="zoom" type="button" data-full="img/full/render_06.jpg" data-cap-en="After · final lighting and materials" data-cap-pt="Depois · iluminação e materiais finais"><img src="img/thumb/render_06.jpg" alt="" loading="lazy"><span class="ns-tag"><b><span class="en">AFTER</span><span class="pt">DEPOIS</span></b> · <span class="en">Final</span><span class="pt">Final</span></span></button></figure>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Tool development</span><span class="pt">Desenvolvimento de ferramenta</span></span>
+        <h2 class="en">A need that became a tool</h2><h2 class="pt">Uma necessidade que virou ferramenta</h2></div>
+      <p class="muted en">Capturing the house from many angles in high quality, without depending on the Editor window, needed more than ordinary screenshots. The existing workflow did not fit, so I built one.</p>
+      <p class="muted pt">Capturar a casa de vários ângulos, em alta qualidade e sem depender da janela do Editor, exigia mais do que screenshots comuns. O fluxo existente não servia, então criei um.</p>
+    </div>
+    <div class="tool">
+      <figure><button class="zoom free" type="button" data-full="img/full/inspector.png" data-cap-en="PhotoVideoCamera.cs custom Inspector" data-cap-pt="Inspector customizado do PhotoVideoCamera.cs"><img src="img/full/inspector.png" alt="" loading="lazy" data-alt-en="Unity Inspector for the Photo Video Camera script" data-alt-pt="Inspector da Unity do script Photo Video Camera"></button>
+        <figcaption><b>INSPECTOR</b><span class="en">PhotoVideoCamera.cs custom Inspector</span><span class="pt">Inspector customizado do PhotoVideoCamera.cs</span></figcaption></figure>
+      <div>
+        <h3 class="en">How it grew</h3><h3 class="pt">Como ela evoluiu</h3>
+        <p class="muted en" style="margin-top:10px">Built in steps, each one answering a problem found while capturing the scene. It ended up unified in <code>PhotoVideoCamera.cs</code> with a custom Inspector, packed into a <code>Cameras(PhotoVideo)</code> prefab that can be dropped into other scenes.</p>
+        <p class="muted pt" style="margin-top:10px">Construída em etapas, cada uma respondendo a um problema encontrado ao capturar a cena. No fim, tudo foi unificado no <code>PhotoVideoCamera.cs</code>, com Inspector customizado, e empacotado no prefab <code>Cameras(PhotoVideo)</code>, pronto para outras cenas.</p>
+        <ol class="steps">
+          <li><span>01</span><span><span class="en">High-resolution image capture</span><span class="pt">Captura de imagem em alta resolução</span></span></li>
+          <li><span>02</span><span><span class="en">Camera and field-of-view control</span><span class="pt">Controle de câmera e campo de visão</span></span></li>
+          <li><span>03</span><span><span class="en">Free camera movement</span><span class="pt">Movimentação livre da câmera</span></span></li>
+          <li><span>04</span><span><span class="en">Multi-camera video recording through Unity Recorder</span><span class="pt">Gravação de vídeo com várias câmeras pelo Unity Recorder</span></span></li>
+          <li><span>05</span><span><span class="en">One Inspector for everything, with 4K, 2K, Full HD and HD presets</span><span class="pt">Um único Inspector para tudo, com presets 4K, 2K, Full HD e HD</span></span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="psr-list">
+      <div class="ns-psr"><h3><span class="en">Capture without UI</span><span class="pt">Captura sem UI</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">01 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">Screenshots included Editor interface elements.</span><span class="pt">Os screenshots incluíam elementos da interface do Editor.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">The camera renders to a dedicated RenderTexture, offscreen.</span><span class="pt">A câmera renderiza em uma RenderTexture dedicada, offscreen.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">Clean images with only the scene.</span><span class="pt">Imagens limpas, só com a cena.</span></p></div></div>
+      <div class="ns-psr"><h3><span class="en">4K and memory</span><span class="pt">4K e memória</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">02 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">Temporary RenderTextures and Texture2Ds piled up in high-resolution captures.</span><span class="pt">RenderTextures e Texture2Ds temporários se acumulavam nas capturas em alta resolução.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">Explicit release of resources after each capture.</span><span class="pt">Liberação explícita dos recursos após cada captura.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">Repeated use without memory growing out of control.</span><span class="pt">Uso repetido sem a memória sair do controle.</span></p></div></div>
+      <div class="ns-psr"><h3><span class="en">Window-independent quality</span><span class="pt">Qualidade independente da janela</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">03 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">The Editor window size limited image resolution.</span><span class="pt">O tamanho da janela do Editor limitava a resolução da imagem.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">Width and height are set in the tool itself.</span><span class="pt">Largura e altura são definidas na própria ferramenta.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">3840×2160 images in any Editor layout.</span><span class="pt">Imagens em 3840×2160 em qualquer layout do Editor.</span></p></div></div>
+      <div class="ns-psr"><h3><span class="en">Multiple cameras</span><span class="pt">Várias câmeras</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">04 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">Recording several viewpoints at the same time.</span><span class="pt">Gravar vários pontos de vista ao mesmo tempo.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">One RenderTexture and one RecorderController per camera.</span><span class="pt">Uma RenderTexture e um RecorderController por câmera.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">A separate MP4 per camera.</span><span class="pt">Um MP4 separado para cada câmera.</span></p></div></div>
+      <div class="ns-psr"><h3><span class="en">No overwrites</span><span class="pt">Sem sobrescrita</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">05 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">Simultaneous recordings could overwrite each other's files.</span><span class="pt">Gravações simultâneas podiam sobrescrever os arquivos umas das outras.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">File names built from camera name and recording time.</span><span class="pt">Nomes de arquivo montados com o nome da câmera e o horário da gravação.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">No file replaces another.</span><span class="pt">Nenhum arquivo substitui outro.</span></p></div></div>
+      <div class="ns-psr"><h3><span class="en">Control from the Editor</span><span class="pt">Controle pelo Editor</span></h3>
+        <div class="ns-psr__box"><div class="ns-psr__k">06 · <span class="en">Problem</span><span class="pt">Problema</span></div><p><span class="en">Camera, quality and recording settings were spread across scripts and fields.</span><span class="pt">Configurações de câmera, qualidade e gravação estavam espalhadas por vários scripts e campos.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Solution</span><span class="pt">Solução</span></div><p><span class="en">One Inspector split into Free Camera, Screenshot and Video Recording.</span><span class="pt">Um Inspector dividido em Câmera Livre, Screenshot e Gravação de Vídeo.</span></p></div>
+        <div class="ns-psr__box"><div class="ns-psr__k"><span class="en">Result</span><span class="pt">Resultado</span></div><p><span class="en">Photo or recording in one click, without leaving Unity.</span><span class="pt">Foto ou gravação em um clique, sem sair da Unity.</span></p></div></div>
+    </div>
+    <p class="ns-quote" style="margin-top:48px"><span class="en">Each camera, an independent output.</span><span class="pt">Cada câmera, uma saída independente.</span></p>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Gallery</span><span class="pt">Galeria</span></span>
+        <h2 class="en">Every capture</h2><h2 class="pt">Todas as capturas</h2></div>
+      <p class="muted en">Final renders are 3840×2160 captures from the tool's free camera, shown reduced. Click any image to enlarge; use the arrow keys to move through a set.</p>
+      <p class="muted pt">Os renders finais são capturas em 3840×2160 feitas com a câmera livre da ferramenta, exibidas reduzidas. Clique em qualquer imagem para ampliar; use as setas do teclado para navegar.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter">
+      <button type="button" data-filter="render" aria-pressed="true"><span class="en">Final renders</span><span class="pt">Renders finais</span><small>13</small></button>
+      <button type="button" data-filter="editor" aria-pressed="false"><span class="en">Editor &amp; wireframe</span><span class="pt">Editor e wireframe</span><small>8</small></button>
+      <button type="button" data-filter="early" aria-pressed="false"><span class="en">Earlier version</span><span class="pt">Versão anterior</span><small>4</small></button>
+      <button type="button" data-filter="all" aria-pressed="false"><span class="en">All</span><span class="pt">Todas</span><small>25</small></button>
+    </div>
+    <div class="grid" id="hf-grid"></div>
+  </section>
+
+  <section class="tight">
+    <div class="next">
+      <div>
+        <span class="label kicker"><span class="en">What I took from it</span><span class="pt">O que ficou</span></span>
+        <p class="en">House Farm started as a level design study and turned into a tooling exercise. When the capture workflow did not fit, the fix was a small, reusable C# system: the same habit I use in production simulation work.</p>
+        <p class="pt">O House Farm começou como um estudo de level design e virou um exercício de ferramentas. Quando o fluxo de captura não serviu, a solução foi um sistema pequeno e reutilizável em C#, o mesmo hábito que uso no trabalho com simuladores em produção.</p>
+        <p class="ns-quote" style="margin:24px 0"><span class="en">When the existing tool didn't fit the workflow, the workflow itself became a tool.</span><span class="pt">Quando a ferramenta existente não atendia ao fluxo, o próprio fluxo virou uma ferramenta.</span></p>
+        <p class="muted en" style="margin-top:12px">Next step, in progress: the rigged, animated character walking through the house.</p>
+        <p class="muted pt" style="margin-top:12px">Próxima etapa, em andamento: o personagem com rig e animação andando pela casa.</p>
+      </div>
+      <div class="credits">
+        <span class="label kicker"><span class="en">Credits</span><span class="pt">Créditos</span></span>
+        <div><span><span class="en">Level design, lighting and tools</span><span class="pt">Level design, iluminação e ferramentas</span></span><span><span class="en">My own work</span><span class="pt">Autoria própria</span></span></div>
+        <div><span><span class="en">Models and textures</span><span class="pt">Modelos e texturas</span></span><span><span class="en">Third-party assets</span><span class="pt">Assets de terceiros</span></span></div>
+        <div><span><span class="en">Visual references</span><span class="pt">Referências visuais</span></span><span><span class="en">DOCUMERICA / U.S. National Archives, public domain</span><span class="pt">DOCUMERICA / U.S. National Archives, domínio público</span></span></div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  </div><!-- /p-full -->
+</div><!-- /v-project -->
+
+<footer>
+  <span style="display:inline-flex;align-items:center;gap:12px"><svg class="foot-mark" viewBox="586 322 1037 1065" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M586 322H854L1148 660L1623 1184V1387H1378L828 697V1153H956L1135 1387H586Z M1090 322H1623V1000L1382 746V553H1268Z"/></svg><span>Nicolas Schulze · <span class="en">Unity Developer &amp; Software Engineer</span><span class="pt">Desenvolvedor Unity e Engenheiro de Software</span></span></span>
+  <span class="mono">Unity · C# · HDRP</span>
+</footer>
+</main>
+
+<!-- preview drawer -->
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="d-title">
+  <button class="scrim" type="button" aria-label="Close" data-close-drawer></button>
+  <div class="panel">
+    <div class="ptop"><span class="label brass"><span class="en">Preview</span><span class="pt">Pré-visualização</span></span><button class="btn small" type="button" data-close-drawer><span class="en">Close ✕</span><span class="pt">Fechar ✕</span></button></div>
+    <div id="d-body"></div>
+  </div>
+</div>
+
+<!-- lightbox -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lb-top"><span class="label" id="lb-count"></span><button type="button" id="lb-close"><span class="en">Close ✕</span><span class="pt">Fechar ✕</span></button></div>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-bottom"><button type="button" id="lb-prev" aria-label="Previous">←</button><span class="cap" id="lb-cap"></span><button type="button" id="lb-next" aria-label="Next">→</button></div>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function L(){ return root.classList.contains('lang-pt')?'pt':'en'; }
+  function t(o){ return typeof o==='string' ? o : '<span class="en">'+o.en+'</span><span class="pt">'+o.pt+'</span>'; }
+  function esc(s){ return String(s).replace(/"/g,'&quot;'); }
+  var PEND={en:'PENDING',pt:'PENDENTE'};
+
+  /* ================= DATA ================= */
+  var HF_R=[
+    ['render_01','Living room, chandelier and wood stove','Sala, lustre e fogão a lenha'],
+    ['render_02','Daylight across the rug','Luz do dia sobre o tapete'],
+    ['render_03','Globe and gramophone','Globo e gramofone'],
+    ['render_04','Stove and dresser corner','Canto do fogão e da cômoda'],
+    ['render_05','Stove and view to the next room','Fogão e vista para o cômodo ao lado'],
+    ['render_06','Dining table','Mesa de jantar'],
+    ['render_07','Dining area, wide view','Área de jantar, vista aberta'],
+    ['render_08','Long view through the house','Vista longa pela casa'],
+    ['render_09','Hall with wall clock','Corredor com relógio de parede'],
+    ['render_10','Two doorways','Duas portas'],
+    ['render_11','Hall, side table and clock','Corredor, aparador e relógio'],
+    ['render_12','Corner with bathroom door','Canto com a porta do banheiro'],
+    ['render_13','Hall, another angle','Corredor, outro ângulo']
+  ].map(function(r){return {g:'render',k:r[0],en:r[1],pt:r[2]};});
+  var HF_E=[
+    ['wire_1','Wireframe · living room','Wireframe · sala'],
+    ['wire_2','Wireframe · living room, window side','Wireframe · sala, lado da janela'],
+    ['wire_3','Wireframe · dining area','Wireframe · área de jantar'],
+    ['wire_4','Wireframe · living room, wide','Wireframe · sala, vista aberta'],
+    ['wire_5','Wireframe · hallway','Wireframe · corredor'],
+    ['hall_lit_b','Editor view · hallway, lit','Vista do editor · corredor iluminado'],
+    ['kit_1','Asset kit laid out in the editor','Kit de assets organizado no editor'],
+    ['kit_2','Asset kit, second angle','Kit de assets, segundo ângulo']
+  ].map(function(r){return {g:'editor',k:r[0],en:r[1],pt:r[2]};});
+  var HF_P=[1,2,3,4].map(function(i){return {g:'early',k:'early_'+i,en:'Earlier version · '+i+'/4',pt:'Versão anterior · '+i+'/4'};});
+  var HF_ALL=HF_R.concat(HF_E,HF_P);
+  function hf(k){ return HF_ALL.filter(function(x){return x.k===k;})[0]; }
+
+  var P=[
+    { id:'house-farm', status:'ready', series:'estudo', feature:true,
+      title:'House Farm', cover:'img/full/hero.jpg', coverThumb:'img/thumb/render_01.jpg', cardCover:'img/full/render_03.jpg',
+      kicker:{en:'Level design & tools · Study project',pt:'Level design e ferramentas · Projeto de estudo'},
+      period:'2025', tags:['Unity','HDRP','C#','Level design'],
+      lede:{en:'A 1970s American farmhouse interior built in Unity HDRP, and the C# camera tool I wrote to capture it.',pt:'O interior de uma casa de fazenda americana dos anos 70, construído na Unity HDRP, e a ferramenta de câmera em C# que criei para capturá-lo.'},
+      summary:{en:'I built a lived-in farmhouse interior in stages, used light and props as composition tools, and wrote a C# tool to capture it in 4K and record multiple cameras straight from the Editor.',pt:'Construí em etapas o interior de uma casa de fazenda com cara de habitada, usei luz e props como ferramentas de composição e escrevi uma ferramenta em C# para capturá-la em 4K e gravar várias câmeras direto do Editor.'},
+      facts:[[{en:'Engine',pt:'Engine'},'Unity · HDRP'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting, C# tooling',pt:'Level design, iluminação, ferramentas em C#'}],[{en:'Type',pt:'Tipo'},{en:'Study project',pt:'Projeto de estudo'}],['Status',{en:'Environment done · animation in progress',pt:'Ambiente concluído · animação em andamento'}]],
+      hl:[['Level design',{en:'Layout, set dressing and focal points in every room',pt:'Layout, set dressing e pontos focais em cada cômodo'}],[{en:'Lighting',pt:'Iluminação'},{en:'HDRP lighting, volumetric fog and reflection probes',pt:'Iluminação HDRP, fog volumétrico e reflection probes'}],[{en:'Tool',pt:'Ferramenta'},{en:'<code>PhotoVideoCamera.cs</code>: offscreen 4K capture, free camera, one MP4 per camera',pt:'<code>PhotoVideoCamera.cs</code>: captura 4K offscreen, câmera livre, um MP4 por câmera'}],[{en:'Next',pt:'Próximo'},{en:'Rigged character walking through the house',pt:'Personagem com rig andando pela casa'}]],
+      compare:{a:'img/full/cmp_hall_unlit.jpg',b:'img/full/cmp_hall_lit.jpg',lb:{en:'With HDRP lighting',pt:'Com iluminação HDRP'},la:{en:'Without',pt:'Sem'},note:{en:'Drag to compare. Same camera, same geometry.',pt:'Arraste para comparar. Mesma câmera, mesma geometria.'}},
+      strip:['render_01','render_03','render_04','render_08','render_10','render_12'],
+      count:{en:'25 images · 3 comparisons',pt:'25 imagens · 3 comparações'} },
+    { id:'schio', status:'draft', series:'entregue',
+      title:'Schio', kicker:{en:'Industrial & agricultural training simulator',pt:'Simulador de treinamento industrial e agrícola'},
+      period:'Jul 2024 – May 2026', tags:['Unity','C#','HDRP','Physics','Reporting'],
+      lede:{en:'Twenty-three months inside one simulator, from environments to physics, lesson systems, reports and hardware.',pt:'Vinte e três meses dentro de um simulador, de ambientes a física, sistemas de lição, relatórios e hardware.'},
+      summary:{en:'I started on environments, the main menu and vehicle selection, and moved into vehicle and implement physics, lesson and task systems, training statistics, JSON-to-PDF reporting and physical hardware controls.',pt:'Comecei em ambientes, menu principal e seleção de veículos, e passei para física de veículos e implementos, sistemas de lição e tarefa, estatísticas de treinamento, relatórios de JSON para PDF e controles físicos.'},
+      note:{en:'The task and lesson systems were founded by another engineer. I extended, debugged and maintained them.',pt:'Os sistemas de tarefa e lição foram criados por outro engenheiro. Eu estendi, depurei e mantive esses sistemas.'},
+      facts:[[{en:'Period',pt:'Período'},{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}],[{en:'Team',pt:'Time'},{en:'~7 contributors',pt:'~7 pessoas'}],['Stack','Unity · C# · HDRP'],['Status',{en:'Draft · evidence pending',pt:'Rascunho · evidências pendentes'}]],
+      hl:[[{en:'Physics',pt:'Física'},{en:'Trailers, forklift, bin dumpers, BinFallDetector',pt:'Reboques, empilhadeira, basculadores, BinFallDetector'}],[{en:'Lessons',pt:'Lições'},{en:'Extended LessonManager and SchioTaskManager',pt:'Estendi o LessonManager e o SchioTaskManager'}],[{en:'Reports',pt:'Relatórios'},{en:'Statistics → JSON → UI → PDF',pt:'Estatísticas → JSON → UI → PDF'}],['Hardware',{en:'Physical simulator controls',pt:'Controles físicos do simulador'}]],
+      ph:{en:'Schio screenshot or clip',pt:'Screenshot ou vídeo do Schio'} },
+    { id:'yellow-mirrors', status:'draft', series:'andamento',
+      title:'Yellow · Mirrors', kicker:{en:'Heavy equipment simulator',pt:'Simulador de equipamento pesado'},
+      period:'2026', tags:['Unity 6','HDRP','RenderTexture','Rewired'],
+      lede:{en:'Virtual and physical rear-view mirrors for heavy vehicles, adjustable at runtime and saved per vehicle.',pt:'Retrovisores virtuais e físicos para veículos pesados, ajustáveis em runtime e salvos por veículo.'},
+      summary:{en:'Per-vehicle mirror cameras rendered to RenderTextures, with UV cropping, physical mirror materials, and runtime adjustment through Rewired that persists between sessions.',pt:'Câmeras de espelho por veículo renderizando em RenderTextures, com recorte de UV, materiais de espelho físico e ajuste em runtime pelo Rewired, persistido entre sessões.'},
+      facts:[[{en:'Project',pt:'Projeto'},'Yellow'],['Engine','Unity 6 · HDRP'],['Input','Rewired'],['Status',{en:'Draft · authorship pending',pt:'Rascunho · autoria pendente'}]],
+      hl:[[{en:'Rendering',pt:'Render'},{en:'Mirror cameras, RenderTextures, UV cropping',pt:'Câmeras de espelho, RenderTextures, recorte de UV'}],[{en:'Control',pt:'Controle'},{en:'Runtime adjustment via Rewired, persisted',pt:'Ajuste em runtime via Rewired, persistido'}],[{en:'Mode',pt:'Modo'},{en:'Grayscale adjustment mode',pt:'Modo de ajuste em escala de cinza'}]],
+      ph:{en:'Cabin view with mirrors',pt:'Vista da cabine com espelhos'} },
+    { id:'yellow-performance', status:'draft', series:'andamento',
+      title:'Yellow · 4K', kicker:{en:'Performance engineering',pt:'Engenharia de performance'},
+      period:'2026', tags:['Profiler','GC','HDRP cameras'],
+      lede:{en:'Profiling a Unity 6 HDRP simulator toward 60 FPS at 3840×2160 without lowering visual or simulation quality.',pt:'Profiling de um simulador em Unity 6 HDRP rumo a 60 FPS em 3840×2160 sem reduzir a qualidade visual ou da simulação.'},
+      summary:{en:'Separated startup cost from steady-state cost, removed recurring component searches from the mirror views and eliminated steady-state GC allocation in the audited paths.',pt:'Separei o custo de startup do custo em steady state, removi as buscas recorrentes de componentes das vistas de espelho e zerei a alocação de GC em steady state nos caminhos auditados.'},
+      facts:[[{en:'Target',pt:'Meta'},'~60 FPS · 3840×2160'],[{en:'Frame measured',pt:'Frame medido'},'29.5 ms'],[{en:'Steady-state GC',pt:'GC em steady state'},{en:'0 B (audited paths)',pt:'0 B (caminhos auditados)'}],['Status',{en:'Draft · baseline pending',pt:'Rascunho · baseline pendente'}]],
+      hl:[['Startup',{en:'Lesson startup logic ≈0.98 ms',pt:'Lógica de startup da lição ≈0,98 ms'}],['Scripts',{en:'Main-thread scripts 10.1 ms',pt:'Scripts na main thread 10,1 ms'}],['MirrorView',{en:'0 recurring GetComponentsInChildren calls',pt:'0 chamadas recorrentes de GetComponentsInChildren'}],[{en:'Honest gap',pt:'Gap honesto'},{en:'29.5 ms ≈ 34 FPS; target not yet reached',pt:'29,5 ms ≈ 34 FPS; meta ainda não atingida'}]],
+      ph:{en:'Profiler capture',pt:'Captura do profiler'} },
+    { id:'rollover', status:'draft', series:'andamento',
+      title:'Rollover', kicker:{en:'Yellow + RDLesson · cross-repository',pt:'Yellow + RDLesson · entre repositórios'},
+      period:'2026', tags:['Lesson lifecycle','Reports','Regression control'],
+      lede:{en:'A rollover records the infraction, ends the lesson and reaches the report, the same way in every lesson type.',pt:'O capotamento registra a infração, encerra a lição e chega ao relatório, do mesmo jeito em todo tipo de lição.'},
+      summary:{en:'A change across the shared RDLesson framework and the Yellow project, made consistent across lesson types while keeping both repositories free of regressions.',pt:'Uma mudança no framework compartilhado RDLesson e no projeto Yellow, consistente entre tipos de lição e sem regressões nos dois repositórios.'},
+      facts:[[{en:'Repositories',pt:'Repositórios'},'Yellow · RDLesson'],[{en:'Area',pt:'Área'},{en:'Lesson lifecycle',pt:'Ciclo de vida da lição'}],[{en:'Related',pt:'Relacionado'},{en:'Restart, PDF re-save',pt:'Reinício, novo salvamento de PDF'}],['Status',{en:'Draft · evidence pending',pt:'Rascunho · evidências pendentes'}]],
+      hl:[[{en:'Infraction',pt:'Infração'},{en:'Rollover recorded',pt:'Capotamento registrado'}],[{en:'Lesson',pt:'Lição'},{en:'Terminated with failure status',pt:'Encerrada com status de falha'}],[{en:'Report',pt:'Relatório'},{en:'Failure carried into the report',pt:'Falha levada ao relatório'}]],
+      ph:{en:'Rollover → report with failure',pt:'Capotamento → relatório com falha'} }
+  ];
+  function byId(id){ return P.filter(function(p){return p.id===id;})[0]; }
+
+  /* ================= BUILDERS ================= */
+  var SERIES={estudo:{en:'Study',pt:'Estudo'},andamento:{en:'In progress',pt:'Em andamento'},entregue:{en:'✓ Completed project',pt:'✓ Projeto finalizado'}};
+  function statusTag(p){ return '<span class="ns-badge">'+t(SERIES[p.series])+'</span>'+(p.status==='draft'?'<span class="evid">'+t({en:'Case in draft · evidence pending',pt:'Case em rascunho · evidências pendentes'})+'</span>':''); }
+  function coverHTML(p,big){
+    var src = big ? p.cover : (p.coverThumb||p.cover);
+    return src ? '<img src="'+src+'" alt="" loading="lazy">' : '<div class="ph"><div><b>'+t(PEND)+'</b>'+t(p.ph)+'</div></div>';
+  }
+  function thumbBtn(it,set){
+    return '<button class="zoom" type="button" data-set="'+set+'" data-full="img/full/'+it.k+'.jpg" data-cap-en="'+esc(it.en)+'" data-cap-pt="'+esc(it.pt)+'"><img src="img/thumb/'+it.k+'.jpg" loading="lazy" data-alt-en="'+esc(it.en)+'" data-alt-pt="'+esc(it.pt)+'" alt="'+esc(it[L()])+'"></button>';
+  }
+  function compareHTML(c){
+    return '<div class="cmp-block"><div class="compare" style="--pos:50%"><img src="'+c.a+'" alt=""><img class="top" src="'+c.b+'" alt="">'+
+      '<span class="tag l">'+t(c.lb)+'</span><span class="tag r">'+t(c.la)+'</span><div class="handle"></div>'+
+      '<input type="range" min="0" max="100" value="50" data-aria-en="Drag to compare" data-aria-pt="Arraste para comparar" aria-label="'+(L()==='pt'?'Arraste para comparar':'Drag to compare')+'"></div>'+
+      '<span class="cmp-note">'+t(c.note)+'</span></div>';
+  }
+  function quickHTML(p,where){
+    var hl=p.hl.map(function(h){return '<li><span class="label brass">'+t(h[0])+'</span><span>'+t(h[1])+'</span></li>';}).join('');
+    var right = p.compare ? compareHTML(p.compare) : '<div class="cover" style="border:1px solid var(--line)">'+coverHTML(p,true)+'</div>';
+    var h='<div class="quick"><div><h2>'+t({en:'In one minute',pt:'Em um minuto'})+'</h2>'+
+      '<p class="muted" style="margin-top:16px">'+t(p.summary)+'</p>'+
+      (p.note?'<p class="ns-quote" style="margin-top:20px;font-size:22px">'+t(p.note)+'</p>':'')+
+      '<ul class="hl">'+hl+'</ul></div>'+right+'</div>';
+    if(p.strip){ h+='<div class="strip">'+p.strip.map(function(k){return thumbBtn(hf(k),where+'-strip');}).join('')+'</div>'; }
+    return h;
+  }
+  function cardHTML(p){
+    var img = p.cardCover ? '<img src="'+p.cardCover+'" alt="" loading="lazy">' : coverHTML(p,false);
+    return '<article class="card ns-'+p.series+'"><div class="cover">'+img+'</div>'+
+      '<div class="body"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
+      '<h3>'+p.title+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+p.period+'</p>'+
+      '<p style="font-size:16px">'+t(p.lede)+'</p>'+
+      '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
+      '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div></article>';
+  }
+  function rowHTML(p){
+    return '<div class="prow ns-'+p.series+'"><div class="thumb">'+coverHTML(p,false)+'</div>'+
+      '<div class="txt"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
+      '<span class="label">'+t(p.kicker)+' · '+p.period+'</span>'+
+      '<h3>'+p.title+'</h3><p>'+t(p.summary)+'</p><div class="tags">'+p.tags.map(function(x){return '<span class="chip">'+x+'</span>';}).join('')+'</div></div>'+
+      '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
+      '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div>';
+  }
+  document.getElementById('home-cards').innerHTML=P.map(cardHTML).join('');
+  document.getElementById('plist').innerHTML=P.map(rowHTML).join('');
+
+  /* ================= HERO SHOWCASE ================= */
+  (function(){
+    var box=document.getElementById('showcase'); if(!box) return;
+    var POOL=['render_01','render_03','render_02','render_09','render_07','render_04','wire_4','render_08','render_10','render_05','render_12','render_06','render_13','render_11','kit_1','cmp_room_wire'].map(function(k){ return {k:k,p:'house-farm'}; });
+    var layers=box.querySelectorAll('.sc-layer'), cur=0, idx=0, step=0, timer=null, paused=false;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function fill(layer,n){
+      layer.className='sc-layer '+(n===2?'two':'four');
+      var h='';
+      for(var i=0;i<n;i++){ var it=POOL[(idx+i)%POOL.length], meta=hf(it.k)||{en:'House Farm',pt:'House Farm'};
+        var src='img/full/'+it.k+'.jpg';
+        h+='<div class="sc-cell"><img src="'+src+'" alt=""></div>'; }
+      layer.innerHTML=h;
+      var p=byId(POOL[idx%POOL.length].p);
+      box.className='hero-bg ns-'+p.series; document.getElementById('sc-open').setAttribute('data-preview',p.id);
+      document.getElementById('sc-badge').innerHTML=p.title;
+      document.getElementById('sc-count').textContent=String((idx%POOL.length)+1).padStart(2,'0')+' / '+POOL.length;
+      idx=(idx+n)%POOL.length;
+    }
+    function next(){
+      if(paused||document.hidden) return;
+      var n = (step++%2===0) ? 4 : 2;
+      var nxt=layers[1-cur]; fill(nxt,n);
+      requestAnimationFrame(function(){ nxt.classList.add('is-on'); layers[cur].classList.remove('is-on'); cur=1-cur; });
+    }
+    fill(layers[0],2); layers[0].classList.add('is-on'); step=0;
+    if(!reduce){ timer=setInterval(next,5000); }
+    var cap=document.getElementById('sc-open'); cap.addEventListener('focus',function(){paused=true;}); cap.addEventListener('blur',function(){paused=false;});
+  })();
+
+  /* ================= HOUSE FARM GALLERY ================= */
+  var grid=document.getElementById('hf-grid');
+  function renderGrid(f){
+    grid.innerHTML=HF_ALL.filter(function(it){return f==='all'||it.g===f;}).map(function(it){return thumbBtn(it,'hf-grid');}).join('');
+    document.querySelectorAll('.filters button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.filter===f?'true':'false'); });
+  }
+  document.querySelectorAll('.filters button').forEach(function(b){ b.addEventListener('click',function(){ renderGrid(b.dataset.filter); }); });
+  renderGrid('render');
+
+  /* ================= ROUTER ================= */
+  var views={home:'v-home',projects:'v-projects',about:'v-about'};
+  var mode='quick';
+  function setMode(m){
+    mode=m;
+    document.querySelectorAll('[data-kind="mode"] button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set===m?'true':'false'); });
+    document.getElementById('p-quick').hidden = m!=='quick';
+    document.getElementById('p-full').hidden = m!=='full';
+  }
+  function showProject(p){
+    document.getElementById('p-cover').innerHTML=coverHTML(p,true);
+    document.getElementById('v-project').className='view ns-'+p.series;
+    document.getElementById('p-kicker').innerHTML='<span style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px">'+statusTag(p)+'</span>'+t(p.kicker);
+    document.getElementById('p-title').textContent=p.title;
+    document.getElementById('p-lede').innerHTML='<p class="lede">'+t(p.lede)+'</p>';
+    document.getElementById('p-facts').innerHTML=p.facts.map(function(f){return '<div><span class="label">'+t(f[0])+'</span><span>'+t(f[1])+'</span></div>';}).join('');
+    document.getElementById('p-quick').innerHTML=quickHTML(p,'page')+'<div class="cta-full"><button class="btn primary" type="button" data-set-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div>';
+    document.querySelectorAll('.full-block').forEach(function(b){ b.hidden = b.dataset.project!==p.id; });
+  }
+  function route(name,opts){
+    opts=opts||{};
+    var p=byId(name);
+    Object.keys(views).forEach(function(k){ document.getElementById(views[k]).hidden = (k!==name); });
+    document.getElementById('v-project').hidden = !p;
+    if(!p && !views[name]){ name='home'; document.getElementById('v-home').hidden=false; }
+    if(p){ showProject(p); setMode(opts.mode||mode); }
+    document.querySelectorAll('[data-nav]').forEach(function(b){ var on=(b.dataset.nav===name)||(p&&b.dataset.nav==='projects'); if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
+    document.title = p ? p.title+' · Nicolas Schulze' : 'Nicolas Schulze';
+    applyLang(L());
+    if(opts.scroll){ var el=document.getElementById(opts.scroll); if(el){ el.scrollIntoView(); return; } }
+    window.scrollTo(0,0);
+  }
+  function go(name,opts){
+    try{ if(location.hash.slice(1)!==name) history.pushState(null,'','#'+name); }catch(e){}
+    route(name,opts);
+  }
+  window.addEventListener('popstate',function(){ route(currentHash()); });
+  window.addEventListener('hashchange',function(){ route(currentHash()); });
+  function currentHash(){ return location.hash.slice(1).replace(/\.(pt|en)$/,'') || 'home'; }
+
+  /* ================= DRAWER ================= */
+  var drawer=document.getElementById('drawer'), dOpener=null;
+  function openDrawer(id,btn){
+    var p=byId(id); dOpener=btn;
+    document.getElementById('d-body').innerHTML=
+      '<div style="display:grid;gap:14px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div><span class="label">'+t(p.kicker)+' · '+p.period+'</span><h2 id="d-title">'+p.title+'</h2><p>'+t(p.lede)+'</p>'+
+      '<div class="pactions"><button class="btn primary small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div></div>'+
+      '<div style="margin-top:8px">'+quickHTML(p,'drawer')+'</div>';
+    drawer.querySelector('.panel').className='panel ns-'+p.series; drawer.hidden=false; document.body.style.overflow='hidden'; applyLang(L());
+    drawer.querySelector('.ptop .btn').focus();
+  }
+  function closeDrawer(){ drawer.hidden=true; document.body.style.overflow=''; if(dOpener&&document.body.contains(dOpener)) dOpener.focus(); }
+
+  /* ================= LIGHTBOX ================= */
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lb-img'), lbCap=document.getElementById('lb-cap'), lbCount=document.getElementById('lb-count');
+  var list=[], idx=0, lbOpener=null;
+  function show(){ var b=list[idx]; lbImg.src=b.getAttribute('data-full'); var c=b.getAttribute('data-cap-'+L())||''; lbCap.textContent=c; lbImg.alt=c; lbCount.textContent=(idx+1)+' / '+list.length; }
+  function openLb(b){
+    var set=b.getAttribute('data-set');
+    list = set ? Array.prototype.slice.call(document.querySelectorAll('.zoom[data-set="'+set+'"]')) : Array.prototype.slice.call(b.closest('section,.quick,.panel').querySelectorAll('.zoom'));
+    idx=Math.max(0,list.indexOf(b)); lbOpener=b; lb.hidden=false; document.body.style.overflow='hidden'; show(); document.getElementById('lb-close').focus();
+  }
+  function closeLb(){ lb.hidden=true; lbImg.removeAttribute('src'); document.body.style.overflow = drawer.hidden ? '' : 'hidden'; if(lbOpener) lbOpener.focus(); }
+  function step(d){ idx=(idx+d+list.length)%list.length; show(); }
+  document.getElementById('lb-close').addEventListener('click',closeLb);
+  document.getElementById('lb-prev').addEventListener('click',function(){step(-1);});
+  document.getElementById('lb-next').addEventListener('click',function(){step(1);});
+  lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('lb-stage')) closeLb(); });
+  var tx=null; lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){ if(tx===null)return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50)step(dx<0?1:-1); tx=null; });
+
+  /* ================= GLOBAL EVENTS ================= */
+  document.addEventListener('click',function(e){
+    var z=e.target.closest('.zoom'); if(z){ openLb(z); return; }
+    var pv=e.target.closest('[data-preview]'); if(pv){ openDrawer(pv.dataset.preview,pv); return; }
+    if(e.target.closest('[data-close-drawer]')){ closeDrawer(); return; }
+    var sm=e.target.closest('[data-set-mode]'); if(sm){ setMode(sm.dataset.setMode); document.querySelector('.modebar').scrollIntoView(); return; }
+    var g=e.target.closest('[data-go]');
+    if(g){ if(!drawer.hidden) closeDrawer(); go(g.dataset.go,{mode:g.dataset.mode,scroll:g.dataset.scroll}); return; }
+    var s=e.target.closest('[data-scroll]'); if(s){ var el=document.getElementById(s.dataset.scroll); if(el) el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
+  });
+  document.addEventListener('input',function(e){ if(e.target.matches('.compare input')){ e.target.closest('.compare').style.setProperty('--pos', e.target.value+'%'); } });
+  document.addEventListener('keydown',function(e){
+    if(!lb.hidden){ if(e.key==='Escape')closeLb(); if(e.key==='ArrowRight')step(1); if(e.key==='ArrowLeft')step(-1); return; }
+    if(!drawer.hidden && e.key==='Escape') closeDrawer();
+  });
+  document.querySelectorAll('[data-kind="mode"] button').forEach(function(b){ b.addEventListener('click',function(){ setMode(b.dataset.set); }); });
+
+  /* ================= LANGUAGE ================= */
+  function applyLang(l){
+    root.classList.toggle('lang-pt', l==='pt'); root.lang = l==='pt'?'pt-BR':'en';
+    document.querySelectorAll('[data-alt-en]').forEach(function(i){ i.alt=i.getAttribute('data-alt-'+l)||''; });
+    document.querySelectorAll('[data-aria-en]').forEach(function(el){ el.setAttribute('aria-label', el.getAttribute('data-aria-'+l)); });
+    document.querySelectorAll('[data-kind="lang"] button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set===l?'true':'false'); });
+    if(!lb.hidden) show();
+  }
+  document.querySelectorAll('[data-kind="lang"] button').forEach(function(b){ b.addEventListener('click',function(){ applyLang(b.dataset.set); try{localStorage.setItem('ns-lang',b.dataset.set);}catch(e){} }); });
+
+  function curTheme(){ var a=root.getAttribute('data-theme'); if(a==='light'||a==='dark') return a; return matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'; }
+  function paintTheme(){ var c=curTheme(); document.querySelectorAll('[data-kind="theme"] button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set===c?'true':'false'); }); }
+  document.querySelectorAll('[data-kind="theme"] button').forEach(function(b){ b.addEventListener('click',function(){ root.setAttribute('data-theme',b.dataset.set); try{localStorage.setItem('ns-theme',b.dataset.set);}catch(e){} paintTheme(); }); });
+  try{ matchMedia('(prefers-color-scheme: light)').addEventListener('change',paintTheme); }catch(e){}
+  new MutationObserver(paintTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
+  paintTheme();
+  route(currentHash());
+})();
+</script>
+
+</body>
+</html>
