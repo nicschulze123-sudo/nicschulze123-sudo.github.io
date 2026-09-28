@@ -479,6 +479,23 @@ code{color:var(--series)}
 th{font-family:var(--body);font-weight:600;letter-spacing:3px}
 td:first-child{font-family:var(--body);font-weight:600;font-size:16px;text-transform:none}
 footer{border-top-color:var(--line)}
+
+/* Hero wallpaper stays in the dark "world" in both themes (world-* rule): images keep their real colors. */
+.home-hero{
+  color-scheme:dark;
+  --surface-0:#0F0E17; --surface-raised:#17152A; --line-c:#2C2942; --line-strong:#4A4663;
+  --ink-c:#EDEBF5; --ink-body:#C9C5DA; --ink-muted:#A9A4BF;
+  --estudo:#9D7CFF; --estudo-soft:#231F3D; --on-estudo:#0F0E17;
+  --andamento:#F28A2E; --andamento-soft:#2A1D12; --on-andamento:#0A1520;
+  --entregue:#3CC2B2; --entregue-soft:#10302E; --on-entregue:#072322;
+  --bg:#0F0E17; --surface:#17152A; --raised:#17152A; --ink:#EDEBF5; --muted:#A9A4BF; --line:#2C2942;
+  --series:#9D7CFF; --on-series:#0F0E17; --series-soft:#231F3D; --brass:#9D7CFF;
+  color:var(--ink);
+}
+.home-hero .hero-bg.ns-estudo{--series:#9D7CFF;--on-series:#0F0E17}
+.home-hero .hero-bg.ns-andamento{--series:#F28A2E;--on-series:#0A1520}
+.home-hero .hero-bg.ns-entregue{--series:#3CC2B2;--on-series:#072322}
+.home-hero .sc-layer{background:#0F0E17}
 </style>
 <script>
 (function(){
