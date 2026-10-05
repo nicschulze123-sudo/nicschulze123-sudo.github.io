@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Nicolas Schulze: Unity Developer and Software Engineer. Industrial and training simulation, vehicle physics, hardware integration, reporting and performance.">
-<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze · Unity Developer and Software Engineer · simulation and training."><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Nicolas Schulze</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,19 +26,19 @@
 }
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
   color-scheme:light;
-  --surface-0:#F2EFE8; --surface-raised:#FBF9F4; --line-c:#C8C1B2; --line-strong:#9A94AD;
+  --surface-0:#FFFFFF; --surface-raised:#F2EFE8; --line-c:#E4E1EA; --line-strong:#A9A4BF;
   --ink-c:#0F0E17; --ink-body:#3E3A52; --ink-muted:#5E5A73;
-  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#F2EFE8;
-  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#F2EFE8;
-  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#F2EFE8;
+  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#FFFFFF;
+  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#FFFFFF;
+  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#FFFFFF;
 }}
 :root[data-theme="light"]{
   color-scheme:light;
-  --surface-0:#F2EFE8; --surface-raised:#FBF9F4; --line-c:#C8C1B2; --line-strong:#9A94AD;
+  --surface-0:#FFFFFF; --surface-raised:#F2EFE8; --line-c:#E4E1EA; --line-strong:#A9A4BF;
   --ink-c:#0F0E17; --ink-body:#3E3A52; --ink-muted:#5E5A73;
-  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#F2EFE8;
-  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#F2EFE8;
-  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#F2EFE8;
+  --estudo:#6A4BD6; --estudo-soft:#E6E0FA; --on-estudo:#FFFFFF;
+  --andamento:#A34A0C; --andamento-soft:#F8E3D2; --on-andamento:#FFFFFF;
+  --entregue:#0E6E66; --entregue-soft:#D6ECE8; --on-entregue:#FFFFFF;
 }
 :root[data-theme="dark"]{color-scheme:dark}
 .ns-estudo{--series:var(--estudo);--on-series:var(--on-estudo);--series-soft:var(--estudo-soft)}
@@ -206,6 +200,7 @@ section.tight{padding-top:0}
 .contact h2{font-size:clamp(36px,6vw,72px);font-stretch:66%}
 .links{display:grid;border-top:2px solid var(--ink)}
 .links div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.links a{color:var(--ink);font-family:var(--mono);font-size:14px;text-decoration:underline;text-underline-offset:3px}.links a:hover{color:var(--series)}
 
 /* ---------- PROJECT PAGE ---------- */
 .p-hero{position:relative;margin-inline:calc(-1*var(--gut))}
@@ -565,14 +560,14 @@ footer{border-top-color:var(--line)}
       <p class="muted"><span class="en">Each skill links to the project where you can see it. Click a project name to open its preview.</span><span class="pt">Cada skill aponta para o projeto onde ela aparece. Clique no nome do projeto para abrir a pré-visualização.</span></p>
     </div>
     <div class="skills">
-    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button></div></article>
-    <article class="skill"><span class="label brass">02</span><h3><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></h3><p><span class="en">Rigidbodies, joints, trailers, implements, forklift and bin physics.</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira e física de bins.</span></p><div class="chips"><span class="chip">Rigidbody</span><span class="chip">Joints</span><span class="chip">Colliders</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
+    <article class="skill"><span class="label brass">02</span><h3><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></h3><p><span class="en">Rigidbodies, joints, trailers, implements, forklift and bin physics.</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira e física de bins.</span></p><div class="chips"><span class="chip">Rigidbody</span><span class="chip">Joints</span><span class="chip">Colliders</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
-    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
+    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
     <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-performance">Yellow · 4K ↗</button></div></article>
-    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button></div></article>
+    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">07</span><h3><span class="en">C# tooling</span><span class="pt">Ferramentas em C#</span></h3><p><span class="en">Custom Inspectors and editor tools that remove friction from production.</span><span class="pt">Inspectors customizados e ferramentas de editor que tiram atrito da produção.</span></p><div class="chips"><span class="chip">Editor</span><span class="chip">Unity Recorder</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
-    <article class="skill"><span class="label brass">08</span><h3>Level design</h3><p><span class="en">Composition, set dressing and light used as a layout tool.</span><span class="pt">Composição, set dressing e luz usada como ferramenta de layout.</span></p><div class="chips"><span class="chip">Composition</span><span class="chip">Lighting</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">08</span><h3>Level design</h3><p><span class="en">Composition, set dressing and light used as a layout tool.</span><span class="pt">Composição, set dressing e luz usada como ferramenta de layout.</span></p><div class="chips"><span class="chip">Composition</span><span class="chip">Lighting</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
     </div>
   </section>
 
@@ -632,11 +627,11 @@ footer{border-top-color:var(--line)}
       <p class="muted pt">Cada etapa se apoiou na anterior. A ordem importa mais do que qualquer título.</p>
     </div>
     <div class="timeline">
-      <div class="stage unknown"><div class="when"><span class="en">Before 2024</span><span class="pt">Antes de 2024</span></div><div><h3 class="en">Earlier work</h3><h3 class="pt">Trabalhos anteriores</h3><p><span class="pending"><span class="en">PENDING: roles, companies and projects</span><span class="pt">PENDENTE: funções, empresas e projetos</span></span></p></div></div>
+      <div class="stage"><div class="when">2022–23</div><div><h3 class="en">RealDrive, starting from the ground</h3><h3 class="pt">RealDrive, começando pelo chão</h3><p class="en">Joined RealDrive in October 2022. On RealDrive Agro I built the farm terrain, crop rows, LODs and impostors for thousands of plants and the field states. The recovered repository history starts in October 2023, with a terrain commit.</p><p class="pt">Entrei na RealDrive em outubro de 2022. No RealDrive Agro construí o terreno da fazenda, a lavoura em linhas, LODs e impostores para milhares de plantas e os estados do campo. O histórico recuperado do repositório começa em outubro de 2023, com um commit de terreno.</p></div></div>
       <div class="stage"><div class="when">2024</div><div><h3 class="en">Environments, UI and vehicles</h3><h3 class="pt">Ambientes, UI e veículos</h3><p class="en">Apple Farm and Schio Storage environments, main menu, garage and vehicle selection, then vehicle and implement integration and physics.</p><p class="pt">Ambientes Apple Farm e Schio Storage, menu principal, garagem e seleção de veículos; depois integração de veículos e implementos, e física.</p></div></div>
       <div class="stage"><div class="when">2025</div><div><h3 class="en">Lessons, users and reports</h3><h3 class="pt">Lições, usuários e relatórios</h3><p class="en">Extended the inherited lesson and task systems. Built user registration and search, training statistics and JSON-to-PDF reports. House Farm study in parallel.</p><p class="pt">Estendi os sistemas de lição e tarefa herdados. Construí cadastro e busca de usuários, estatísticas de treinamento e relatórios de JSON para PDF. Estudo House Farm em paralelo.</p></div></div>
       <div class="stage"><div class="when">2025–26</div><div><h3 class="en">Hardware and hard bugs</h3><h3 class="pt">Hardware e bugs difíceis</h3><p class="en">Physical controls, bin and forklift physics debugging, industrial silo refinement, HDRP migration and XR cleanup.</p><p class="pt">Controles físicos, depuração de física de bins e empilhadeira, refinamento do silo industrial, migração para HDRP e limpeza de XR.</p></div></div>
-      <div class="stage now"><div class="when">2026</div><div><h3 class="en">Ownership and performance</h3><h3 class="pt">Ownership e performance</h3><p class="en">Yellow and RDLesson: mirrors, Control Mapper, lesson restart, rollover failure and 4K performance, with an agent-assisted workflow.</p><p class="pt">Yellow e RDLesson: espelhos, Control Mapper, reinício de lição, falha por capotamento e performance em 4K, com fluxo de trabalho assistido por agentes.</p></div></div>
+      <div class="stage now"><div class="when">2026</div><div><h3 class="en">Ownership and performance</h3><h3 class="pt">Ownership e performance</h3><p class="en">RealDrive Agro: lesson telemetry and the PDF report exporter. Yellow and RDLesson: mirrors, Control Mapper, lesson restart, rollover failure and 4K performance, with an agent-assisted workflow.</p><p class="pt">RealDrive Agro: telemetria das aulas e exportador de relatório em PDF. Yellow e RDLesson: espelhos, Control Mapper, reinício de lição, falha por capotamento e performance em 4K, com fluxo de trabalho assistido por agentes.</p></div></div>
     </div>
   </section>
 
@@ -705,6 +700,7 @@ footer{border-top-color:var(--line)}
         <p class="muted pt" style="margin-top:16px">Aberto a vagas Senior em projetos Unity de simulação, treinamento e indústria.</p></div>
       <div class="links">
         <div><span class="label">Email</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+        <div><span class="label">Instagram</span><a href="https://instagram.com/nicolas.sschulze" target="_blank" rel="noopener">@nicolas.sschulze</a></div>
         <div><span class="label">LinkedIn</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
         <div><span class="label">GitHub</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
         <div><span class="label">CV (PDF)</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
@@ -732,34 +728,100 @@ footer{border-top-color:var(--line)}
   <div id="p-quick"></div>
   <div id="p-full">
 
-<!-- ---------- SCHIO (draft) ---------- -->
-<div class="full-block" data-project="schio" hidden>
+<!-- ---------- AGRO ---------- -->
+<div class="full-block" data-project="agro" hidden>
   <section class="tight">
     <div class="head">
-      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">23 months inside one simulator</h2><h2 class="pt">23 meses dentro de um simulador</h2></div>
-      <p class="muted en">Built only from confirmed facts. Screenshots, videos and lessons learned are still missing.</p>
-      <p class="muted pt">Montado só com fatos confirmados. Ainda faltam screenshots, vídeos e lições aprendidas.</p>
+      <div><span class="label kicker"><span class="en">Full case</span><span class="pt">Case completo</span></span><h2 class="en">From the ground to the report</h2><h2 class="pt">Do chão ao relatório</h2></div>
+      <p class="muted en">My part in a team simulator, in four stages, with who built what.</p>
+      <p class="muted pt">Minha parte num simulador feito em equipe, em quatro etapas, com quem fez o quê.</p>
     </div>
     <dl class="fields">
       <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
-      <dd><p class="en">Schio is an industrial and agricultural training simulator. Repository period June 2024 – September 2026; my active contribution ran from about July 2024 to May 2026, in a team of about seven contributors.</p><p class="pt">O Schio é um simulador de treinamento industrial e agrícola. O repositório vai de junho de 2024 a setembro de 2026; minha contribuição ativa foi de cerca de julho de 2024 a maio de 2026, em um time de cerca de sete pessoas.</p></dd>
-      <dt><span class="en">My responsibility</span><span class="pt">Minha responsabilidade</span></dt>
-      <dd><ul class="en"><li>Environments: Apple Farm, Schio Farm, Schio Storage, Industrial Silo</li><li>Main menu, garage, vehicle selection, scene management</li><li>Vehicle and implement physics: trailers, forklift, bin dumpers, box and bin physics, BinFallDetector</li><li>Lesson and task progression, completion percentage, collision systems</li><li>User registration and search, training statistics, JSON-to-PDF reports and report UI</li><li>Physical hardware controls, HDRP migration, VR/XR cleanup, maintenance</li></ul>
-        <ul class="pt"><li>Ambientes: Apple Farm, Schio Farm, Schio Storage, Silo Industrial</li><li>Menu principal, garagem, seleção de veículos, gerenciamento de cenas</li><li>Física de veículos e implementos: reboques, empilhadeira, basculadores de bins, física de caixas e bins, BinFallDetector</li><li>Progressão de lições e tarefas, porcentagem de conclusão, sistemas de colisão</li><li>Cadastro e busca de usuários, estatísticas de treinamento, relatórios de JSON para PDF e UI de relatório</li><li>Controles físicos, migração para HDRP, limpeza de VR/XR, manutenção</li></ul></dd>
-      <dt><span class="en">Inherited vs built</span><span class="pt">Herdado vs construído</span></dt>
-      <dd><p class="en">SchioTaskManager, ColliderController and the LessonManager ecosystem had foundational work by another engineer (Vini MB). I later extended, debugged, integrated and maintained large parts of them.</p><p class="pt">SchioTaskManager, ColliderController e o ecossistema do LessonManager tiveram a base feita por outro engenheiro (Vini MB). Depois eu estendi, depurei, integrei e mantive grande parte deles.</p></dd>
-      <dt><span class="en">Evolution</span><span class="pt">Evolução</span></dt>
-      <dd><ul class="en"><li><b>2024</b> environments, UI, vehicle selection → implements → physics</li><li><b>2025</b> lesson and task systems → reporting → user systems</li><li><b>2025–26</b> maintenance, hardware, complex physics debugging, cleanup</li></ul><ul class="pt"><li><b>2024</b> ambientes, UI, seleção de veículos → implementos → física</li><li><b>2025</b> sistemas de lição e tarefa → relatórios → sistemas de usuário</li><li><b>2025–26</b> manutenção, hardware, depuração de física complexa, limpeza</li></ul></dd>
-      <dt><span class="en">Git context</span><span class="pt">Contexto do Git</span></dt>
-      <dd><div class="metrics"><div><span class="label">Commits</span><strong>1,013 / 1,855</strong></div><div><span class="label"><span class="en">Non-merge</span><span class="pt">Sem merge</span></span><strong>936</strong></div><div><span class="label"><span class="en">C# scripts touched</span><span class="pt">Scripts C# tocados</span></span><strong>555</strong></div></div><p class="muted en" style="margin-top:10px">Volume context only. Commit counts do not measure seniority.</p><p class="muted pt" style="margin-top:10px">Apenas contexto de volume. Número de commits não mede senioridade.</p></dd>
-      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
-      <dd><span class="pending"><span class="en">PENDING: screenshots, videos, report PDF sample (anonymized)</span><span class="pt">PENDENTE: screenshots, vídeos, exemplo de PDF de relatório (anonimizado)</span></span></dd>
-      <dt><span class="en">Lessons</span><span class="pt">Lições</span></dt>
-      <dd><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></dd>
+      <dd><div class="en"><p>RealDrive Agro is a training simulator for operating agricultural machines: planting, spraying and harvesting, with an evaluation report at the end of each lesson. It was built as a team at RealDrive within the AGRO 4.0 project, supported by Finep, and shown at trade fairs such as Tecnoshow and Show Rural.</p></div><div class="pt"><p>O RealDrive Agro é um simulador de treinamento para operação de máquinas agrícolas: plantio, pulverização e colheita, com relatório de avaliação ao final de cada aula. Foi desenvolvido em equipe na RealDrive dentro do projeto AGRO 4.0, com apoio da Finep, e apresentado em feiras como Tecnoshow e Show Rural.</p></div></dd>
+      <dt><span class="en">1 · The ground</span><span class="pt">1 · O chão</span></dt>
+      <dd><div class="en"><p>Before simulating a machine, it needed a place where it made sense. I built the farm terrain and the crop rows (75 cm spacing), implemented LODs and 2D impostors for thousands of plants, and set up crops and field states (standing, cut, stubble), with spawning and density for more than one crop.</p></div><div class="pt"><p>Antes de simular uma máquina, era preciso um lugar onde ela fizesse sentido. Construí o terreno da fazenda e a lavoura em linhas de 75 cm, implementei LODs e impostores 2D para milhares de plantas e montei as culturas e os estados do campo (em pé, cortado, palhada), com spawn e densidade de mais de uma cultura.</p></div></dd>
+      <dt><span class="en">2 · Harvest</span><span class="pt">2 · Colheita</span></dt>
+      <dd><div class="en"><p>A harvest has stages: cut, store, transfer, unload. I created the first version of the harvest controller (<code>RDHarvestClassController</code>: unloading and the grain pile). Vinicius built the grain tank, grain loss and falling grain. I then integrated triggers, unloading points, farm limits and the link to telemetry and the report.</p></div><div class="pt"><p>Uma colheita tem etapas: cortar, armazenar, transbordar, descarregar. Criei a primeira versão do controlador de colheita (<code>RDHarvestClassController</code>: descarga e monte de grãos). O Vinicius fez o graneleiro, as perdas e a queda dos grãos. Depois eu integrei gatilhos, pontos de descarga, limites da fazenda e a ligação com a telemetria e o relatório.</p></div></dd>
+      <dt><span class="en">3 · Rules, not buttons</span><span class="pt">3 · Regras, não botões</span></dt>
+      <dd><div class="en"><p>A working machine is not, on its own, training. The flow is: machine state → condition → allowed/blocked action → sequence → detection → feedback → progression. Three people built it: Guilherme Schaeffer the structure, menus and completion UI; Vinicius routes, damage and colliders; I built the procedure sequences and the safety locks.</p></div><div class="pt"><p>Uma máquina funcionando não é, sozinha, um treinamento. O fluxo é: estado da máquina → condição → ação permitida/bloqueada → sequência → detecção → feedback → progressão. Três pessoas construíram: o Guilherme Schaeffer a estrutura, os menus e a UI de conclusão; o Vinicius rota, dano e colisores; eu as sequências de procedimento e as travas de segurança.</p></div></dd>
+      <dt><span class="en">4 · From simulating to measuring</span><span class="pt">4 · De simular a medir</span></dt>
+      <dd><div class="en"><p>In 2026 I created the lesson data collection: speed, RPM, throttle, brake, steering, load, position and machine states, about 10 times per second. I created <code>LessonPdfExporter</code> and developed it with Guilherme: at the end of the lesson it generates a PDF with the path drawn as vectors, charts, statistics, grain loss and speed recommendations, opened inside the simulator.</p></div><div class="pt"><p>Em 2026 criei a coleta de dados da aula: velocidade, RPM, acelerador, freio, direção, carga, posição e estados da máquina, cerca de 10 vezes por segundo. Criei o <code>LessonPdfExporter</code> e o desenvolvi com o Guilherme: no fim da aula ele gera um PDF com a trajetória desenhada em vetor, gráficos, estatísticas, perda de grãos e recomendações de velocidade, aberto dentro do simulador.</p></div></dd>
+      <dt><span class="en">What I would do differently</span><span class="pt">O que eu faria diferente</span></dt>
+      <dd><div class="en"><ul><li>Sampling depends on frame rate; it is not frame-rate independent.</li><li>The exporter grew too large in a single file.</li><li>There are no automated tests.</li></ul></div><div class="pt"><ul><li>A amostragem depende do framerate; ela não é independente dele.</li><li>O exportador ficou grande demais num arquivo só.</li><li>Faltam testes automatizados.</li></ul></div></dd>
+      <dt><span class="en">Credits</span><span class="pt">Créditos</span></dt>
+      <dd><div class="en"><p>Machine models, cab, controls and hardware: RealDrive team. Commit counts measure activity, not importance or product authorship.</p></div><div class="pt"><p>Modelos das máquinas, cabine, comandos e hardware: equipe RealDrive. Números de commits medem atividade, não importância nem autoria do produto.</p></div></dd>
     </dl>
   </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Gallery</span><span class="pt">Galeria</span></span><h2 class="en">Planting, spraying and harvesting</h2><h2 class="pt">Plantio, pulverização e colheita</h2></div>
+      <p class="muted en">Captures from the simulator. Click any image to enlarge; use the arrow keys to move through the set.</p>
+      <p class="muted pt">Capturas do simulador. Clique em qualquer imagem para ampliar; use as setas do teclado para navegar.</p>
+    </div>
+    <div class="grid" data-gal="agro"></div>
+  </section>
 </div>
-
+<!-- ---------- SCHIO ---------- -->
+<div class="full-block" data-project="schio" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case</span><span class="pt">Case completo</span></span><h2 class="en">From the real orchard to the simulator</h2><h2 class="pt">Do pomar real ao simulador</h2></div>
+      <p class="muted en">Almost two years inside one simulator.</p>
+      <p class="muted pt">Quase dois anos dentro de um simulador.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
+      <dd><div class="en"><p>A training simulator for the operation of an apple orchard under hail net: spraying inside the rows, bins, the packing shed, forklift and yard, all in one environment. Team project at RealDrive for Agropecuária Schio, in Vacaria (RS), which presents itself as Brazil's largest apple producer.</p></div><div class="pt"><p>Um simulador de treinamento para a operação de um pomar de maçã sob tela antigranizo: pulverização dentro do corredor, bins, barracão, empilhadeira e pátio, no mesmo ambiente. Projeto em equipe na RealDrive para a Agropecuária Schio, em Vacaria (RS), que se apresenta como a maior produtora de maçã do Brasil.</p></div></dd>
+      <dt><span class="en">Before modelling, I went there</span><span class="pt">Antes de modelar, eu fui até lá</span></dt>
+      <dd><div class="en"><p>In August 2024 I joined the technical visit to the orchard. Hail net, row width, posts, bare winter branches, the road between blocks, bins, shed and silo: each detail became a reference. A hail-net orchard has its own rules: the net organises the rows and changes the light, the bin is what the operation moves, and the shed has to fit a manoeuvring forklift.</p></div><div class="pt"><p>Em agosto de 2024 participei da visita técnica ao pomar. Tela antigranizo, largura do corredor, postes, galhos sem folhas no inverno, a estrada entre as quadras, bins, barracão e silo: cada detalhe virou referência. Um pomar com tela tem regras próprias: a tela organiza as linhas e muda a luz, o bin é o objeto que a operação movimenta, e o barracão precisa caber uma empilhadeira manobrando.</p></div></dd>
+      <dt><span class="en">Four phases</span><span class="pt">Quatro fases</span></dt>
+      <dd><div class="en"><ul><li><b>Jul–Sep 2024</b> environment and interface</li><li><b>Oct 2024 – Feb 2025</b> physics and simulation</li><li><b>Mar–Nov 2025</b> tasks, lessons and reports</li><li><b>Dec 2025 – May 2026</b> hardware, maintenance and cleanup</li></ul></div><div class="pt"><ul><li><b>jul–set/2024</b> ambiente e interface</li><li><b>out/2024 – fev/2025</b> física e simulação</li><li><b>mar–nov/2025</b> tarefas, lições e relatórios</li><li><b>dez/2025 – mai/2026</b> hardware, manutenção e limpeza</li></ul></div></dd>
+      <dt><span class="en">My responsibility</span><span class="pt">Minha responsabilidade</span></dt>
+      <dd><div class="en"><ul><li>Environments: orchard, Schio farm and storage, industrial silo</li><li>Main menu, garage, vehicle selection, scene management</li><li>Vehicle and implement physics: trailers, forklift, bin dumpers, bins, <code>BinFallDetector</code></li><li>Lesson and task progression, completion percentage, collisions</li><li>User registration and search, training statistics, JSON-to-PDF reports</li><li>Physical hardware controls and calibration, HDRP migration, maintenance</li></ul></div><div class="pt"><ul><li>Ambientes: pomar, fazenda e armazém Schio, silo industrial</li><li>Menu principal, garagem, seleção de veículos, gerenciamento de cenas</li><li>Física de veículos e implementos: reboques, empilhadeira, basculadores, bins, <code>BinFallDetector</code></li><li>Progressão de lições e tarefas, porcentagem de conclusão, colisões</li><li>Cadastro e busca de usuários, estatísticas de treinamento, relatórios de JSON para PDF</li><li>Controles físicos e calibração, migração para HDRP, manutenção</li></ul></div></dd>
+      <dt><span class="en">A system that did not start with me</span><span class="pt">Um sistema que não começou comigo</span></dt>
+      <dd><div class="en"><p>The core architecture, including <code>SchioTaskManager</code>, <code>ColliderController</code> and the <code>LessonManager</code> ecosystem, is by Vinicius Bacca. My verbs here are took over, maintained, extended and integrated. Process: investigate → reproduce → trace → root cause → scope → implement → test → audit → compare → commit.</p></div><div class="pt"><p>A arquitetura central, incluindo <code>SchioTaskManager</code>, <code>ColliderController</code> e o ecossistema do <code>LessonManager</code>, é do Vinicius Bacca. Meus verbos aqui são assumi, mantive, estendi e integrei. Processo: investigar → reproduzir → rastrear → causa raiz → escopo → implementar → testar → auditar → comparar → commit.</p></div></dd>
+      <dt><span class="en">Git context</span><span class="pt">Contexto do Git</span></dt>
+      <dd><div class="en"><div class="metrics"><div><span class="label">Commits</span><strong>1,013 / 1,855</strong></div><div><span class="label">Non-merge</span><strong>936</strong></div><div><span class="label">C# scripts touched</span><strong>555</strong></div></div><p class="muted" style="margin-top:10px">About 54.6% of the repository's commits. Volume context only: commit counts do not measure seniority or authorship of the product.</p></div><div class="pt"><div class="metrics"><div><span class="label">Commits</span><strong>1.013 / 1.855</strong></div><div><span class="label">Sem merge</span><strong>936</strong></div><div><span class="label">Scripts C# tocados</span><strong>555</strong></div></div><p class="muted" style="margin-top:10px">Cerca de 54,6% dos commits do repositório. Apenas contexto de volume: número de commits não mede senioridade nem autoria do produto.</p></div></dd>
+      <dt><span class="en">Credits</span><span class="pt">Créditos</span></dt>
+      <dd><div class="en"><p>The cab, with Valtra tractor components, was built by the RealDrive hardware team.</p></div><div class="pt"><p>A cabine, com componentes do trator Valtra, foi feita pela equipe de hardware da RealDrive.</p></div></dd>
+    </dl>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Gallery</span><span class="pt">Galeria</span></span><h2 class="en">Orchard, shed and yard</h2><h2 class="pt">Pomar, barracão e pátio</h2></div>
+      <p class="muted en">Captures from the simulator. Click any image to enlarge; use the arrow keys to move through the set.</p>
+      <p class="muted pt">Capturas do simulador. Clique em qualquer imagem para ampliar; use as setas do teclado para navegar.</p>
+    </div>
+    <div class="grid" data-gal="schio"></div>
+  </section>
+</div>
+<!-- ---------- GARAGEM ---------- -->
+<div class="full-block" data-project="garagem" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case</span><span class="pt">Case completo</span></span><h2 class="en">The garage already existed</h2><h2 class="pt">A garagem já existia</h2></div>
+      <p class="muted en">A menu is also an environment.</p>
+      <p class="muted pt">O menu de um simulador também é um ambiente.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Problem</span><span class="pt">Problema</span></dt>
+      <dd><div class="en"><p>A wide, busy real space had to become a menu that shows one machine at a time. In RealDrive Agro, this is where the user picks farm, operation, crop and machine before driving.</p></div><div class="pt"><p>Um espaço real largo e cheio de coisas precisava virar um menu que mostra uma máquina por vez. No RealDrive Agro, é ali que o usuário escolhe fazenda, operação, cultura e máquina antes de operar.</p></div></dd>
+      <dt><span class="en">Process</span><span class="pt">Processo</span></dt>
+      <dd><div class="en"><ol><li>Study the real reference</li><li>Adapt it to the rules of a menu</li><li>Test light colour and amount of set</li><li>Reach a version where the machine is the only protagonist</li></ol></div><div class="pt"><ol><li>Estudar a referência real</li><li>Adaptar para as regras de um menu</li><li>Testar cor de luz e quantidade de cenário</li><li>Chegar numa versão em que a máquina é a única protagonista</li></ol></div></dd>
+      <dt><span class="en">Credits</span><span class="pt">Créditos</span></dt>
+      <dd><div class="en"><p>Level design and lighting: Nicolas Schulze. Machine models: RealDrive team.</p></div><div class="pt"><p>Level design e iluminação: Nicolas Schulze. Modelos das máquinas: equipe RealDrive.</p></div></dd>
+    </dl>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Gallery</span><span class="pt">Galeria</span></span><h2 class="en">From the first version to the final one</h2><h2 class="pt">Da primeira versão à final</h2></div>
+      <p class="muted en">Captures from the simulator. Click any image to enlarge; use the arrow keys to move through the set.</p>
+      <p class="muted pt">Capturas do simulador. Clique em qualquer imagem para ampliar; use as setas do teclado para navegar.</p>
+    </div>
+    <div class="grid" data-gal="garagem"></div>
+  </section>
+</div>
 <!-- ---------- YELLOW MIRRORS (draft) ---------- -->
 <div class="full-block" data-project="yellow-mirrors" hidden>
   <section class="tight">
@@ -1120,7 +1182,68 @@ footer{border-top-color:var(--line)}
   ].map(function(r){return {g:'editor',k:r[0],en:r[1],pt:r[2]};});
   var HF_P=[1,2,3,4].map(function(i){return {g:'early',k:'early_'+i,en:'Earlier version · '+i+'/4',pt:'Versão anterior · '+i+'/4'};});
   var HF_ALL=HF_R.concat(HF_E,HF_P);
-  function hf(k){ return HF_ALL.filter(function(x){return x.k===k;})[0]; }
+
+  function mk(g,list){ return list.map(function(r){return {g:g,k:r[0],en:r[1],pt:r[2]};}); }
+  var GAL={
+    agro: mk('agro',[
+      ['ag_08','Combine harvesting wheat, with the in-cab monitor','Colheitadeira no trigo, com o monitor da cabine'],
+      ['ag_44','Harvest next to the grain silos','Colheita ao lado dos silos'],
+      ['ag_13','Combine in the field','Colheitadeira no campo'],
+      ['ag_18','Operator view from the cab during harvest','Vista do operador na cabine durante a colheita'],
+      ['ag_11','Combine, silos and farm buildings','Colheitadeira, silos e construções da fazenda'],
+      ['ag_14','Harvest in late light','Colheita com luz de fim de tarde'],
+      ['ag_01','Combine near the silo','Colheitadeira perto do silo'],
+      ['ag_09','Combine with the farm behind','Colheitadeira com a fazenda ao fundo'],
+      ['ag_06','Sprayer working the crop rows','Pulverizador trabalhando nas linhas'],
+      ['ag_07','Crop rows at ground level','Linhas da lavoura na altura do chão'],
+      ['ag_43','Self-propelled sprayer on the farm road','Pulverizador autopropelido na estrada da fazenda'],
+      ['ag_04','Combine on a green field','Colheitadeira em lavoura verde'],
+      ['ag_12','Crop seen from the operator height','Lavoura vista da altura do operador'],
+      ['ag_19','Wheat, plant detail','Trigo, detalhe da planta'],
+      ['ag_23','Wheat: cut and standing','Trigo: cortado e em pé'],
+      ['ag_20','Field after cutting, stubble on the ground','Campo depois do corte, palhada no chão'],
+      ['ag_32','Farm yard and terrain','Sede da fazenda e terreno'],
+      ['ag_28','Farm road through the woods','Estrada da fazenda pelo mato']]),
+    schio: mk('schio',[
+      ['sc_14','Orchard under hail net, with the headquarters behind','Pomar sob tela antigranizo, com a sede ao fundo'],
+      ['sc_22','Inside a row under the hail net','Dentro do corredor sob a tela'],
+      ['sc_44','Orchard rows with fruit','Linhas do pomar com frutos'],
+      ['sc_39','Winter state: trees without leaves','Estado de inverno: árvores sem folhas'],
+      ['sc_46','Winter row, another angle','Corredor no inverno, outro ângulo'],
+      ['sc_32','Hail-net blocks from above','Quadras com tela vistas de cima'],
+      ['sc_35','Hail-net structure, wide view','Estrutura da tela, vista aberta'],
+      ['sc_05','Editor view: hail-net layout','Vista do editor: layout da tela'],
+      ['sc_06','Editor view: posts and rows','Vista do editor: postes e linhas'],
+      ['sc_01','Apple tree study','Estudo da macieira'],
+      ['sc_02','Apple trees on the terrain','Macieiras no terreno'],
+      ['sc_50','Packing shed with forklift','Barracão com empilhadeira'],
+      ['sc_53','Forklift inside the shed','Empilhadeira dentro do barracão'],
+      ['sc_52','Yard with forklift and tractors','Pátio com empilhadeira e tratores'],
+      ['sc_34','Bins full of apples','Bins cheios de maçãs'],
+      ['sc_07','Bin detail','Detalhe dos bins'],
+      ['sc_33','Empty bins in the yard','Bins vazios no pátio'],
+      ['sc_03','Headquarters with tractors and bins','Sede com tratores e bins'],
+      ['sc_12','Entrance gate','Portaria'],
+      ['sc_18','Headquarters from above','Sede vista de cima'],
+      ['sc_20','Road to the buildings','Estrada até os barracões'],
+      ['sc_24','Open shed','Barracão aberto']]),
+    garagem: mk('garagem',[
+      ['gr_16','Final version: sprayer on stage','Versão final: pulverizador no palco'],
+      ['gr_15','Final version: combine','Versão final: colheitadeira'],
+      ['gr_17','Final version: another machine','Versão final: outra máquina'],
+      ['gr_19','Sprayer, green edge light','Pulverizador, luz verde nas bordas'],
+      ['gr_21','Final stage, empty','Palco final, vazio'],
+      ['gr_20','Logo panel and stage','Painel com a marca e o palco'],
+      ['gr_18','Iteration: lighter set','Iteração: cenário mais limpo'],
+      ['gr_13','Light test: blue','Teste de luz: azul'],
+      ['gr_09','Iteration: full green light','Iteração: luz verde total'],
+      ['gr_10','Iteration: props on the sides','Iteração: objetos nas laterais'],
+      ['gr_07','Earlier version with more set dressing','Versão anterior com mais cenário'],
+      ['gr_01','First version','Primeira versão'],
+      ['gr_02','In the Unity editor','No editor da Unity']])
+  };
+  var ALLIMG=HF_ALL.concat(GAL.agro,GAL.schio,GAL.garagem);
+  function hf(k){ return ALLIMG.filter(function(x){return x.k===k;})[0]; }
 
   var P=[
     { id:'house-farm', status:'ready', series:'estudo', feature:true,
@@ -1134,15 +1257,36 @@ footer{border-top-color:var(--line)}
       compare:{a:'img/full/cmp_hall_unlit.jpg',b:'img/full/cmp_hall_lit.jpg',lb:{en:'With HDRP lighting',pt:'Com iluminação HDRP'},la:{en:'Without',pt:'Sem'},note:{en:'Drag to compare. Same camera, same geometry.',pt:'Arraste para comparar. Mesma câmera, mesma geometria.'}},
       strip:['render_01','render_03','render_04','render_08','render_10','render_12'],
       count:{en:'25 images · 3 comparisons',pt:'25 imagens · 3 comparações'} },
-    { id:'schio', status:'draft', series:'entregue',
-      title:'Schio', kicker:{en:'Industrial & agricultural training simulator',pt:'Simulador de treinamento industrial e agrícola'},
+    { id:'agro', status:'ready', series:'entregue',
+      title:'RealDrive Agro', cover:'img/full/ag_44.jpg', coverThumb:'img/thumb/ag_44.jpg', cardCover:'img/full/ag_13.jpg',
+      kicker:{en:'Agricultural training simulator · Team project',pt:'Simulador de treinamento agrícola · Projeto em equipe'},
+      period:'2022 – 2026', tags:['Unity','C#','LOD','Telemetry','PDF'],
+      lede:{en:'A training simulator for planting, spraying and harvesting, with a report at the end of every lesson. Built as a team at RealDrive within the AGRO 4.0 project (Finep).',pt:'Um simulador de treinamento para plantio, pulverização e colheita, com relatório ao final de cada aula. Desenvolvido em equipe na RealDrive dentro do projeto AGRO 4.0 (Finep).'},
+      summary:{en:'I started on the ground: terrain, crop rows and field states. Over time I moved into the systems: the harvest controller, procedure sequences and safety locks, lesson telemetry and the PDF report.',pt:'Comecei pelo chão: terreno, lavoura em linhas e estados do campo. Com o tempo passei para os sistemas: controlador de colheita, sequências de procedimento e travas de segurança, telemetria das aulas e o relatório em PDF.'},
+      note:{en:'Team work. Vinicius built the grain mechanics, routes and damage; Guilherme Schaeffer built the lesson structure and UI and co-developed the PDF exporter. Machines, cab and hardware: RealDrive team.',pt:'Trabalho em equipe. O Vinicius fez a mecânica do grão, rotas e dano; o Guilherme Schaeffer fez a estrutura e a interface das aulas e co-desenvolveu o exportador de PDF. Máquinas, cabine e hardware: equipe RealDrive.'},
+      facts:[[{en:'Company',pt:'Empresa'},'RealDrive'],[{en:'Program',pt:'Programa'},'AGRO 4.0 · Finep'],[{en:'My role',pt:'Meu papel'},{en:'Environment, harvest, lessons, telemetry, report',pt:'Ambiente, colheita, aulas, telemetria, relatório'}],['Status',{en:'Finished · shown at Tecnoshow and Show Rural',pt:'Finalizado · apresentado na Tecnoshow e no Show Rural'}]],
+      hl:[[{en:'Field',pt:'Campo'},{en:'Terrain, 75 cm crop rows, LODs and 2D impostors for thousands of plants, standing / cut / stubble states',pt:'Terreno, linhas de 75 cm, LODs e impostores 2D para milhares de plantas, estados em pé / cortado / palhada'}],[{en:'Harvest',pt:'Colheita'},{en:'First version of the harvest controller; triggers, unloading points, farm limits, telemetry link',pt:'Primeira versão do controlador de colheita; gatilhos, pontos de descarga, limites da fazenda, ligação com a telemetria'}],[{en:'Lessons',pt:'Aulas'},{en:'Procedure sequences and safety locks that stop steps being skipped or reversed',pt:'Sequências de procedimento e travas de segurança que impedem pular ou inverter etapas'}],[{en:'Data',pt:'Dados'},{en:'Telemetry at ~10 Hz and <code>LessonPdfExporter</code>: vector path, charts, statistics, recommendations',pt:'Telemetria a ~10 Hz e <code>LessonPdfExporter</code>: trajetória em vetor, gráficos, estatísticas, recomendações'}]],
+      strip:['ag_08','ag_18','ag_06','ag_43','ag_23','ag_44'] },
+    { id:'schio', status:'ready', series:'entregue',
+      title:'Simulador Schio', cover:'img/full/sc_14.jpg', coverThumb:'img/thumb/sc_14.jpg', cardCover:'img/full/sc_44.jpg',
+      kicker:{en:'Apple orchard training simulator · Team project',pt:'Simulador de treinamento para pomar de maçã · Projeto em equipe'},
       period:'Jul 2024 – May 2026', tags:['Unity','C#','HDRP','Physics','Reporting'],
-      lede:{en:'Twenty-three months inside one simulator, from environments to physics, lesson systems, reports and hardware.',pt:'Vinte e três meses dentro de um simulador, de ambientes a física, sistemas de lição, relatórios e hardware.'},
-      summary:{en:'I started on environments, the main menu and vehicle selection, and moved into vehicle and implement physics, lesson and task systems, training statistics, JSON-to-PDF reporting and physical hardware controls.',pt:'Comecei em ambientes, menu principal e seleção de veículos, e passei para física de veículos e implementos, sistemas de lição e tarefa, estatísticas de treinamento, relatórios de JSON para PDF e controles físicos.'},
-      note:{en:'The task and lesson systems were founded by another engineer. I extended, debugged and maintained them.',pt:'Os sistemas de tarefa e lição foram criados por outro engenheiro. Eu estendi, depurei e mantive esses sistemas.'},
-      facts:[[{en:'Period',pt:'Período'},{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}],[{en:'Team',pt:'Time'},{en:'~7 contributors',pt:'~7 pessoas'}],['Stack','Unity · C# · HDRP'],['Status',{en:'Draft · evidence pending',pt:'Rascunho · evidências pendentes'}]],
-      hl:[[{en:'Physics',pt:'Física'},{en:'Trailers, forklift, bin dumpers, BinFallDetector',pt:'Reboques, empilhadeira, basculadores, BinFallDetector'}],[{en:'Lessons',pt:'Lições'},{en:'Extended LessonManager and SchioTaskManager',pt:'Estendi o LessonManager e o SchioTaskManager'}],[{en:'Reports',pt:'Relatórios'},{en:'Statistics → JSON → UI → PDF',pt:'Estatísticas → JSON → UI → PDF'}],['Hardware',{en:'Physical simulator controls',pt:'Controles físicos do simulador'}]],
-      ph:{en:'Schio screenshot or clip',pt:'Screenshot ou vídeo do Schio'} },
+      lede:{en:'An orchard under hail net, spraying, bins, packing shed and yard in one environment, to train the operation without taking a real machine out of work. Built at RealDrive for Agropecuária Schio.',pt:'Pomar sob tela antigranizo, pulverização, bins, barracão e pátio num só ambiente, para treinar a operação sem tirar uma máquina real do trabalho. Feito na RealDrive para a Agropecuária Schio.'},
+      summary:{en:'Almost two years inside one simulator. I came in through the environment, after the technical visit to the orchard, and moved into vehicle and implement physics, tasks and lessons, reports, user registration, hardware and calibration.',pt:'Quase dois anos dentro de um simulador. Entrei pelo ambiente, depois da visita técnica ao pomar, e passei para física de veículos e implementos, tarefas e lições, relatórios, cadastro de usuários, hardware e calibração.'},
+      note:{en:'The core architecture is by Vinicius Bacca. My work was to understand it, then extend it without breaking it. The cab, with Valtra tractor parts, was built by the RealDrive hardware team.',pt:'A arquitetura central é do Vinicius Bacca. Meu trabalho foi entendê-la e depois estendê-la sem quebrar. A cabine, com componentes do trator Valtra, foi feita pela equipe de hardware da RealDrive.'},
+      facts:[[{en:'Period',pt:'Período'},{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}],[{en:'Client',pt:'Cliente'},'Agropecuária Schio · Vacaria/RS'],['Stack','Unity · C# · HDRP'],['Status',{en:'Finished',pt:'Finalizado'}]],
+      hl:[[{en:'Environment',pt:'Ambiente'},{en:'Orchard with hail net, winter and fruiting states, shed, yard and silo',pt:'Pomar com tela, estados de inverno e com frutos, barracão, pátio e silo'}],[{en:'Physics',pt:'Física'},{en:'Trailers, forklift, bin dumpers, <code>BinFallDetector</code>',pt:'Reboques, empilhadeira, basculadores, <code>BinFallDetector</code>'}],[{en:'Lessons',pt:'Lições'},{en:'Extended <code>LessonManager</code> and <code>SchioTaskManager</code>',pt:'Estendi o <code>LessonManager</code> e o <code>SchioTaskManager</code>'}],[{en:'Reports',pt:'Relatórios'},{en:'Statistics → JSON → UI → PDF',pt:'Estatísticas → JSON → UI → PDF'}]],
+      strip:['sc_22','sc_39','sc_50','sc_34','sc_32','sc_52'] },
+    { id:'garagem', status:'ready', series:'entregue',
+      title:'Garagem RealDrive', cover:'img/full/gr_16.jpg', coverThumb:'img/thumb/gr_16.jpg', cardCover:'img/full/gr_15.jpg',
+      kicker:{en:'Level design & lighting · Simulator menu',pt:'Level design e iluminação · Menu do simulador'},
+      period:'RealDrive Agro', tags:['Unity','Level design','Lighting','UI space'],
+      lede:{en:'The machine-selection screen of RealDrive Agro, turned into a space: one machine alone on stage, the brand in the room.',pt:'A tela de seleção de máquinas do RealDrive Agro transformada em espaço: uma máquina sozinha no palco, a marca no ambiente.'},
+      summary:{en:'The reference was a real RealDrive space with green edge light and the logo on the wall. The work was deciding what from that space made sense in a menu: study the reference, adapt it, test light colour and amount of set, and end with the machine as the only focus.',pt:'A referência foi um espaço real da RealDrive, com luz verde nas bordas e a marca na parede. O trabalho foi decidir o que desse espaço fazia sentido num menu: estudar a referência, adaptar, testar cor da luz e quantidade de cenário, e chegar na máquina como único foco.'},
+      note:{en:'My part: level design and lighting. Machine models: RealDrive team.',pt:'Minha parte: level design e iluminação. Modelos das máquinas: equipe RealDrive.'},
+      facts:[[{en:'Project',pt:'Projeto'},'RealDrive Agro'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting',pt:'Level design, iluminação'}],['Engine','Unity'],['Status',{en:'Finished',pt:'Finalizado'}]],
+      hl:[[{en:'Reference',pt:'Referência'},{en:'Real space: green light, logo panel, equipment in the centre',pt:'Espaço real: luz verde, painel com a marca, equipamento no centro'}],[{en:'Iteration',pt:'Iteração'},{en:'Light colour tests and less set dressing at each pass',pt:'Testes de cor de luz e menos cenário a cada versão'}],[{en:'Result',pt:'Resultado'},{en:'Pick farm, operation, crop and machine on one stage',pt:'Escolher fazenda, operação, cultura e máquina num só palco'}]],
+      strip:['gr_16','gr_15','gr_19','gr_13','gr_07','gr_01'] },
     { id:'yellow-mirrors', status:'draft', series:'andamento',
       title:'Yellow · Mirrors', kicker:{en:'Heavy equipment simulator',pt:'Simulador de equipamento pesado'},
       period:'2026', tags:['Unity 6','HDRP','RenderTexture','Rewired'],
@@ -1219,21 +1363,21 @@ footer{border-top-color:var(--line)}
   /* ================= HERO SHOWCASE ================= */
   (function(){
     var box=document.getElementById('showcase'); if(!box) return;
-    var POOL=['render_01','render_03','render_02','render_09','render_07','render_04','wire_4','render_08','render_10','render_05','render_12','render_06','render_13','render_11','kit_1','cmp_room_wire'].map(function(k){ return {k:k,p:'house-farm'}; });
+    var ORDER=['house-farm','agro','schio','garagem'], src={'house-farm':['render_01','render_03','render_09','render_07','render_04','render_08','render_10','render_12'],agro:['ag_08','ag_44','ag_13','ag_06','ag_14','ag_43','ag_11','ag_01'],schio:['sc_14','sc_22','sc_44','sc_50','sc_39','sc_34','sc_52','sc_32'],garagem:['gr_16','gr_15','gr_19','gr_20','gr_17','gr_21']}, pos={}, TOTAL=0;
+    ORDER.forEach(function(p){ pos[p]=0; TOTAL+=src[p].length; });
     var layers=box.querySelectorAll('.sc-layer'), cur=0, idx=0, step=0, timer=null, paused=false;
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     function fill(layer,n){
       layer.className='sc-layer '+(n===2?'two':'four');
-      var h='';
-      for(var i=0;i<n;i++){ var it=POOL[(idx+i)%POOL.length], meta=hf(it.k)||{en:'House Farm',pt:'House Farm'};
-        var src='img/full/'+it.k+'.jpg';
-        h+='<div class="sc-cell"><img src="'+src+'" alt=""></div>'; }
+      var pid=ORDER[idx%ORDER.length], list=src[pid], h='';
+      for(var i=0;i<n;i++){ h+='<div class="sc-cell"><img src="img/full/'+list[(pos[pid]+i)%list.length]+'.jpg" alt=""></div>'; }
+      pos[pid]=(pos[pid]+n)%list.length;
       layer.innerHTML=h;
-      var p=byId(POOL[idx%POOL.length].p);
+      var p=byId(pid);
       box.className='hero-bg ns-'+p.series; document.getElementById('sc-open').setAttribute('data-preview',p.id);
       document.getElementById('sc-badge').innerHTML=p.title;
-      document.getElementById('sc-count').textContent=String((idx%POOL.length)+1).padStart(2,'0')+' / '+POOL.length;
-      idx=(idx+n)%POOL.length;
+      document.getElementById('sc-count').textContent=String((idx%ORDER.length)+1).padStart(2,'0')+' / '+String(ORDER.length).padStart(2,'0');
+      idx++;
     }
     function next(){
       if(paused||document.hidden) return;
@@ -1254,6 +1398,7 @@ footer{border-top-color:var(--line)}
   }
   document.querySelectorAll('.filters button').forEach(function(b){ b.addEventListener('click',function(){ renderGrid(b.dataset.filter); }); });
   renderGrid('render');
+  document.querySelectorAll('[data-gal]').forEach(function(el){ var set=GAL[el.dataset.gal]; el.innerHTML=set.map(function(it){return thumbBtn(it,'gal-'+el.dataset.gal);}).join(''); });
 
   /* ================= ROUTER ================= */
   var views={home:'v-home',projects:'v-projects',about:'v-about'};
