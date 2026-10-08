@@ -1,10 +1,7 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze · Unity Developer and Software Engineer · simulation and training."><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfslbNaMtVSKaI0WOpA1mdHBlhfk4c5dk5hfO+1IT50=' 'sha256-j7Vp/wtT6coPK2+dDTiAwfW/KxN2L+VXWb3wtw3EYSE='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze · Unity Developer and Software Engineer · simulation and training."><meta name="robots" content="index,follow"><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Nicolas Schulze</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@500&display=swap">
-<style>
+<style>@font-face{font-family:"Barlow";src:url("fonts/Barlow-Regular.woff2") format("woff2");font-weight:400;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-Medium.woff2") format("woff2");font-weight:500;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}@font-face{font-family:"Barlow Condensed";src:url("fonts/BarlowCondensed-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
 /* Tokens from the "Nicolas Schulze" design system (dark theme, the brand's primary). */
 :root{
   color-scheme:dark;
@@ -528,7 +525,6 @@ footer{border-top-color:var(--line)}
 
 <main class="wrap">
 
-<!-- =================== HOME =================== -->
 <div class="view" id="v-home">
   <div class="home-hero">
     <div class="hero-bg" id="showcase">
@@ -560,12 +556,12 @@ footer{border-top-color:var(--line)}
       <p class="muted"><span class="en">Each skill links to the project where you can see it. Click a project name to open its preview.</span><span class="pt">Cada skill aponta para o projeto onde ela aparece. Clique no nome do projeto para abrir a pré-visualização.</span></p>
     </div>
     <div class="skills">
-    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
+    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">02</span><h3><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></h3><p><span class="en">Rigidbodies, joints, trailers, implements, forklift and bin physics.</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira e física de bins.</span></p><div class="chips"><span class="chip">Rigidbody</span><span class="chip">Joints</span><span class="chip">Colliders</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
-    <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
-    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-mirrors">Yellow ↗</button><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
-    <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow-performance">Yellow · 4K ↗</button></div></article>
-    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="rollover">Rollover ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
+    <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
+    <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div></article>
+    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">07</span><h3><span class="en">C# tooling</span><span class="pt">Ferramentas em C#</span></h3><p><span class="en">Custom Inspectors and editor tools that remove friction from production.</span><span class="pt">Inspectors customizados e ferramentas de editor que tiram atrito da produção.</span></p><div class="chips"><span class="chip">Editor</span><span class="chip">Unity Recorder</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
     <article class="skill"><span class="label brass">08</span><h3>Level design</h3><p><span class="en">Composition, set dressing and light used as a layout tool.</span><span class="pt">Composição, set dressing e luz usada como ferramenta de layout.</span></p><div class="chips"><span class="chip">Composition</span><span class="chip">Lighting</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
     </div>
@@ -592,19 +588,17 @@ footer{border-top-color:var(--line)}
   </div>
 </div>
 
-<!-- =================== PROJECTS =================== -->
 <div class="view" id="v-projects" hidden>
   <section>
     <div class="head">
       <div><span class="label kicker"><span class="en">All projects</span><span class="pt">Todos os projetos</span></span><h2 class="en">Everything about the projects</h2><h2 class="pt">Tudo sobre os projetos</h2></div>
-      <p class="muted en">Status shows how much evidence each case has. Drafts use only facts already confirmed; missing parts are marked PENDING.</p>
-      <p class="muted pt">O status mostra quanta evidência cada case já tem. Rascunhos usam só fatos já confirmados; o que falta está marcado como PENDENTE.</p>
+      <p class="muted en pub-only">Each project opens a quick preview or a full case with process, credits and images.</p>
+      <p class="muted pt pub-only">Cada projeto abre uma pré-visualização rápida ou o case completo, com processo, créditos e imagens.</p>
     </div>
     <div class="plist" id="plist"></div>
   </section>
 </div>
 
-<!-- =================== ABOUT =================== -->
 <div class="view" id="v-about" hidden>
   <div class="about-hero">
     <div><span class="label kicker brass"><span class="en">About me</span><span class="pt">Sobre mim</span></span><h1 class="en">Unity Developer &amp; Software Engineer</h1><h1 class="pt">Desenvolvedor Unity e Engenheiro de Software</h1></div>
@@ -699,17 +693,12 @@ footer{border-top-color:var(--line)}
         <p class="muted en" style="margin-top:16px">Open to Senior roles in simulation, training and industrial Unity projects.</p>
         <p class="muted pt" style="margin-top:16px">Aberto a vagas Senior em projetos Unity de simulação, treinamento e indústria.</p></div>
       <div class="links">
-        <div><span class="label">Email</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
-        <div><span class="label">Instagram</span><a href="https://instagram.com/nicolas.sschulze" target="_blank" rel="noopener">@nicolas.sschulze</a></div>
-        <div><span class="label">LinkedIn</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
-        <div><span class="label">GitHub</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
-        <div><span class="label">CV (PDF)</span><span class="pending"><span class="en">PENDING</span><span class="pt">PENDENTE</span></span></div>
+        <div><span class="label">Instagram</span><a href="https://instagram.com/nicolas.sschulze" target="_blank" rel="noopener noreferrer">@nicolas.sschulze</a></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- =================== PROJECT PAGE =================== -->
 <div class="view" id="v-project" hidden>
   <div class="p-hero"><div class="img" id="p-cover"></div></div>
   <div class="p-copy">
@@ -728,7 +717,6 @@ footer{border-top-color:var(--line)}
   <div id="p-quick"></div>
   <div id="p-full">
 
-<!-- ---------- AGRO ---------- -->
 <div class="full-block" data-project="agro" hidden>
   <section class="tight">
     <div class="head">
@@ -762,7 +750,6 @@ footer{border-top-color:var(--line)}
     <div class="grid" data-gal="agro"></div>
   </section>
 </div>
-<!-- ---------- SCHIO ---------- -->
 <div class="full-block" data-project="schio" hidden>
   <section class="tight">
     <div class="head">
@@ -796,7 +783,6 @@ footer{border-top-color:var(--line)}
     <div class="grid" data-gal="schio"></div>
   </section>
 </div>
-<!-- ---------- GARAGEM ---------- -->
 <div class="full-block" data-project="garagem" hidden>
   <section class="tight">
     <div class="head">
@@ -822,86 +808,8 @@ footer{border-top-color:var(--line)}
     <div class="grid" data-gal="garagem"></div>
   </section>
 </div>
-<!-- ---------- YELLOW MIRRORS (draft) ---------- -->
-<div class="full-block" data-project="yellow-mirrors" hidden>
-  <section class="tight">
-    <div class="head">
-      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Mirrors a driver can trust</h2><h2 class="pt">Espelhos em que o operador pode confiar</h2></div>
-      <p class="muted en">Built only from confirmed facts. Original authorship of the mirror system is still to be confirmed.</p>
-      <p class="muted pt">Montado só com fatos confirmados. A autoria original do sistema de espelhos ainda precisa ser confirmada.</p>
-    </div>
-    <dl class="fields">
-      <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
-      <dd><p class="en">Yellow is a Unity 6 HDRP heavy-equipment simulator using Rewired and the Unity Input System. Operators need working rear-view mirrors, both on screen and on physical mirror surfaces.</p><p class="pt">O Yellow é um simulador de equipamento pesado em Unity 6 HDRP, com Rewired e Unity Input System. O operador precisa de retrovisores funcionando, tanto na tela quanto em superfícies de espelho físico.</p></dd>
-      <dt><span class="en">Technical work</span><span class="pt">Trabalho técnico</span></dt>
-      <dd><ul class="en"><li>Per-vehicle mirror cameras rendered to RenderTextures</li><li>Camera positioning and UV cropping</li><li>UI mirrors and physical mirror materials</li><li>Runtime adjustment through Rewired, persisted between sessions</li><li>Grayscale adjustment mode</li><li>Per-vehicle configuration, including large haul trucks</li></ul>
-        <ul class="pt"><li>Câmeras de espelho por veículo renderizando em RenderTextures</li><li>Posicionamento de câmera e recorte de UV</li><li>Espelhos de UI e materiais de espelho físico</li><li>Ajuste em runtime pelo Rewired, persistido entre sessões</li><li>Modo de ajuste em escala de cinza</li><li>Configuração por veículo, incluindo caminhões fora de estrada</li></ul></dd>
-      <dt><span class="en">Performance link</span><span class="pt">Ligação com performance</span></dt>
-      <dd><p class="en">Mirror views were part of the 4K performance work: recurring GetComponentsInChildren calls from MirrorView were brought to zero.</p><p class="pt">As vistas de espelho fizeram parte do trabalho de performance em 4K: as chamadas recorrentes de GetComponentsInChildren vindas do MirrorView foram zeradas.</p></dd>
-      <dt><span class="en">Responsibility</span><span class="pt">Responsabilidade</span></dt>
-      <dd><span class="pending"><span class="en">PENDING: what existed before, what I built, who else worked on it</span><span class="pt">PENDENTE: o que já existia, o que eu construí, quem mais trabalhou</span></span></dd>
-      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
-      <dd><span class="pending"><span class="en">PENDING: cabin view with mirrors, adjustment mode video</span><span class="pt">PENDENTE: vista da cabine com espelhos, vídeo do modo de ajuste</span></span></dd>
-    </dl>
-  </section>
-</div>
 
-<!-- ---------- YELLOW PERFORMANCE (draft) ---------- -->
-<div class="full-block" data-project="yellow-performance" hidden>
-  <section class="tight">
-    <div class="head">
-      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Profiling a simulator for 4K</h2><h2 class="pt">Profiling de um simulador para 4K</h2></div>
-      <p class="muted en">The measured numbers are real and project-specific. The baseline before optimization is still missing, so no improvement percentage is claimed.</p>
-      <p class="muted pt">Os números medidos são reais e específicos do projeto. Ainda falta o baseline de antes da otimização, então nenhuma porcentagem de melhoria é declarada.</p>
-    </div>
-    <dl class="fields">
-      <dt><span class="en">Problem</span><span class="pt">Problema</span></dt>
-      <dd><p class="en">Reach about 60 FPS at 3840×2160 without lowering visual quality or changing simulation behavior.</p><p class="pt">Chegar a cerca de 60 FPS em 3840×2160 sem reduzir a qualidade visual nem mudar o comportamento da simulação.</p></dd>
-      <dt><span class="en">Process</span><span class="pt">Processo</span></dt>
-      <dd><ul class="en"><li>Profile startup and steady state separately</li><li>Measure garbage allocation per frame</li><li>Isolate rendering, physics and terrain cost</li><li>Change one thing at a time, then audit for regressions</li></ul><ul class="pt"><li>Medir startup e steady state separadamente</li><li>Medir alocação de lixo por frame</li><li>Isolar custo de renderização, física e terreno</li><li>Mudar uma coisa por vez e auditar regressões</li></ul></dd>
-      <dt><span class="en">Areas investigated</span><span class="pt">Áreas investigadas</span></dt>
-      <dd><p class="en">Expensive scene searches, vehicle initialization, terrain and Digger systems, mirror cameras, GetComponentsInChildren allocations, HDRP multi-camera cost, startup and loading.</p><p class="pt">Buscas caras na cena, inicialização de veículos, terreno e sistemas Digger, câmeras de espelho, alocações de GetComponentsInChildren, custo de multi-câmera no HDRP, startup e loading.</p></dd>
-      <dt><span class="en">Measured</span><span class="pt">Medido</span></dt>
-      <dd>
-        <div class="budget" role="img" aria-label="Frame time: 29.5 ms frame, 10.1 ms scripts, 60 FPS budget 16.7 ms">
-          <div class="bar-row"><span>Baseline</span><div class="trk"><div class="fill pend" style="width:100%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">—</span></div>
-          <div class="bar-row"><span><span class="en">Frame after</span><span class="pt">Frame depois</span></span><div class="trk"><div class="fill" style="width:84.3%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">29.5 ms</span></div>
-          <div class="bar-row"><span><span class="en">Main-thread scripts</span><span class="pt">Scripts main thread</span></span><div class="trk"><div class="fill scripts" style="width:28.9%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">10.1 ms</span></div>
-          <div class="axis"><span></span><div class="scale"><span style="left:0">0</span><span style="left:47.7%">16.7 ms · 60 FPS</span><span style="left:95.1%">33.3</span></div><span></span></div>
-        </div>
-        <p class="muted en" style="margin-top:12px;font-size:14px">3840×2160, tested environment. Also: startup lesson logic ≈0.98 ms; 0 recurring GetComponentsInChildren calls from MirrorView; 0 B steady-state GC in audited paths.</p>
-        <p class="muted pt" style="margin-top:12px;font-size:14px">3840×2160, ambiente testado. Também: lógica de startup da lição ≈0,98 ms; 0 chamadas recorrentes de GetComponentsInChildren do MirrorView; 0 B de GC em steady state nos caminhos auditados.</p>
-      </dd>
-      <dt><span class="en">Remaining gap</span><span class="pt">O que falta</span></dt>
-      <dd><p class="en">29.5 ms is about 34 FPS, so the 60 FPS target was not reached in this environment.</p><p class="pt">29,5 ms equivalem a cerca de 34 FPS, então a meta de 60 FPS não foi atingida neste ambiente.</p> <span class="pending"><span class="en">PENDING: where the remaining cost sits</span><span class="pt">PENDENTE: onde está o custo restante</span></span></dd>
-      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
-      <dd><span class="pending"><span class="en">PENDING: profiler captures before and after</span><span class="pt">PENDENTE: capturas do profiler antes e depois</span></span></dd>
-    </dl>
-  </section>
-</div>
 
-<!-- ---------- ROLLOVER (draft) ---------- -->
-<div class="full-block" data-project="rollover" hidden>
-  <section class="tight">
-    <div class="head">
-      <div><span class="label kicker"><span class="en">Full case · draft</span><span class="pt">Case completo · rascunho</span></span><h2 class="en">Rollover ends the lesson, everywhere</h2><h2 class="pt">Capotou, a lição termina, em todo lugar</h2></div>
-      <p class="muted en">A change that crossed two repositories: the shared RDLesson framework and the Yellow project that uses it.</p>
-      <p class="muted pt">Uma mudança que atravessou dois repositórios: o framework compartilhado RDLesson e o projeto Yellow que o utiliza.</p>
-    </div>
-    <dl class="fields">
-      <dt><span class="en">Problem</span><span class="pt">Problema</span></dt>
-      <dd><p class="en">A vehicle rollover had to be treated as a lesson failure consistently, across different lesson types.</p><p class="pt">O capotamento do veículo precisava ser tratado como falha da lição de forma consistente, em diferentes tipos de lição.</p></dd>
-      <dt><span class="en">Result</span><span class="pt">Resultado</span></dt>
-      <dd><ul class="en"><li>Records the rollover infraction</li><li>Terminates the lesson</li><li>Sets the failure status</li><li>Carries the failure into the report</li></ul><ul class="pt"><li>Registra a infração de capotamento</li><li>Encerra a lição</li><li>Define o status de falha</li><li>Leva a falha para o relatório</li></ul></dd>
-      <dt><span class="en">Difficulty</span><span class="pt">Dificuldade</span></dt>
-      <dd><p class="en">Changes in the shared framework had to stay compatible with Yellow-specific behavior, so regressions had to be checked on both sides of the repository boundary.</p><p class="pt">Mudanças no framework compartilhado precisavam continuar compatíveis com o comportamento específico do Yellow, então as regressões tinham que ser verificadas dos dois lados da fronteira entre repositórios.</p></dd>
-      <dt><span class="en">Related work</span><span class="pt">Trabalho relacionado</span></dt>
-      <dd><p class="en">Lesson restart (fresh session, previous report kept, runtime state reset) and safe PDF re-save with overwrite confirmation.</p><p class="pt">Reinício de lição (sessão nova, relatório anterior preservado, estado de runtime resetado) e novo salvamento seguro de PDF com confirmação de sobrescrita.</p></dd>
-      <dt><span class="en">Evidence</span><span class="pt">Evidências</span></dt>
-      <dd><span class="pending"><span class="en">PENDING: rollover clip, report screenshot with failure status</span><span class="pt">PENDENTE: vídeo do capotamento, screenshot do relatório com status de falha</span></span></dd>
-    </dl>
-  </section>
-</div>
 <div class="full-block" data-project="house-farm" hidden>
   <section>
     <div class="head">
@@ -1121,16 +1029,13 @@ footer{border-top-color:var(--line)}
   </section>
   </div>
 
-  </div><!-- /p-full -->
-</div><!-- /v-project -->
-
+  </div></div>
 <footer>
   <span style="display:inline-flex;align-items:center;gap:12px"><svg class="foot-mark" viewBox="586 322 1037 1065" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M586 322H854L1148 660L1623 1184V1387H1378L828 697V1153H956L1135 1387H586Z M1090 322H1623V1000L1382 746V553H1268Z"/></svg><span>Nicolas Schulze · <span class="en">Unity Developer &amp; Software Engineer</span><span class="pt">Desenvolvedor Unity e Engenheiro de Software</span></span></span>
   <span class="mono">Unity · C# · HDRP</span>
 </footer>
 </main>
 
-<!-- preview drawer -->
 <div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="d-title">
   <button class="scrim" type="button" aria-label="Close" data-close-drawer></button>
   <div class="panel">
@@ -1139,7 +1044,6 @@ footer{border-top-color:var(--line)}
   </div>
 </div>
 
-<!-- lightbox -->
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
   <div class="lb-top"><span class="label" id="lb-count"></span><button type="button" id="lb-close"><span class="en">Close ✕</span><span class="pt">Fechar ✕</span></button></div>
   <div class="lb-stage"><img id="lb-img" alt=""></div>
@@ -1286,31 +1190,7 @@ footer{border-top-color:var(--line)}
       note:{en:'My part: level design and lighting. Machine models: RealDrive team.',pt:'Minha parte: level design e iluminação. Modelos das máquinas: equipe RealDrive.'},
       facts:[[{en:'Project',pt:'Projeto'},'RealDrive Agro'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting',pt:'Level design, iluminação'}],['Engine','Unity'],['Status',{en:'Finished',pt:'Finalizado'}]],
       hl:[[{en:'Reference',pt:'Referência'},{en:'Real space: green light, logo panel, equipment in the centre',pt:'Espaço real: luz verde, painel com a marca, equipamento no centro'}],[{en:'Iteration',pt:'Iteração'},{en:'Light colour tests and less set dressing at each pass',pt:'Testes de cor de luz e menos cenário a cada versão'}],[{en:'Result',pt:'Resultado'},{en:'Pick farm, operation, crop and machine on one stage',pt:'Escolher fazenda, operação, cultura e máquina num só palco'}]],
-      strip:['gr_16','gr_15','gr_19','gr_13','gr_07','gr_01'] },
-    { id:'yellow-mirrors', status:'draft', series:'andamento',
-      title:'Yellow · Mirrors', kicker:{en:'Heavy equipment simulator',pt:'Simulador de equipamento pesado'},
-      period:'2026', tags:['Unity 6','HDRP','RenderTexture','Rewired'],
-      lede:{en:'Virtual and physical rear-view mirrors for heavy vehicles, adjustable at runtime and saved per vehicle.',pt:'Retrovisores virtuais e físicos para veículos pesados, ajustáveis em runtime e salvos por veículo.'},
-      summary:{en:'Per-vehicle mirror cameras rendered to RenderTextures, with UV cropping, physical mirror materials, and runtime adjustment through Rewired that persists between sessions.',pt:'Câmeras de espelho por veículo renderizando em RenderTextures, com recorte de UV, materiais de espelho físico e ajuste em runtime pelo Rewired, persistido entre sessões.'},
-      facts:[[{en:'Project',pt:'Projeto'},'Yellow'],['Engine','Unity 6 · HDRP'],['Input','Rewired'],['Status',{en:'Draft · authorship pending',pt:'Rascunho · autoria pendente'}]],
-      hl:[[{en:'Rendering',pt:'Render'},{en:'Mirror cameras, RenderTextures, UV cropping',pt:'Câmeras de espelho, RenderTextures, recorte de UV'}],[{en:'Control',pt:'Controle'},{en:'Runtime adjustment via Rewired, persisted',pt:'Ajuste em runtime via Rewired, persistido'}],[{en:'Mode',pt:'Modo'},{en:'Grayscale adjustment mode',pt:'Modo de ajuste em escala de cinza'}]],
-      ph:{en:'Cabin view with mirrors',pt:'Vista da cabine com espelhos'} },
-    { id:'yellow-performance', status:'draft', series:'andamento',
-      title:'Yellow · 4K', kicker:{en:'Performance engineering',pt:'Engenharia de performance'},
-      period:'2026', tags:['Profiler','GC','HDRP cameras'],
-      lede:{en:'Profiling a Unity 6 HDRP simulator toward 60 FPS at 3840×2160 without lowering visual or simulation quality.',pt:'Profiling de um simulador em Unity 6 HDRP rumo a 60 FPS em 3840×2160 sem reduzir a qualidade visual ou da simulação.'},
-      summary:{en:'Separated startup cost from steady-state cost, removed recurring component searches from the mirror views and eliminated steady-state GC allocation in the audited paths.',pt:'Separei o custo de startup do custo em steady state, removi as buscas recorrentes de componentes das vistas de espelho e zerei a alocação de GC em steady state nos caminhos auditados.'},
-      facts:[[{en:'Target',pt:'Meta'},'~60 FPS · 3840×2160'],[{en:'Frame measured',pt:'Frame medido'},'29.5 ms'],[{en:'Steady-state GC',pt:'GC em steady state'},{en:'0 B (audited paths)',pt:'0 B (caminhos auditados)'}],['Status',{en:'Draft · baseline pending',pt:'Rascunho · baseline pendente'}]],
-      hl:[['Startup',{en:'Lesson startup logic ≈0.98 ms',pt:'Lógica de startup da lição ≈0,98 ms'}],['Scripts',{en:'Main-thread scripts 10.1 ms',pt:'Scripts na main thread 10,1 ms'}],['MirrorView',{en:'0 recurring GetComponentsInChildren calls',pt:'0 chamadas recorrentes de GetComponentsInChildren'}],[{en:'Honest gap',pt:'Gap honesto'},{en:'29.5 ms ≈ 34 FPS; target not yet reached',pt:'29,5 ms ≈ 34 FPS; meta ainda não atingida'}]],
-      ph:{en:'Profiler capture',pt:'Captura do profiler'} },
-    { id:'rollover', status:'draft', series:'andamento',
-      title:'Rollover', kicker:{en:'Yellow + RDLesson · cross-repository',pt:'Yellow + RDLesson · entre repositórios'},
-      period:'2026', tags:['Lesson lifecycle','Reports','Regression control'],
-      lede:{en:'A rollover records the infraction, ends the lesson and reaches the report, the same way in every lesson type.',pt:'O capotamento registra a infração, encerra a lição e chega ao relatório, do mesmo jeito em todo tipo de lição.'},
-      summary:{en:'A change across the shared RDLesson framework and the Yellow project, made consistent across lesson types while keeping both repositories free of regressions.',pt:'Uma mudança no framework compartilhado RDLesson e no projeto Yellow, consistente entre tipos de lição e sem regressões nos dois repositórios.'},
-      facts:[[{en:'Repositories',pt:'Repositórios'},'Yellow · RDLesson'],[{en:'Area',pt:'Área'},{en:'Lesson lifecycle',pt:'Ciclo de vida da lição'}],[{en:'Related',pt:'Relacionado'},{en:'Restart, PDF re-save',pt:'Reinício, novo salvamento de PDF'}],['Status',{en:'Draft · evidence pending',pt:'Rascunho · evidências pendentes'}]],
-      hl:[[{en:'Infraction',pt:'Infração'},{en:'Rollover recorded',pt:'Capotamento registrado'}],[{en:'Lesson',pt:'Lição'},{en:'Terminated with failure status',pt:'Encerrada com status de falha'}],[{en:'Report',pt:'Relatório'},{en:'Failure carried into the report',pt:'Falha levada ao relatório'}]],
-      ph:{en:'Rollover → report with failure',pt:'Capotamento → relatório com falha'} }
+      strip:['gr_16','gr_15','gr_19','gr_13','gr_07','gr_01'] }
   ];
   function byId(id){ return P.filter(function(p){return p.id===id;})[0]; }
 
@@ -1342,7 +1222,7 @@ footer{border-top-color:var(--line)}
   }
   function cardHTML(p){
     var img = p.cardCover ? '<img src="'+p.cardCover+'" alt="" loading="lazy">' : coverHTML(p,false);
-    return '<article class="card ns-'+p.series+'"><div class="cover">'+img+'</div>'+
+    return '<article class="card ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="cover">'+img+'</div>'+
       '<div class="body"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
       '<h3>'+p.title+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+p.period+'</p>'+
       '<p style="font-size:16px">'+t(p.lede)+'</p>'+
@@ -1350,7 +1230,7 @@ footer{border-top-color:var(--line)}
       '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div></article>';
   }
   function rowHTML(p){
-    return '<div class="prow ns-'+p.series+'"><div class="thumb">'+coverHTML(p,false)+'</div>'+
+    return '<div class="prow ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="thumb">'+coverHTML(p,false)+'</div>'+
       '<div class="txt"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
       '<span class="label">'+t(p.kicker)+' · '+p.period+'</span>'+
       '<h3>'+p.title+'</h3><p>'+t(p.summary)+'</p><div class="tags">'+p.tags.map(function(x){return '<span class="chip">'+x+'</span>';}).join('')+'</div></div>'+
@@ -1504,7 +1384,7 @@ footer{border-top-color:var(--line)}
   try{ matchMedia('(prefers-color-scheme: light)').addEventListener('change',paintTheme); }catch(e){}
   new MutationObserver(paintTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
   paintTheme();
-  route(currentHash());
+    route(currentHash());
 })();
 </script>
 

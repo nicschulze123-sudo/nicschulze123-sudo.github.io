@@ -1,12 +1,32 @@
 # Nicolas Schulze · Portfolio
 
-Site estático (HTML, CSS, JS e imagens). Não precisa de build.
+Site estático publicado no GitHub Pages. Esta pasta contém **apenas a versão pública**.
 
-## Publicar grátis no GitHub Pages
+## Duas versões
 
-1. Crie um repositório público chamado `SEU-USUARIO.github.io` (troque pelo seu usuário do GitHub).
-2. Envie o conteúdo desta pasta para a raiz do repositório (`index.html`, `img/`, `.nojekyll`).
-3. No repositório: Settings → Pages → Build and deployment → Source: "Deploy from a branch" → Branch: `main` / `/ (root)` → Save.
-4. Em um ou dois minutos o site fica em `https://SEU-USUARIO.github.io`.
+| Versão | Onde fica | Quem vê |
+|---|---|---|
+| **Edição / pré-visualização** | Artifact privado no Claude (com rascunhos, pendências e o botão "Visão pública") | Só você |
+| **Pública** | Este repositório → `nicschulze123-sudo.github.io` | Recrutadores e clientes |
 
-Para atualizar: substitua os arquivos e faça um novo commit/push.
+Rascunhos e pendências nunca entram neste repositório. A versão pública é gerada a partir da versão de edição por um script que remove tudo o que é privado.
+
+## Segurança aplicada
+
+- Content-Security-Policy restritiva: só roda o JavaScript do próprio site (por hash), sem scripts, formulários ou conexões externas.
+- Fontes hospedadas no próprio site (nenhuma requisição ao Google; o visitante não é rastreado).
+- Sem cookies, sem formulários, sem coleta de dados.
+- Links externos com `noopener noreferrer`.
+- Referrer policy `strict-origin-when-cross-origin`.
+
+## Recomendado no GitHub (uma vez)
+
+1. Settings → Pages → marque **Enforce HTTPS**.
+2. Ative a verificação em duas etapas (2FA) na sua conta do GitHub.
+3. Settings → Code security → deixe ativo o **Secret scanning** e o **Push protection**.
+
+## Atualizar
+
+1. Peça a atualização ao Claude (ela é feita primeiro na versão de edição).
+2. Confira no botão "Visão pública".
+3. GitHub Desktop → Commit to main → Push origin.
