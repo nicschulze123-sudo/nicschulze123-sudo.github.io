@@ -1,5 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfslbNaMtVSKaI0WOpA1mdHBlhfk4c5dk5hfO+1IT50=' 'sha256-j7Vp/wtT6coPK2+dDTiAwfW/KxN2L+VXWb3wtw3EYSE='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze · Unity Developer and Software Engineer · simulation and training."><meta name="robots" content="index,follow"><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Nicolas Schulze</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfslbNaMtVSKaI0WOpA1mdHBlhfk4c5dk5hfO+1IT50=' 'sha256-VyrU6hEOwjjm0uVRgYrgLUWC3HEbySTfAcX2/HwkHkA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer and Software Engineer. Training simulators in Unity 6 and HDRP: vehicle physics, hardware input, lessons, PDF reports and 4K performance."><meta name="robots" content="index,follow"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer &amp; Software Engineer"><meta property="og:description" content="Training simulators in Unity 6 and HDRP: agricultural, orchard and heavy-equipment projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer & Software Engineer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","Simulation","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Nicolas Schulze · Unity Developer &amp; Software Engineer</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
 <style>@font-face{font-family:"Barlow";src:url("fonts/Barlow-Regular.woff2") format("woff2");font-weight:400;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-Medium.woff2") format("woff2");font-weight:500;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}@font-face{font-family:"Barlow Condensed";src:url("fonts/BarlowCondensed-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
 /* Tokens from the "Nicolas Schulze" design system (dark theme, the brand's primary). */
@@ -488,6 +488,12 @@ footer{border-top-color:var(--line)}
 .home-hero .hero-bg.ns-andamento{--series:#F28A2E;--on-series:#0A1520}
 .home-hero .hero-bg.ns-entregue{--series:#3CC2B2;--on-series:#072322}
 .home-hero .sc-layer{background:#0F0E17}
+.fields .budget{margin-top:18px}
+@media (max-width:760px){#v-home{display:flex;flex-direction:column}#v-home>.home-hero{order:0}#v-home>#home-projects{order:1}#v-home>#home-skills{order:2}#v-home>.about-teaser{order:3}}
+.refs .linkish{min-height:28px;padding:6px 2px;display:inline-flex;align-items:center}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--series);color:var(--on-series);padding:10px 16px;border-radius:var(--radius-md);font-weight:600;border:0;cursor:pointer}
+.skip:focus{top:12px}
+#main:focus{outline:none}
 </style>
 <script>
 (function(){
@@ -501,7 +507,7 @@ footer{border-top-color:var(--line)}
 
 </head>
 <body>
-<div class="bar">
+<div class="bar"><button class="skip" type="button" id="skip"><span class="en">Skip to content</span><span class="pt">Pular para o conteúdo</span></button>
   <div class="wrap">
     <button class="ns-logo" type="button" data-go="home" aria-label="Nicolas Schulze · Home"><svg class="ns-logo__mark" viewBox="586 322 1037 1065" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M586 322H854L1148 660L1623 1184V1387H1378L828 697V1153H956L1135 1387H586Z M1090 322H1623V1000L1382 746V553H1268Z"/></svg><span class="ns-logo__div"></span><span class="ns-logo__name">NICOLAS<br>SCHULZE</span></button>
     <div class="right">
@@ -523,7 +529,7 @@ footer{border-top-color:var(--line)}
   </div>
 </div>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
 
 <div class="view" id="v-home">
   <div class="home-hero">
@@ -544,9 +550,9 @@ footer{border-top-color:var(--line)}
     <p class="lede pt">Construo e mantenho os sistemas por trás de simuladores de treinamento industriais e agrícolas: física de veículos, controles físicos, lições e avaliação, relatórios e performance. A maior parte desse trabalho acontece dentro de bases de código grandes e compartilhadas.</p>
     <div class="chips"><span class="chip">Unity 6</span><span class="chip">C#</span><span class="chip">HDRP</span><span class="chip">Rewired</span><span class="chip">Input System</span><span class="chip">Rigidbody</span><span class="chip">JSON → PDF</span><span class="chip">Profiler</span></div>
     <div class="cta">
-      <button class="btn primary" type="button" data-scroll="home-projects"><span class="en">Preview projects</span><span class="pt">Pré-visualizar projetos</span></button>
-      <button class="btn" type="button" data-scroll="home-skills"><span class="en">Skills</span><span class="pt">Skills</span></button>
-      <button class="btn" type="button" data-go="about"><span class="en">All about me</span><span class="pt">Tudo sobre mim</span></button>
+      <button class="btn primary" type="button" data-scroll="home-projects"><span class="en">View projects</span><span class="pt">Ver projetos</span></button>
+      <button class="btn" type="button" data-go="about" data-scroll="contact"><span class="en">Get in touch</span><span class="pt">Entrar em contato</span></button>
+      <button class="btn" type="button" data-go="about"><span class="en">About me</span><span class="pt">Sobre mim</span></button>
     </div>
   </div>
 
@@ -556,12 +562,12 @@ footer{border-top-color:var(--line)}
       <p class="muted"><span class="en">Each skill links to the project where you can see it. Click a project name to open its preview.</span><span class="pt">Cada skill aponta para o projeto onde ela aparece. Clique no nome do projeto para abrir a pré-visualização.</span></p>
     </div>
     <div class="skills">
-    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
+    <article class="skill"><span class="label brass">01</span><h3><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></h3><p><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions and restart flows.</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações e reinício.</span></p><div class="chips"><span class="chip">LessonManager</span><span class="chip">Tasks</span><span class="chip">Scoring</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="yellow">Yellow ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">02</span><h3><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></h3><p><span class="en">Rigidbodies, joints, trailers, implements, forklift and bin physics.</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira e física de bins.</span></p><div class="chips"><span class="chip">Rigidbody</span><span class="chip">Joints</span><span class="chip">Colliders</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
-    <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
-    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
-    <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div></article>
-    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
+    <article class="skill"><span class="label brass">03</span><h3><span class="en">Hardware &amp; input</span><span class="pt">Hardware e input</span></h3><p><span class="en">Steering, analog axes, control panels, calibration and persistent mapping.</span><span class="pt">Volante, eixos analógicos, painéis, calibração e mapeamento persistente.</span></p><div class="chips"><span class="chip">Rewired</span><span class="chip">Input System</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow">Yellow ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button></div></article>
+    <article class="skill"><span class="label brass">04</span><h3><span class="en">Rendering &amp; HDRP</span><span class="pt">Render e HDRP</span></h3><p><span class="en">Multi-camera setups, RenderTextures, mirrors, lighting and materials.</span><span class="pt">Setups multi-câmera, RenderTextures, espelhos, iluminação e materiais.</span></p><div class="chips"><span class="chip">HDRP</span><span class="chip">RenderTexture</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow">Yellow ↗</button><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
+    <article class="skill"><span class="label brass">05</span><h3>Performance</h3><p><span class="en">Profiling startup and steady state, GC allocation and camera cost.</span><span class="pt">Profiling de startup e steady state, alocação de GC e custo de câmeras.</span></p><div class="chips"><span class="chip">Profiler</span><span class="chip">GC</span><span class="chip">4K</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="yellow">Yellow ↗</button></div></article>
+    <article class="skill"><span class="label brass">06</span><h3><span class="en">Data &amp; reporting</span><span class="pt">Dados e relatórios</span></h3><p><span class="en">Telemetry and statistics through JSON to report UI and PDF export.</span><span class="pt">Telemetria e estatísticas passando por JSON até UI de relatório e PDF.</span></p><div class="chips"><span class="chip">JSON</span><span class="chip">PDF</span><span class="chip">Telemetry</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="yellow">Yellow ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button></div></article>
     <article class="skill"><span class="label brass">07</span><h3><span class="en">C# tooling</span><span class="pt">Ferramentas em C#</span></h3><p><span class="en">Custom Inspectors and editor tools that remove friction from production.</span><span class="pt">Inspectors customizados e ferramentas de editor que tiram atrito da produção.</span></p><div class="chips"><span class="chip">Editor</span><span class="chip">Unity Recorder</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button></div></article>
     <article class="skill"><span class="label brass">08</span><h3>Level design</h3><p><span class="en">Composition, set dressing and light used as a layout tool.</span><span class="pt">Composição, set dressing e luz usada como ferramenta de layout.</span></p><div class="chips"><span class="chip">Composition</span><span class="chip">Lighting</span></div><div class="refs"><span class="label"><span class="en">Seen in</span><span class="pt">Onde aparece</span></span><button class="linkish" type="button" data-preview="house-farm">House Farm ↗</button><button class="linkish" type="button" data-preview="schio">Schio ↗</button><button class="linkish" type="button" data-preview="agro">RealDrive Agro ↗</button><button class="linkish" type="button" data-preview="garagem">Garagem ↗</button></div></article>
     </div>
@@ -569,9 +575,8 @@ footer{border-top-color:var(--line)}
 
   <section id="home-projects" class="tight">
     <div class="head">
-      <div><span class="label kicker"><span class="en">Projects</span><span class="pt">Projetos</span></span><h2 class="en">Preview or see everything</h2><h2 class="pt">Pré-visualize ou veja tudo</h2></div>
-      <p class="muted en">Each project opens a quick preview right here, or a full case page with process, evidence and images.</p>
-      <p class="muted pt">Cada projeto abre uma pré-visualização rápida aqui mesmo, ou uma página de case completo com processo, evidências e imagens.</p>
+      <div><span class="label kicker"><span class="en">Projects</span><span class="pt">Projetos</span></span><h2 class="en">Selected work</h2><h2 class="pt">Projetos selecionados</h2></div>
+      <p class="muted"><span class="en">Shipped training simulators built with a team, plus one personal study. Open a quick preview or the full case.</span><span class="pt">Simuladores de treinamento entregues em equipe e um estudo pessoal. Abra a pré-visualização rápida ou o case completo.</span></p>
     </div>
     <div class="cards" id="home-cards"></div>
     <div class="cta-full"><button class="btn" type="button" data-go="projects"><span class="en">All projects →</span><span class="pt">Todos os projetos →</span></button></div>
@@ -611,7 +616,7 @@ footer{border-top-color:var(--line)}
     <div><span class="label"><span class="en">Experience</span><span class="pt">Experiência</span></span><span><span class="en">~5 years</span><span class="pt">~5 anos</span></span></div>
     <div><span class="label"><span class="en">Focus</span><span class="pt">Foco</span></span><span><span class="en">Industrial &amp; training simulation</span><span class="pt">Simulação industrial e de treinamento</span></span></div>
     <div><span class="label">Stack</span><span>Unity 6 · C# · HDRP · Rewired</span></div>
-    <div><span class="label"><span class="en">Role</span><span class="pt">Função</span></span><span><span class="en">Senior Unity Developer · Software Engineer</span><span class="pt">Desenvolvedor Unity Sênior · Engenheiro de Software</span></span></div>
+    <div><span class="label"><span class="en">Role</span><span class="pt">Função</span></span><span><span class="en">Unity Developer · Software Engineer</span><span class="pt">Desenvolvedor Unity · Engenheiro de Software</span></span></div>
   </div>
 
   <section>
@@ -668,14 +673,14 @@ footer{border-top-color:var(--line)}
         <thead><tr><th><span class="en">Area</span><span class="pt">Área</span></th><th><span class="en">Includes</span><span class="pt">Inclui</span></th><th><span class="en">Shown in</span><span class="pt">Onde aparece</span></th></tr></thead>
         <tbody>
           <tr><td>Unity runtime</td><td><span class="en">Scene and prefab architecture, prefab variants, serialized references, loading and scene transitions</span><span class="pt">Arquitetura de cenas e prefabs, prefab variants, referências serializadas, loading e transição de cenas</span></td><td>Schio · Yellow</td></tr>
-          <tr><td><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></td><td><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions, restart</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações, reinício</span></td><td>Schio · Yellow · RDLesson</td></tr>
+          <tr><td><span class="en">Simulation systems</span><span class="pt">Sistemas de simulação</span></td><td><span class="en">Lesson lifecycle, tasks and objectives, scoring, infractions, restart</span><span class="pt">Ciclo de vida de lição, tarefas e objetivos, pontuação, infrações, reinício</span></td><td>RealDrive Agro · Schio · Yellow</td></tr>
           <tr><td><span class="en">Vehicle physics</span><span class="pt">Física de veículos</span></td><td><span class="en">Rigidbodies, joints, trailers, implements, forklift, bin physics</span><span class="pt">Rigidbodies, joints, reboques, implementos, empilhadeira, física de bins</span></td><td>Schio · Yellow</td></tr>
           <tr><td><span class="en">Hardware input</span><span class="pt">Input de hardware</span></td><td><span class="en">Rewired, Input System, calibration, inversion, persistent mapping</span><span class="pt">Rewired, Input System, calibração, inversão, mapeamento persistente</span></td><td>Schio · Yellow</td></tr>
-          <tr><td>Rendering</td><td><span class="en">HDRP, multi-camera, RenderTextures, mirrors, lighting</span><span class="pt">HDRP, multi-câmera, RenderTextures, espelhos, iluminação</span></td><td>Yellow · House Farm · Schio</td></tr>
-          <tr><td><span class="en">Data and reporting</span><span class="pt">Dados e relatórios</span></td><td><span class="en">Telemetry, statistics, JSON, report UI, PDF export, safe overwrite</span><span class="pt">Telemetria, estatísticas, JSON, UI de relatório, exportação em PDF, sobrescrita segura</span></td><td>Schio · RDLesson</td></tr>
+          <tr><td>Rendering</td><td><span class="en">HDRP, multi-camera, RenderTextures, mirrors, lighting</span><span class="pt">HDRP, multi-câmera, RenderTextures, espelhos, iluminação</span></td><td>Yellow · House Farm · Garagem</td></tr>
+          <tr><td><span class="en">Data and reporting</span><span class="pt">Dados e relatórios</span></td><td><span class="en">Telemetry, statistics, JSON, report UI, PDF export, safe overwrite</span><span class="pt">Telemetria, estatísticas, JSON, UI de relatório, exportação em PDF, sobrescrita segura</span></td><td>RealDrive Agro · Schio · Yellow</td></tr>
           <tr><td>Performance</td><td><span class="en">Profiling, GC allocation, startup vs steady state</span><span class="pt">Profiling, alocação de GC, startup vs steady state</span></td><td>Yellow</td></tr>
           <tr><td><span class="en">Tooling</span><span class="pt">Ferramentas</span></td><td><span class="en">Custom Inspectors, capture and recording tools</span><span class="pt">Inspectors customizados, ferramentas de captura e gravação</span></td><td>House Farm</td></tr>
-          <tr><td>Level design</td><td><span class="en">Composition, set dressing, lighting, HDRP materials</span><span class="pt">Composição, set dressing, iluminação, materiais HDRP</span></td><td>House Farm · Schio</td></tr>
+          <tr><td>Level design</td><td><span class="en">Composition, set dressing, lighting, HDRP materials</span><span class="pt">Composição, set dressing, iluminação, materiais HDRP</span></td><td>House Farm · RealDrive Agro · Garagem · Schio</td></tr>
         </tbody>
       </table>
     </div>
@@ -808,7 +813,43 @@ footer{border-top-color:var(--line)}
     <div class="grid" data-gal="garagem"></div>
   </section>
 </div>
-
+<div class="full-block" data-project="yellow" hidden>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Full case · in progress</span><span class="pt">Case completo · em andamento</span></span><h2 class="en">Performance, mirrors and failure, in 4K</h2><h2 class="pt">Performance, retrovisores e falha, em 4K</h2></div>
+      <p class="muted en">Measured numbers only. No before-baseline, so no improvement percentage is claimed.</p>
+      <p class="muted pt">Só números medidos. Sem medição de antes, nenhuma porcentagem de melhoria é declarada.</p>
+    </div>
+    <dl class="fields">
+      <dt><span class="en">Context</span><span class="pt">Contexto</span></dt>
+      <dd><div class="en"><p>Yellow is a heavy-equipment training simulator for SENAI's Linha Amarela, built in Unity 6 with HDRP, Rewired and the Unity Input System, on top of the shared RDLesson lesson framework. It runs at 3840×2160 and has to keep visual quality and simulation behaviour while doing it.</p></div><div class="pt"><p>O Yellow é um simulador de treinamento de equipamento pesado para a Linha Amarela do SENAI, feito em Unity 6 com HDRP, Rewired e o Input System, sobre o framework compartilhado de lições RDLesson. Roda em 3840×2160 e precisa manter a qualidade visual e o comportamento da simulação.</p></div></dd>
+      <dt><span class="en">1 · Performance in 4K</span><span class="pt">1 · Performance em 4K</span></dt>
+      <dd><div class="en"><p>Goal: about 60 FPS at 3840×2160 without lowering quality. I measured startup and steady state separately, measured garbage allocation per frame, isolated rendering, physics and terrain cost, and changed one thing at a time before auditing for regressions.</p><p>Areas investigated: expensive scene searches, vehicle initialization, terrain and Digger systems, mirror cameras, <code>GetComponentsInChildren</code> allocations, HDRP multi-camera cost, startup and loading.</p><div class="budget" role="img" aria-label="Frame time at 4K: 29.5 ms per frame, 10.1 ms of main-thread scripts, against a 16.7 ms budget for 60 FPS">
+          <div class="bar-row"><span><span class="en">Frame</span><span class="pt">Frame</span></span><div class="trk"><div class="fill" style="width:84.3%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">29.5 ms</span></div>
+          <div class="bar-row"><span><span class="en">Main-thread scripts</span><span class="pt">Scripts main thread</span></span><div class="trk"><div class="fill scripts" style="width:28.9%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">10.1 ms</span></div>
+          <div class="axis"><span></span><div class="scale"><span style="left:0">0</span><span style="left:47.7%">16.7 ms · 60 FPS</span><span style="left:95.1%">33.3</span></div><span></span></div>
+        </div><p class="muted" style="margin-top:12px;font-size:14px">Also measured: lesson startup logic ≈0.98 ms; 0 recurring <code>GetComponentsInChildren</code> calls from <code>MirrorView</code>; 0 B steady-state GC in the audited paths. 29.5 ms is about 34 FPS: the 60 FPS target is not reached yet.</p></div><div class="pt"><p>Objetivo: cerca de 60 FPS em 3840×2160 sem reduzir a qualidade. Medi startup e steady state separadamente, medi a alocação de lixo por frame, isolei o custo de renderização, física e terreno, e mudei uma coisa por vez antes de auditar regressões.</p><p>Áreas investigadas: buscas caras na cena, inicialização de veículos, terreno e Digger, câmeras dos espelhos, alocações de <code>GetComponentsInChildren</code>, custo de multi-câmera no HDRP, startup e carregamento.</p><div class="budget" role="img" aria-label="Frame time at 4K: 29.5 ms per frame, 10.1 ms of main-thread scripts, against a 16.7 ms budget for 60 FPS">
+          <div class="bar-row"><span><span class="en">Frame</span><span class="pt">Frame</span></span><div class="trk"><div class="fill" style="width:84.3%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">29.5 ms</span></div>
+          <div class="bar-row"><span><span class="en">Main-thread scripts</span><span class="pt">Scripts main thread</span></span><div class="trk"><div class="fill scripts" style="width:28.9%"></div><div class="mark" style="left:47.7%"></div></div><span class="val">10.1 ms</span></div>
+          <div class="axis"><span></span><div class="scale"><span style="left:0">0</span><span style="left:47.7%">16.7 ms · 60 FPS</span><span style="left:95.1%">33.3</span></div><span></span></div>
+        </div><p class="muted" style="margin-top:12px;font-size:14px">Também medido: lógica de início da aula ≈0,98 ms; 0 chamadas recorrentes de <code>GetComponentsInChildren</code> no <code>MirrorView</code>; 0 B de GC em steady state nos caminhos auditados. 29,5 ms equivalem a cerca de 34 FPS: a meta de 60 FPS ainda não foi atingida.</p></div></dd>
+      <dt><span class="en">2 · Mirrors</span><span class="pt">2 · Retrovisores</span></dt>
+      <dd><div class="en"><p>Operators need rear-view mirrors they can trust, on screen and on physical mirror surfaces. The mirror work covers:</p><ul><li>Per-vehicle mirror cameras rendered to RenderTextures</li><li>Camera positioning and UV cropping</li><li>UI mirrors and physical mirror materials</li><li>Runtime adjustment through Rewired, saved between sessions</li><li>A grayscale adjustment mode</li><li>Per-vehicle setup, including large haul trucks</li></ul></div><div class="pt"><p>O operador precisa de retrovisores confiáveis, na tela e em superfícies de espelho físico. O trabalho nos espelhos cobre:</p><ul><li>Câmeras de espelho por veículo renderizando em RenderTextures</li><li>Posicionamento de câmera e recorte de UV</li><li>Espelhos de UI e materiais de espelho físico</li><li>Ajuste em runtime pelo Rewired, salvo entre sessões</li><li>Modo de ajuste em escala de cinza</li><li>Configuração por veículo, incluindo caminhões fora de estrada</li></ul></div></dd>
+      <dt><span class="en">3 · Rollover ends the lesson</span><span class="pt">3 · Capotou, a aula termina</span></dt>
+      <dd><div class="en"><p>A rollover had to count as a lesson failure the same way in every lesson type. Now it records the infraction, ends the lesson, sets the failure status and carries the failure into the report.</p><p>The change crossed two repositories, the shared RDLesson framework and Yellow, so regressions were checked on both sides. Related work: lesson restart (fresh session, previous report kept, runtime state reset) and safe PDF re-save with overwrite confirmation.</p></div><div class="pt"><p>O capotamento precisava contar como falha da aula do mesmo jeito em todo tipo de aula. Agora ele registra a infração, encerra a aula, define o status de falha e leva a falha para o relatório.</p><p>A mudança atravessou dois repositórios, o framework compartilhado RDLesson e o Yellow, então as regressões foram verificadas dos dois lados. Trabalho relacionado: reinício de aula (sessão nova, relatório anterior mantido, estado de runtime zerado) e novo salvamento do PDF com confirmação de sobrescrita.</p></div></dd>
+      <dt><span class="en">What is still open</span><span class="pt">O que ainda está aberto</span></dt>
+      <dd><div class="en"><ul><li>Reach 16.7 ms per frame (60 FPS) at 4K</li><li>A before-measurement, to state the improvement honestly</li></ul></div><div class="pt"><ul><li>Chegar a 16,7 ms por frame (60 FPS) em 4K</li><li>Uma medição de antes, para declarar a melhoria com honestidade</li></ul></div></dd>
+    </dl>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Gallery</span><span class="pt">Galeria</span></span><h2 class="en">Job site and mine</h2><h2 class="pt">Canteiro e mina</h2></div>
+      <p class="muted en">Captures from the simulator, July 2026. They show the whole project, built by the team; my parts are the three above.</p>
+      <p class="muted pt">Capturas do simulador, julho de 2026. Mostram o projeto inteiro, feito pela equipe; minhas partes são as três acima.</p>
+    </div>
+    <div class="grid" data-gal="yellow"></div>
+  </section>
+</div>
 
 <div class="full-block" data-project="house-farm" hidden>
   <section>
@@ -1131,6 +1172,20 @@ footer{border-top-color:var(--line)}
       ['sc_18','Headquarters from above','Sede vista de cima'],
       ['sc_20','Road to the buildings','Estrada até os barracões'],
       ['sc_24','Open shed','Barracão aberto']]),
+    yellow: mk('yellow',[
+      ['yl_01','Backhoe loader on the urban job site, with the cab gauges','Retroescavadeira no canteiro urbano, com os instrumentos da cabine'],
+      ['yl_02','Excavator seen from the cab','Escavadeira vista de dentro da cabine'],
+      ['yl_03','Forklift view: unloading the truck, with both mirrors','Vista da empilhadeira: descarga do caminhão, com os dois retrovisores'],
+      ['yl_04','Off-road haul truck at the mine','Caminhão fora de estrada na mina'],
+      ['yl_05','Wheel loader in the pit','Pá carregadeira na cava'],
+      ['yl_06','The machine line-up','A frota de máquinas'],
+      ['yl_07','Skid steer cab, inside the cage','Cabine da minicarregadeira, por dentro da grade'],
+      ['yl_08','Excavator next to the building under construction','Escavadeira ao lado do prédio em obra'],
+      ['yl_09','Forklift and flatbed truck on site','Empilhadeira e caminhão de carroceria no canteiro'],
+      ['yl_10','Mine overview with the haul road','Visão geral da mina com a estrada de transporte'],
+      ['yl_11','Skid steer with the bucket raised','Minicarregadeira com a caçamba erguida'],
+      ['yl_12','Fleet on the mine floor','Frota no piso da mina'],
+      ['yl_13','Haul truck in front of the fleet','Caminhão fora de estrada à frente da frota']]),
     garagem: mk('garagem',[
       ['gr_16','Final version: sprayer on stage','Versão final: pulverizador no palco'],
       ['gr_15','Final version: combine','Versão final: colheitadeira'],
@@ -1146,21 +1201,10 @@ footer{border-top-color:var(--line)}
       ['gr_01','First version','Primeira versão'],
       ['gr_02','In the Unity editor','No editor da Unity']])
   };
-  var ALLIMG=HF_ALL.concat(GAL.agro,GAL.schio,GAL.garagem);
+  var ALLIMG=HF_ALL.concat(GAL.agro,GAL.schio,GAL.yellow,GAL.garagem);
   function hf(k){ return ALLIMG.filter(function(x){return x.k===k;})[0]; }
 
   var P=[
-    { id:'house-farm', status:'ready', series:'estudo', feature:true,
-      title:'House Farm', cover:'img/full/hero.jpg', coverThumb:'img/thumb/render_01.jpg', cardCover:'img/full/render_03.jpg',
-      kicker:{en:'Level design & tools · Study project',pt:'Level design e ferramentas · Projeto de estudo'},
-      period:'2025', tags:['Unity','HDRP','C#','Level design'],
-      lede:{en:'A 1970s American farmhouse interior built in Unity HDRP, and the C# camera tool I wrote to capture it.',pt:'O interior de uma casa de fazenda americana dos anos 70, construído na Unity HDRP, e a ferramenta de câmera em C# que criei para capturá-lo.'},
-      summary:{en:'I built a lived-in farmhouse interior in stages, used light and props as composition tools, and wrote a C# tool to capture it in 4K and record multiple cameras straight from the Editor.',pt:'Construí em etapas o interior de uma casa de fazenda com cara de habitada, usei luz e props como ferramentas de composição e escrevi uma ferramenta em C# para capturá-la em 4K e gravar várias câmeras direto do Editor.'},
-      facts:[[{en:'Engine',pt:'Engine'},'Unity · HDRP'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting, C# tooling',pt:'Level design, iluminação, ferramentas em C#'}],[{en:'Type',pt:'Tipo'},{en:'Study project',pt:'Projeto de estudo'}],['Status',{en:'Environment done · animation in progress',pt:'Ambiente concluído · animação em andamento'}]],
-      hl:[['Level design',{en:'Layout, set dressing and focal points in every room',pt:'Layout, set dressing e pontos focais em cada cômodo'}],[{en:'Lighting',pt:'Iluminação'},{en:'HDRP lighting, volumetric fog and reflection probes',pt:'Iluminação HDRP, fog volumétrico e reflection probes'}],[{en:'Tool',pt:'Ferramenta'},{en:'<code>PhotoVideoCamera.cs</code>: offscreen 4K capture, free camera, one MP4 per camera',pt:'<code>PhotoVideoCamera.cs</code>: captura 4K offscreen, câmera livre, um MP4 por câmera'}],[{en:'Next',pt:'Próximo'},{en:'Rigged character walking through the house',pt:'Personagem com rig andando pela casa'}]],
-      compare:{a:'img/full/cmp_hall_unlit.jpg',b:'img/full/cmp_hall_lit.jpg',lb:{en:'With HDRP lighting',pt:'Com iluminação HDRP'},la:{en:'Without',pt:'Sem'},note:{en:'Drag to compare. Same camera, same geometry.',pt:'Arraste para comparar. Mesma câmera, mesma geometria.'}},
-      strip:['render_01','render_03','render_04','render_08','render_10','render_12'],
-      count:{en:'25 images · 3 comparisons',pt:'25 imagens · 3 comparações'} },
     { id:'agro', status:'ready', series:'entregue',
       title:'RealDrive Agro', cover:'img/full/ag_44.jpg', coverThumb:'img/thumb/ag_44.jpg', cardCover:'img/full/ag_13.jpg',
       kicker:{en:'Agricultural training simulator · Team project',pt:'Simulador de treinamento agrícola · Projeto em equipe'},
@@ -1174,13 +1218,23 @@ footer{border-top-color:var(--line)}
     { id:'schio', status:'ready', series:'entregue',
       title:'Simulador Schio', cover:'img/full/sc_14.jpg', coverThumb:'img/thumb/sc_14.jpg', cardCover:'img/full/sc_44.jpg',
       kicker:{en:'Apple orchard training simulator · Team project',pt:'Simulador de treinamento para pomar de maçã · Projeto em equipe'},
-      period:'Jul 2024 – May 2026', tags:['Unity','C#','HDRP','Physics','Reporting'],
+      period:{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}, tags:['Unity','C#','HDRP','Physics','Reporting'],
       lede:{en:'An orchard under hail net, spraying, bins, packing shed and yard in one environment, to train the operation without taking a real machine out of work. Built at RealDrive for Agropecuária Schio.',pt:'Pomar sob tela antigranizo, pulverização, bins, barracão e pátio num só ambiente, para treinar a operação sem tirar uma máquina real do trabalho. Feito na RealDrive para a Agropecuária Schio.'},
       summary:{en:'Almost two years inside one simulator. I came in through the environment, after the technical visit to the orchard, and moved into vehicle and implement physics, tasks and lessons, reports, user registration, hardware and calibration.',pt:'Quase dois anos dentro de um simulador. Entrei pelo ambiente, depois da visita técnica ao pomar, e passei para física de veículos e implementos, tarefas e lições, relatórios, cadastro de usuários, hardware e calibração.'},
       note:{en:'The core architecture is by Vinicius Bacca. My work was to understand it, then extend it without breaking it. The cab, with Valtra tractor parts, was built by the RealDrive hardware team.',pt:'A arquitetura central é do Vinicius Bacca. Meu trabalho foi entendê-la e depois estendê-la sem quebrar. A cabine, com componentes do trator Valtra, foi feita pela equipe de hardware da RealDrive.'},
       facts:[[{en:'Period',pt:'Período'},{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}],[{en:'Client',pt:'Cliente'},'Agropecuária Schio · Vacaria/RS'],['Stack','Unity · C# · HDRP'],['Status',{en:'Finished',pt:'Finalizado'}]],
       hl:[[{en:'Environment',pt:'Ambiente'},{en:'Orchard with hail net, winter and fruiting states, shed, yard and silo',pt:'Pomar com tela, estados de inverno e com frutos, barracão, pátio e silo'}],[{en:'Physics',pt:'Física'},{en:'Trailers, forklift, bin dumpers, <code>BinFallDetector</code>',pt:'Reboques, empilhadeira, basculadores, <code>BinFallDetector</code>'}],[{en:'Lessons',pt:'Lições'},{en:'Extended <code>LessonManager</code> and <code>SchioTaskManager</code>',pt:'Estendi o <code>LessonManager</code> e o <code>SchioTaskManager</code>'}],[{en:'Reports',pt:'Relatórios'},{en:'Statistics → JSON → UI → PDF',pt:'Estatísticas → JSON → UI → PDF'}]],
       strip:['sc_22','sc_39','sc_50','sc_34','sc_32','sc_52'] },
+    { id:'yellow', status:'ready', series:'andamento',
+      title:'Yellow · SENAI', cover:'img/full/yl_cover.jpg', coverThumb:'img/thumb/yl_cover.jpg', cardCover:'img/full/yl_card.jpg',
+      kicker:{en:'Heavy-equipment simulator · Linha Amarela',pt:'Simulador de equipamento pesado · Linha Amarela'},
+      period:'2026', tags:['Unity 6','HDRP','Rewired','Profiler','RDLesson'],
+      lede:{en:'A Unity 6 HDRP simulator for SENAI\'s heavy-equipment (Linha Amarela) training. Three parts of my work: 4K performance, rear-view mirrors, and rollover handling across the lesson framework.',pt:'Um simulador em Unity 6 HDRP para o treinamento de Linha Amarela do SENAI. Três frentes do meu trabalho: performance em 4K, retrovisores e o tratamento de capotamento no framework de lições.'},
+      summary:{en:'I profiled the simulator toward 60 FPS at 3840×2160, worked on per-vehicle mirrors that operators adjust at runtime, and made a rollover end the lesson and reach the report the same way in every lesson type.',pt:'Fiz o profiling do simulador rumo a 60 FPS em 3840×2160, trabalhei nos retrovisores por veículo que o operador ajusta em runtime e fiz o capotamento encerrar a lição e chegar ao relatório do mesmo jeito em todo tipo de lição.'},
+      note:{en:'In progress. The numbers were measured in the project\'s test environment. There is no before-baseline, so I do not claim an improvement percentage, and the 60 FPS target is not reached yet. The screens show the whole simulator, built by the team; my parts are the three above.',pt:'Em andamento. Os números foram medidos no ambiente de teste do projeto. Não há medição de antes, então não declaro porcentagem de melhoria, e a meta de 60 FPS ainda não foi atingida. As telas mostram o simulador inteiro, feito pela equipe; minhas partes são as três acima.'},
+      facts:[[{en:'Client',pt:'Cliente'},'SENAI · Linha Amarela'],['Engine','Unity 6 · HDRP'],['Input','Rewired · Input System'],['Status',{en:'In progress',pt:'Em andamento'}]],
+      hl:[[{en:'4K frame',pt:'Frame em 4K'},{en:'29.5 ms measured at 3840×2160 · budget for 60 FPS is 16.7 ms',pt:'29,5 ms medidos em 3840×2160 · o orçamento para 60 FPS é 16,7 ms'}],[{en:'Memory',pt:'Memória'},{en:'0 B steady-state GC in the audited paths · lesson startup logic ≈0.98 ms',pt:'0 B de GC em steady state nos caminhos auditados · lógica de início da aula ≈0,98 ms'}],[{en:'Mirrors',pt:'Retrovisores'},{en:'Per-vehicle RenderTexture cameras, adjusted at runtime via Rewired and saved',pt:'Câmeras em RenderTexture por veículo, ajustadas em runtime pelo Rewired e salvas'}],[{en:'Rollover',pt:'Capotamento'},{en:'Infraction → lesson ends → failure in the report, in every lesson type',pt:'Infração → aula encerrada → falha no relatório, em todo tipo de aula'}]],
+      strip:['yl_01','yl_02','yl_03','yl_04','yl_05','yl_06'] },
     { id:'garagem', status:'ready', series:'entregue',
       title:'Garagem RealDrive', cover:'img/full/gr_16.jpg', coverThumb:'img/thumb/gr_16.jpg', cardCover:'img/full/gr_15.jpg',
       kicker:{en:'Level design & lighting · Simulator menu',pt:'Level design e iluminação · Menu do simulador'},
@@ -1190,7 +1244,18 @@ footer{border-top-color:var(--line)}
       note:{en:'My part: level design and lighting. Machine models: RealDrive team.',pt:'Minha parte: level design e iluminação. Modelos das máquinas: equipe RealDrive.'},
       facts:[[{en:'Project',pt:'Projeto'},'RealDrive Agro'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting',pt:'Level design, iluminação'}],['Engine','Unity'],['Status',{en:'Finished',pt:'Finalizado'}]],
       hl:[[{en:'Reference',pt:'Referência'},{en:'Real space: green light, logo panel, equipment in the centre',pt:'Espaço real: luz verde, painel com a marca, equipamento no centro'}],[{en:'Iteration',pt:'Iteração'},{en:'Light colour tests and less set dressing at each pass',pt:'Testes de cor de luz e menos cenário a cada versão'}],[{en:'Result',pt:'Resultado'},{en:'Pick farm, operation, crop and machine on one stage',pt:'Escolher fazenda, operação, cultura e máquina num só palco'}]],
-      strip:['gr_16','gr_15','gr_19','gr_13','gr_07','gr_01'] }
+      strip:['gr_16','gr_15','gr_19','gr_13','gr_07','gr_01'] },
+    { id:'house-farm', status:'ready', series:'estudo', feature:true,
+      title:'House Farm', cover:'img/full/hero.jpg', coverThumb:'img/thumb/render_01.jpg', cardCover:'img/full/render_03.jpg',
+      kicker:{en:'Level design & tools · Study project',pt:'Level design e ferramentas · Projeto de estudo'},
+      period:'2025', tags:['Unity','HDRP','C#','Level design'],
+      lede:{en:'A 1970s American farmhouse interior built in Unity HDRP, and the C# camera tool I wrote to capture it.',pt:'O interior de uma casa de fazenda americana dos anos 70, construído na Unity HDRP, e a ferramenta de câmera em C# que criei para capturá-lo.'},
+      summary:{en:'I built a lived-in farmhouse interior in stages, used light and props as composition tools, and wrote a C# tool to capture it in 4K and record multiple cameras straight from the Editor.',pt:'Construí em etapas o interior de uma casa de fazenda com cara de habitada, usei luz e props como ferramentas de composição e escrevi uma ferramenta em C# para capturá-la em 4K e gravar várias câmeras direto do Editor.'},
+      facts:[[{en:'Engine',pt:'Engine'},'Unity · HDRP'],[{en:'My role',pt:'Meu papel'},{en:'Level design, lighting, C# tooling',pt:'Level design, iluminação, ferramentas em C#'}],[{en:'Type',pt:'Tipo'},{en:'Study project',pt:'Projeto de estudo'}],['Status',{en:'Environment done · animation in progress',pt:'Ambiente concluído · animação em andamento'}]],
+      hl:[['Level design',{en:'Layout, set dressing and focal points in every room',pt:'Layout, set dressing e pontos focais em cada cômodo'}],[{en:'Lighting',pt:'Iluminação'},{en:'HDRP lighting, volumetric fog and reflection probes',pt:'Iluminação HDRP, fog volumétrico e reflection probes'}],[{en:'Tool',pt:'Ferramenta'},{en:'<code>PhotoVideoCamera.cs</code>: offscreen 4K capture, free camera, one MP4 per camera',pt:'<code>PhotoVideoCamera.cs</code>: captura 4K offscreen, câmera livre, um MP4 por câmera'}],[{en:'Next',pt:'Próximo'},{en:'Rigged character walking through the house',pt:'Personagem com rig andando pela casa'}]],
+      compare:{a:'img/full/cmp_hall_unlit.jpg',b:'img/full/cmp_hall_lit.jpg',lb:{en:'With HDRP lighting',pt:'Com iluminação HDRP'},la:{en:'Without',pt:'Sem'},note:{en:'Drag to compare. Same camera, same geometry.',pt:'Arraste para comparar. Mesma câmera, mesma geometria.'}},
+      strip:['render_01','render_03','render_04','render_08','render_10','render_12'],
+      count:{en:'25 images · 3 comparisons',pt:'25 imagens · 3 comparações'} }
   ];
   function byId(id){ return P.filter(function(p){return p.id===id;})[0]; }
 
@@ -1224,7 +1289,7 @@ footer{border-top-color:var(--line)}
     var img = p.cardCover ? '<img src="'+p.cardCover+'" alt="" loading="lazy">' : coverHTML(p,false);
     return '<article class="card ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="cover">'+img+'</div>'+
       '<div class="body"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
-      '<h3>'+p.title+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+p.period+'</p>'+
+      '<h3>'+p.title+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+t(p.period)+'</p>'+
       '<p style="font-size:16px">'+t(p.lede)+'</p>'+
       '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
       '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div></article>';
@@ -1232,7 +1297,7 @@ footer{border-top-color:var(--line)}
   function rowHTML(p){
     return '<div class="prow ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="thumb">'+coverHTML(p,false)+'</div>'+
       '<div class="txt"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
-      '<span class="label">'+t(p.kicker)+' · '+p.period+'</span>'+
+      '<span class="label">'+t(p.kicker)+' · '+t(p.period)+'</span>'+
       '<h3>'+p.title+'</h3><p>'+t(p.summary)+'</p><div class="tags">'+p.tags.map(function(x){return '<span class="chip">'+x+'</span>';}).join('')+'</div></div>'+
       '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
       '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div>';
@@ -1282,7 +1347,7 @@ footer{border-top-color:var(--line)}
 
   /* ================= ROUTER ================= */
   var views={home:'v-home',projects:'v-projects',about:'v-about'};
-  var mode='quick';
+    var mode='quick';
   function setMode(m){
     mode=m;
     document.querySelectorAll('[data-kind="mode"] button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set===m?'true':'false'); });
@@ -1297,6 +1362,7 @@ footer{border-top-color:var(--line)}
     document.getElementById('p-lede').innerHTML='<p class="lede">'+t(p.lede)+'</p>';
     document.getElementById('p-facts').innerHTML=p.facts.map(function(f){return '<div><span class="label">'+t(f[0])+'</span><span>'+t(f[1])+'</span></div>';}).join('');
     document.getElementById('p-quick').innerHTML=quickHTML(p,'page')+'<div class="cta-full"><button class="btn primary" type="button" data-set-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div>';
+    if(window.__notes) window.__notes(p);
     document.querySelectorAll('.full-block').forEach(function(b){ b.hidden = b.dataset.project!==p.id; });
   }
   function route(name,opts){
@@ -1307,7 +1373,7 @@ footer{border-top-color:var(--line)}
     if(!p && !views[name]){ name='home'; document.getElementById('v-home').hidden=false; }
     if(p){ showProject(p); setMode(opts.mode||mode); }
     document.querySelectorAll('[data-nav]').forEach(function(b){ var on=(b.dataset.nav===name)||(p&&b.dataset.nav==='projects'); if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
-    document.title = p ? p.title+' · Nicolas Schulze' : 'Nicolas Schulze';
+    document.title = p ? p.title+' · Nicolas Schulze' : 'Nicolas Schulze · Unity Developer & Software Engineer';
     applyLang(L());
     if(opts.scroll){ var el=document.getElementById(opts.scroll); if(el){ el.scrollIntoView(); return; } }
     window.scrollTo(0,0);
@@ -1325,7 +1391,7 @@ footer{border-top-color:var(--line)}
   function openDrawer(id,btn){
     var p=byId(id); dOpener=btn;
     document.getElementById('d-body').innerHTML=
-      '<div style="display:grid;gap:14px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div><span class="label">'+t(p.kicker)+' · '+p.period+'</span><h2 id="d-title">'+p.title+'</h2><p>'+t(p.lede)+'</p>'+
+      '<div style="display:grid;gap:14px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div><span class="label">'+t(p.kicker)+' · '+t(p.period)+'</span><h2 id="d-title">'+p.title+'</h2><p>'+t(p.lede)+'</p>'+
       '<div class="pactions"><button class="btn primary small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div></div>'+
       '<div style="margin-top:8px">'+quickHTML(p,'drawer')+'</div>';
     drawer.querySelector('.panel').className='panel ns-'+p.series; drawer.hidden=false; document.body.style.overflow='hidden'; applyLang(L());
@@ -1359,6 +1425,7 @@ footer{border-top-color:var(--line)}
     var sm=e.target.closest('[data-set-mode]'); if(sm){ setMode(sm.dataset.setMode); document.querySelector('.modebar').scrollIntoView(); return; }
     var g=e.target.closest('[data-go]');
     if(g){ if(!drawer.hidden) closeDrawer(); go(g.dataset.go,{mode:g.dataset.mode,scroll:g.dataset.scroll}); return; }
+    if(e.target.closest('#skip')){ document.getElementById('main').focus(); return; }
     var s=e.target.closest('[data-scroll]'); if(s){ var el=document.getElementById(s.dataset.scroll); if(el) el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
   });
   document.addEventListener('input',function(e){ if(e.target.matches('.compare input')){ e.target.closest('.compare').style.setProperty('--pos', e.target.value+'%'); } });
@@ -1384,7 +1451,7 @@ footer{border-top-color:var(--line)}
   try{ matchMedia('(prefers-color-scheme: light)').addEventListener('change',paintTheme); }catch(e){}
   new MutationObserver(paintTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
   paintTheme();
-    route(currentHash());
+      route(currentHash());
 })();
 </script>
 
