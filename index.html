@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfslbNaMtVSKaI0WOpA1mdHBlhfk4c5dk5hfO+1IT50=' 'sha256-8xJucDqGFpr5NI2dj5rI8nq8b0uwjhaqCfpikMkxphs='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer working on simulation systems. Training simulators in Unity 6 and HDRP: vehicle physics, hardware input, lessons, PDF reports and 4K performance."><meta name="robots" content="index,follow"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6 and HDRP: agricultural, orchard and heavy-equipment projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","Simulation","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<!doctype html><html lang="en" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfslbNaMtVSKaI0WOpA1mdHBlhfk4c5dk5hfO+1IT50=' 'sha256-zBUYxPCmWA2/NNi6difmfX8L/7QOcSXK9QbIzJheM/Y='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer working on simulation systems. Training simulators in Unity 6 and HDRP: vehicle physics, hardware input, lessons, PDF reports and 4K performance."><meta name="robots" content="index,follow"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6 and HDRP: agricultural, orchard and heavy-equipment projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","Simulation","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
 <style>@font-face{font-family:"Barlow";src:url("fonts/Barlow-Regular.woff2") format("woff2");font-weight:400;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-Medium.woff2") format("woff2");font-weight:500;font-display:swap}@font-face{font-family:"Barlow";src:url("fonts/Barlow-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}@font-face{font-family:"Barlow Condensed";src:url("fonts/BarlowCondensed-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
@@ -1423,6 +1423,7 @@ if (buttonsEnabled) {
   var root=document.documentElement;
   function L(){ return root.classList.contains('lang-pt')?'pt':'en'; }
   function t(o){ return typeof o==='string' ? o : '<span class="en">'+o.en+'</span><span class="pt">'+o.pt+'</span>'; }
+  function ptxt(o){ return typeof o==='string' ? o : (document.documentElement.classList.contains('lang-pt')?o.pt:o.en); }
   function esc(s){ return String(s).replace(/"/g,'&quot;'); }
   var PEND={en:'PENDING',pt:'PENDENTE'};
 
@@ -1595,7 +1596,7 @@ if (buttonsEnabled) {
       facts:[[{en:'Company',pt:'Empresa'},'RealDrive Industrial (RDI)'],[{en:'Platform',pt:'Plataforma'},'Meta Quest · standalone'],['Engine','Unity 6.1 · URP'],[{en:'Period',pt:'Período'},{en:'May 2025 – Apr 2026',pt:'mai/2025 – abr/2026'}]],
       hl:[[{en:'Grab',pt:'Pegada'},{en:'Held objects ignore the hand colliders, so they stop shaking',pt:'Objetos na mão ignoram os colisores da mão e param de tremer'}],[{en:'Scale',pt:'Escala'},{en:'Two hands: scale follows the distance between them',pt:'Duas mãos: a escala segue a distância entre elas'}],['UI',{en:'Touch fires the normal button click; a keyboard opens in front of the user',pt:'O toque dispara o clique do botão comum; o teclado abre na frente do usuário'}],['Level design',{en:'Floor markings, industrial sound and a lighter scene for the headset',pt:'Sinalização de chão, som industrial e cena mais leve para o óculos'}]] },
     { id:'crane', status:'ready', series:'andamento', badge:{en:'VR',pt:'VR'},
-      title:'Ponte Rolante VR · RDI', cover:'img/full/cr_01.jpg', coverThumb:'img/thumb/cr_01.jpg', cardCover:'img/full/cr_01.jpg',
+      title:{en:'Overhead Crane VR · RDI',pt:'Ponte Rolante VR · RDI'}, cover:'img/full/cr_01.jpg', coverThumb:'img/thumb/cr_01.jpg', cardCover:'img/full/cr_01.jpg',
       kicker:{en:'VR overhead-crane training',pt:'Treinamento de ponte rolante em VR'},
       period:'2025 – 2026', tags:['Unity 6.1','VR','Physics','C#'],
       lede:{en:'Overhead-crane training in VR: a load that swings instead of shaking, lessons by steps and crane controls rebuilt for VR buttons.',pt:'Treinamento de ponte rolante em VR: carga que balança em vez de tremer, aulas por etapas e comandos da ponte refeitos para botões em VR.'},
@@ -1636,7 +1637,7 @@ if (buttonsEnabled) {
     var img = p.cardCover ? '<img src="'+p.cardCover+'" alt="" loading="lazy">' : coverHTML(p,false);
     return '<article class="card ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="cover">'+img+'</div>'+
       '<div class="body"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
-      '<h3>'+p.title+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+t(p.period)+'</p>'+
+      '<h3>'+t(p.title)+'</h3><p class="muted" style="font-size:14px">'+t(p.kicker)+' · '+t(p.period)+'</p>'+
       '<p style="font-size:16px">'+t(p.lede)+'</p>'+
       '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
       '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div></article>';
@@ -1645,7 +1646,7 @@ if (buttonsEnabled) {
     return '<div class="prow ns-'+p.series+(p.status==='draft'?' is-draft':'')+'"><div class="thumb">'+coverHTML(p,false)+'</div>'+
       '<div class="txt"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
       '<span class="label">'+t(p.kicker)+' · '+t(p.period)+'</span>'+
-      '<h3>'+p.title+'</h3><p>'+t(p.summary)+'</p><div class="tags">'+p.tags.map(function(x){return '<span class="chip">'+x+'</span>';}).join('')+'</div></div>'+
+      '<h3>'+t(p.title)+'</h3><p>'+t(p.summary)+'</p><div class="tags">'+p.tags.map(function(x){return '<span class="chip">'+x+'</span>';}).join('')+'</div></div>'+
       '<div class="actions"><button class="btn primary small" type="button" data-preview="'+p.id+'">'+t({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
       '<button class="btn small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything',pt:'Ver tudo'})+'</button></div></div>';
   }
@@ -1662,12 +1663,12 @@ if (buttonsEnabled) {
   function featHTML(p,i){
     var f=FEAT[p.id];
     var media=(f&&f.compare&&p.compare) ? compareHTML(p.compare)
-      : '<button class="feat-img" type="button" data-preview="'+p.id+'" aria-label="'+esc(p.title)+'"><img src="'+((f&&f.img)||p.cardCover||p.cover)+'" alt="" loading="lazy"></button>';
+      : '<button class="feat-img" type="button" data-preview="'+p.id+'" aria-label="'+esc(ptxt(p.title))+'"><img src="'+((f&&f.img)||p.cardCover||p.cover)+'" alt="" loading="lazy"></button>';
     var stat=f ? '<div class="feat-stat"><strong>'+t(f.v)+'</strong><span>'+t(f.k)+'</span>'+(f.bar?'<div class="mini-bar" aria-hidden="true"><i style="width:84.3%"></i><b style="left:47.7%"></b></div>':'')+'</div>' : '';
     return '<article class="feat ns-'+p.series+(i%2?' flip':'')+(p.status==='draft'?' is-draft':'')+'">'+
       '<div class="feat-media">'+media+'</div>'+
       '<div class="feat-txt"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div>'+
-      '<h3>'+p.title+'</h3><p class="muted feat-kick">'+t(p.kicker)+' · '+t(p.period)+'</p>'+stat+
+      '<h3>'+t(p.title)+'</h3><p class="muted feat-kick">'+t(p.kicker)+' · '+t(p.period)+'</p>'+stat+
       '<p>'+t(p.lede)+'</p>'+
       '<div class="feat-act"><button class="btn primary" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'Open the case →',pt:'Abrir o case →'})+'</button>'+
       '<button class="linkish" type="button" data-preview="'+p.id+'">'+t({en:'Quick preview',pt:'Pré-visualizar'})+'</button></div></div></article>';
@@ -1690,7 +1691,7 @@ if (buttonsEnabled) {
       layer.innerHTML=h;
       var p=byId(pid);
       box.className='hero-bg ns-'+p.series; document.getElementById('sc-open').setAttribute('data-preview',p.id);
-      document.getElementById('sc-badge').innerHTML=p.title;
+      document.getElementById('sc-badge').innerHTML=t(p.title);
       document.getElementById('sc-count').textContent=String((idx%ORDER.length)+1).padStart(2,'0')+' / '+String(ORDER.length).padStart(2,'0');
       idx++;
     }
@@ -1728,7 +1729,7 @@ if (buttonsEnabled) {
     document.getElementById('p-cover').innerHTML=coverHTML(p,true);
     document.getElementById('v-project').className='view ns-'+p.series;
     document.getElementById('p-kicker').innerHTML='<span style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px">'+statusTag(p)+'</span>'+t(p.kicker);
-    document.getElementById('p-title').textContent=p.title;
+    document.getElementById('p-title').innerHTML=t(p.title);
     document.getElementById('p-lede').innerHTML='<p class="lede">'+t(p.lede)+'</p>';
     document.getElementById('p-facts').innerHTML=p.facts.map(function(f){return '<div><span class="label">'+t(f[0])+'</span><span>'+t(f[1])+'</span></div>';}).join('');
     document.getElementById('p-quick').innerHTML=quickHTML(p,'page')+'<div class="cta-full"><button class="btn primary" type="button" data-set-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div>';
@@ -1743,7 +1744,7 @@ if (buttonsEnabled) {
     if(!p && !views[name]){ name='home'; document.getElementById('v-home').hidden=false; }
     if(p){ showProject(p); setMode(opts.mode||mode); }
     document.querySelectorAll('[data-nav]').forEach(function(b){ var on=(b.dataset.nav===name)||(p&&b.dataset.nav==='projects'); if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
-    document.title = p ? p.title+' · Nicolas Schulze' : 'Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games';
+    document.title = p ? ptxt(p.title)+' · Nicolas Schulze' : 'Nicolas Schulze · Unity Developer · Simulation, VR & Games';
     applyLang(L());
     if(opts.scroll){ var el=document.getElementById(opts.scroll); if(el){ el.scrollIntoView(); return; } }
     window.scrollTo(0,0);
@@ -1761,7 +1762,7 @@ if (buttonsEnabled) {
   function openDrawer(id,btn){
     var p=byId(id); dOpener=btn;
     document.getElementById('d-body').innerHTML=
-      '<div style="display:grid;gap:14px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div><span class="label">'+t(p.kicker)+' · '+t(p.period)+'</span><h2 id="d-title">'+p.title+'</h2><p>'+t(p.lede)+'</p>'+
+      '<div style="display:grid;gap:14px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+statusTag(p)+'</div><span class="label">'+t(p.kicker)+' · '+t(p.period)+'</span><h2 id="d-title">'+t(p.title)+'</h2><p>'+t(p.lede)+'</p>'+
       '<div class="pactions"><button class="btn primary small" type="button" data-go="'+p.id+'" data-mode="full">'+t({en:'See everything →',pt:'Ver tudo →'})+'</button></div></div>'+
       '<div style="margin-top:8px">'+quickHTML(p,'drawer')+'</div>';
     drawer.querySelector('.panel').className='panel ns-'+p.series; drawer.hidden=false; document.body.style.overflow='hidden'; applyLang(L());
