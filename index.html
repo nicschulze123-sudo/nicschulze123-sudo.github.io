@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-KYRNQfZekEJuKC5o2sKr9xp1LbUm2x9IRuI9/cMmGHg=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-eYV4OkyPKCSmS0R78T+3Z/hWPEXaIZ4lGRgQ0Ppx0Ws=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* Empresas e clientes */
 .orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (max-width:860px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -1883,27 +1883,30 @@ if (buttonsEnabled) {
 
   var HERO={t:null,ro:null};
   function heroMedia(p){
-    if(HERO.t){clearInterval(HERO.t);HERO.t=null;} if(HERO.ro){HERO.ro.disconnect();HERO.ro=null;}
+    if(HERO.t){clearInterval(HERO.t);HERO.t=null;} if(HERO.ro){HERO.ro.disconnect();HERO.ro=null;} if(HERO.v){clearTimeout(HERO.v);HERO.v=null;}
     if(!p.heroYt&&!p.heroImgs) return;
     var box=document.getElementById('p-cover'); var base=box.querySelector('img');
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     var save=navigator.connection&&navigator.connection.saveData;
-    var small=matchMedia('(max-width:760px)').matches;
     var imgs=(p.heroImgs||[]).map(function(k){return 'img/full/'+k+'.jpg';});
     var layers=[], i=0, playing=!reduce;
     function layer(src){var im=document.createElement('img');im.className='hs';im.alt='';im.src=src;box.appendChild(im);return im;}
     function startShow(){ if(HERO.t||imgs.length<2||reduce) return; HERO.t=setInterval(function(){ i=(i+1)%imgs.length; var nx=layers[i]||(layers[i]=layer(imgs[i])); var go=function(){layers.forEach(function(l){l.classList.remove('on');}); nx.classList.add('on');}; if(nx.complete) go(); else nx.onload=go; },5000); }
     function stopShow(){ if(HERO.t){clearInterval(HERO.t);HERO.t=null;} }
     if(imgs.length){ layers[0]=layer(imgs[0]); layers[0].classList.add('on'); if(base) base.style.opacity='0'; }
-    var fr=null;
+    var fr=null, vi=0, PHOTO_MS=12000, VIDEO_MS=22000;
+    var ids=(p.heroYt||[]).filter(function(x){return /^[A-Za-z0-9_-]{11}$/.test(x);});
     function fit(){ if(!fr) return; var w=box.clientWidth,h=box.clientHeight; var W=Math.max(w,h*16/9), H=Math.max(h,w*9/16); fr.style.width=Math.ceil(W)+'px'; fr.style.height=Math.ceil(H)+'px'; }
-    function startVideo(){ if(fr||!p.heroYt||reduce||save||small) return; var ids=p.heroYt.filter(function(x){return /^[A-Za-z0-9_-]{11}$/.test(x);}); if(!ids.length) return;
-      fr=document.createElement('iframe'); fr.className='ytbg'; fr.tabIndex=-1; fr.setAttribute('aria-hidden','true'); fr.title='';
-      fr.allow='autoplay; encrypted-media'; fr.referrerPolicy='strict-origin-when-cross-origin';
-      fr.src='https://www.youtube-nocookie.com/embed/'+ids[0]+'?autoplay=1&mute=1&loop=1&playlist='+ids.join(',')+'&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0';
-      box.appendChild(fr); fit(); if(window.ResizeObserver){HERO.ro=new ResizeObserver(fit);HERO.ro.observe(box);}
-      setTimeout(function(){ if(fr) fr.classList.add('on'); },3000); }
-    function stopVideo(){ if(fr){fr.remove();fr=null;} }
+    function playNext(){ var id=ids[vi]; var f=document.createElement('iframe'); fr=f; f.className='ytbg'; f.tabIndex=-1; f.setAttribute('aria-hidden','true'); f.title='';
+      f.allow='autoplay; encrypted-media'; f.referrerPolicy='strict-origin-when-cross-origin';
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0';
+      box.appendChild(f); fit(); if(window.ResizeObserver&&!HERO.ro){HERO.ro=new ResizeObserver(fit);HERO.ro.observe(box);}
+      HERO.v=setTimeout(function(){ f.classList.add('on');
+        HERO.v=setTimeout(function(){ f.classList.remove('on');
+          setTimeout(function(){ f.remove(); if(fr===f) fr=null; },1300);
+          vi=(vi+1)%ids.length; HERO.v=setTimeout(playNext,PHOTO_MS); },VIDEO_MS); },2500); }
+    function startVideo(){ if(HERO.v||!ids.length||reduce||save) return; HERO.v=setTimeout(playNext,6000); }
+    function stopVideo(){ if(HERO.v){clearTimeout(HERO.v);HERO.v=null;} if(fr){fr.remove();fr=null;} }
     var bt=document.createElement('button'); bt.type='button'; bt.className='hero-toggle';
     function label(){ bt.innerHTML=playing?t({en:'❚❚ Pause',pt:'❚❚ Pausar'}):t({en:'▶ Play',pt:'▶ Reproduzir'}); bt.setAttribute('aria-pressed',playing?'false':'true'); }
     bt.addEventListener('click',function(){ playing=!playing; if(playing){startShow();startVideo();} else {stopShow();stopVideo();} label(); });
