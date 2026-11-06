@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-oKxYQQ8G2tp4ouxV8n08gtVjBwBG7D1hF0BvSzBqEIU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-oKxYQQ8G2tp4ouxV8n08gtVjBwBG7D1hF0BvSzBqEIU=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* Empresas e clientes */
 .orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (max-width:860px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -14,6 +14,19 @@
 .org .rel{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--series)}
 .org p{margin:0;font-size:14px;line-height:1.45;color:var(--ink-body)}
 .orgs-note{margin-top:12px;font-size:13px;color:var(--ink-muted)}
+
+/* Vídeos oficiais (YouTube sem cookies, carrega só no clique) */
+.ytgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:14px}
+.ytv{display:flex;flex-direction:column;gap:8px;margin:0}
+.ytv .ytframe{position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:#000;border:1px solid var(--line)}
+.ytv button.ytplay{all:unset;cursor:pointer;position:absolute;inset:0;display:block}
+.ytv button.ytplay img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .2s}
+.ytv button.ytplay:hover img,.ytv button.ytplay:focus-visible img{opacity:1}
+.ytv button.ytplay:focus-visible{outline:3px solid var(--series);outline-offset:-3px}
+.ytv button.ytplay i{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:var(--series);color:var(--on-series);display:grid;place-items:center;font-style:normal;font-size:22px;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.ytv iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ytv figcaption{display:block;font-size:14px;line-height:1.4;color:var(--ink)}
+.ytv figcaption a{display:inline-block;margin-top:2px;font-size:12px;color:var(--ink-muted);font-family:var(--mono)}
 </style>
 <title>Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
@@ -913,6 +926,18 @@ pre.code + .muted{font-size:13px;margin-top:6px}
     </div>
     <div class="grid" data-gal="aghw"></div>
   </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Videos</span><span class="pt">Vídeos</span></span><h2 class="en">Official project videos</h2><h2 class="pt">Vídeos oficiais do projeto</h2></div>
+      <p class="muted en">Public videos from the RealDrive Tech YouTube channel, also shown on the RealDrive AGRO 4.0 page. They show the whole team’s project.</p>
+      <p class="muted pt">Vídeos públicos do canal da RealDrive Tech no YouTube, também mostrados na página do AGRO 4.0 no site da RealDrive. Mostram o projeto da equipe inteira.</p>
+    </div>
+    <div class="ytgrid">
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="_hLQRlI1jbo" aria-label="▶ Software RealDrive Agro 4.0 · real x virtual / RealDrive Agro 4.0 software · real vs virtual"><img src="https://i.ytimg.com/vi/_hLQRlI1jbo/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">RealDrive Agro 4.0 software · real vs virtual</span><span class="pt">Software RealDrive Agro 4.0 · real x virtual</span><br><a href="https://www.youtube.com/watch?v=_hLQRlI1jbo" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="YDx2xtMN91M" aria-label="▶ Protótipo do Simulador Realdrive Agro 4.0 / RealDrive Agro 4.0 simulator prototype"><img src="https://i.ytimg.com/vi/YDx2xtMN91M/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">RealDrive Agro 4.0 simulator prototype</span><span class="pt">Protótipo do Simulador Realdrive Agro 4.0</span><br><a href="https://www.youtube.com/watch?v=YDx2xtMN91M" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="IOjivraheLg" aria-label="▶ Colheita de soja · visita técnica à Fazenda Três Rios / Soybean harvest · technical visit to Fazenda Três Rios"><img src="https://i.ytimg.com/vi/IOjivraheLg/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Soybean harvest · technical visit to Fazenda Três Rios</span><span class="pt">Colheita de soja · visita técnica à Fazenda Três Rios</span><br><a href="https://www.youtube.com/watch?v=IOjivraheLg" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+    </div>
+  </section>
 </div>
 <div class="full-block" data-project="schio" hidden>
   <section class="tight">
@@ -969,6 +994,19 @@ pre.code + .muted{font-size:13px;margin-top:6px}
       <p class="muted pt">O simulador da Schio: uma cabine de trator com componentes reais da Valtra, sobre uma base, com a tela na frente do operador. Cabine e hardware: equipe de hardware da RealDrive. Minha parte: a integração dos comandos reais da cabine com o software e a calibração. Fotos: showroom da RealDrive.</p>
     </div>
     <div class="grid" data-gal="schw"></div>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">Videos</span><span class="pt">Vídeos</span></span><h2 class="en">Official project videos</h2><h2 class="pt">Vídeos oficiais do projeto</h2></div>
+      <p class="muted en">Public videos from the RealDrive Tech YouTube channel, also shown on the RealDrive tractor page. They show the whole team’s project.</p>
+      <p class="muted pt">Vídeos públicos do canal da RealDrive Tech no YouTube, também mostrados na página do trator no site da RealDrive. Mostram o projeto da equipe inteira.</p>
+    </div>
+    <div class="ytgrid">
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="YeEmh-muBgg" aria-label="▶ Simulador Trator e Empilhadeira · Agropecuária Schio / Tractor and forklift simulator · Agropecuária Schio"><img src="https://i.ytimg.com/vi/YeEmh-muBgg/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Tractor and forklift simulator · Agropecuária Schio</span><span class="pt">Simulador Trator e Empilhadeira · Agropecuária Schio</span><br><a href="https://www.youtube.com/watch?v=YeEmh-muBgg" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="DOKemhIKpBo" aria-label="▶ Vídeo demonstrativo · software do trator Valtra / Demo · Valtra tractor software"><img src="https://i.ytimg.com/vi/DOKemhIKpBo/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Demo · Valtra tractor software</span><span class="pt">Vídeo demonstrativo · software do trator Valtra</span><br><a href="https://www.youtube.com/watch?v=DOKemhIKpBo" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="T7RDuD7MjQ4" aria-label="▶ Desenvolvimento e modelagem · software do trator Valtra / Development and modeling · Valtra tractor software"><img src="https://i.ytimg.com/vi/T7RDuD7MjQ4/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Development and modeling · Valtra tractor software</span><span class="pt">Desenvolvimento e modelagem · software do trator Valtra</span><br><a href="https://www.youtube.com/watch?v=T7RDuD7MjQ4" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+      <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="txl8HFSW2ig" aria-label="▶ Visita técnica à Schio / Technical visit to Schio"><img src="https://i.ytimg.com/vi/txl8HFSW2ig/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Technical visit to Schio</span><span class="pt">Visita técnica à Schio</span><br><a href="https://www.youtube.com/watch?v=txl8HFSW2ig" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
+    </div>
   </section>
 </div>
 <div class="full-block" data-project="garagem" hidden>
@@ -1932,5 +1970,8 @@ if (buttonsEnabled) {
 })();
 </script>
 
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.ytplay');if(!b)return;var id=b.getAttribute('data-yt');if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label')||'YouTube';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.referrerPolicy='strict-origin-when-cross-origin';b.replaceWith(f);});
+</script>
 </body>
 </html>
