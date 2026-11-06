@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-oKxYQQ8G2tp4ouxV8n08gtVjBwBG7D1hF0BvSzBqEIU=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-KYRNQfZekEJuKC5o2sKr9xp1LbUm2x9IRuI9/cMmGHg=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* Empresas e clientes */
 .orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (max-width:860px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -27,6 +27,15 @@
 .ytv iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .ytv figcaption{display:block;font-size:14px;line-height:1.4;color:var(--ink)}
 .ytv figcaption a{display:inline-block;margin-top:2px;font-size:12px;color:var(--ink-muted);font-family:var(--mono)}
+
+/* Capa animada (Schio): fotos em sequência + vídeos oficiais em loop, sem som */
+.p-hero .img .hs{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;opacity:0;transition:opacity 1.2s ease}
+.p-hero .img .hs.on{opacity:1}
+.p-hero .img .ytbg{position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.p-hero .img .ytbg.on{opacity:1}
+.hero-toggle{position:absolute;right:16px;top:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(15,14,23,.62);color:#fff;font:600 13px/1 var(--sans,inherit);cursor:pointer;backdrop-filter:blur(6px)}
+.hero-toggle:hover{background:rgba(15,14,23,.8)}
+.hero-toggle:focus-visible{outline:3px solid var(--series);outline-offset:2px}
 </style>
 <title>Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
@@ -1690,6 +1699,8 @@ if (buttonsEnabled) {
       hl:[[{en:'Field',pt:'Campo'},{en:'Farm 1 and Farm 2; soybean, corn and wheat in 75 cm rows, growth stages, LODs and 2D billboards for thousands of plants',pt:'Farm 1 e Farm 2; soja, milho e trigo em linhas de 75 cm, estágios de crescimento, LODs e billboards 2D para milhares de plantas'}],[{en:'Menus',pt:'Menus'},{en:'Farm and machine selection, weather, pause and loading, built with Doozy UI',pt:'Seleção de fazenda e máquina, clima, pausa e loading, com Doozy UI'}],[{en:'Harvest',pt:'Colheita'},{en:'First version of the harvest controller; triggers, unloading points, farm limits, telemetry link',pt:'Primeira versão do controlador de colheita; gatilhos, pontos de descarga, limites da fazenda, ligação com a telemetria'}],[{en:'Lessons',pt:'Aulas'},{en:'Procedure sequences and safety locks that stop steps being skipped or reversed',pt:'Sequências de procedimento e travas de segurança que impedem pular ou inverter etapas'}],[{en:'Data',pt:'Dados'},{en:'Telemetry at ~10 Hz and <code>LessonPdfExporter</code>: vector path, charts, statistics, recommendations',pt:'Telemetria a ~10 Hz e <code>LessonPdfExporter</code>: trajetória em vetor, gráficos, estatísticas, recomendações'}]],
       strip:['ag_08','ag_18','ag_06','ag_43','ag_23','ag_44'] },
     { id:'schio', status:'ready', series:'entregue',
+      heroYt:['YeEmh-muBgg','DOKemhIKpBo','T7RDuD7MjQ4','txl8HFSW2ig'],
+      heroImgs:['sc_14','sc_22','sc_44','sc_39','sc_46','sc_32','sc_35','sc_05','sc_06','sc_01','sc_02','sc_50','sc_53','sc_52','sc_34','sc_07','sc_33','sc_03','sc_12','sc_18','sc_20','sc_24'],
       title:'Simulador Schio', cover:'img/full/sc_14.jpg', coverThumb:'img/thumb/sc_14.jpg', cardCover:'img/full/sc_44.jpg',
       kicker:{en:'Apple orchard training simulator · Team project',pt:'Simulador de treinamento para pomar de maçã · Projeto em equipe'},
       period:{en:'Jul 2024 – May 2026',pt:'jul/2024 – mai/2026'}, tags:['Unity','C#','HDRP','Physics','Reporting'],
@@ -1869,8 +1880,40 @@ if (buttonsEnabled) {
     document.getElementById('p-quick').hidden = m!=='quick';
     document.getElementById('p-full').hidden = m!=='full';
   }
+
+  var HERO={t:null,ro:null};
+  function heroMedia(p){
+    if(HERO.t){clearInterval(HERO.t);HERO.t=null;} if(HERO.ro){HERO.ro.disconnect();HERO.ro=null;}
+    if(!p.heroYt&&!p.heroImgs) return;
+    var box=document.getElementById('p-cover'); var base=box.querySelector('img');
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var save=navigator.connection&&navigator.connection.saveData;
+    var small=matchMedia('(max-width:760px)').matches;
+    var imgs=(p.heroImgs||[]).map(function(k){return 'img/full/'+k+'.jpg';});
+    var layers=[], i=0, playing=!reduce;
+    function layer(src){var im=document.createElement('img');im.className='hs';im.alt='';im.src=src;box.appendChild(im);return im;}
+    function startShow(){ if(HERO.t||imgs.length<2||reduce) return; HERO.t=setInterval(function(){ i=(i+1)%imgs.length; var nx=layers[i]||(layers[i]=layer(imgs[i])); var go=function(){layers.forEach(function(l){l.classList.remove('on');}); nx.classList.add('on');}; if(nx.complete) go(); else nx.onload=go; },5000); }
+    function stopShow(){ if(HERO.t){clearInterval(HERO.t);HERO.t=null;} }
+    if(imgs.length){ layers[0]=layer(imgs[0]); layers[0].classList.add('on'); if(base) base.style.opacity='0'; }
+    var fr=null;
+    function fit(){ if(!fr) return; var w=box.clientWidth,h=box.clientHeight; var W=Math.max(w,h*16/9), H=Math.max(h,w*9/16); fr.style.width=Math.ceil(W)+'px'; fr.style.height=Math.ceil(H)+'px'; }
+    function startVideo(){ if(fr||!p.heroYt||reduce||save||small) return; var ids=p.heroYt.filter(function(x){return /^[A-Za-z0-9_-]{11}$/.test(x);}); if(!ids.length) return;
+      fr=document.createElement('iframe'); fr.className='ytbg'; fr.tabIndex=-1; fr.setAttribute('aria-hidden','true'); fr.title='';
+      fr.allow='autoplay; encrypted-media'; fr.referrerPolicy='strict-origin-when-cross-origin';
+      fr.src='https://www.youtube-nocookie.com/embed/'+ids[0]+'?autoplay=1&mute=1&loop=1&playlist='+ids.join(',')+'&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0';
+      box.appendChild(fr); fit(); if(window.ResizeObserver){HERO.ro=new ResizeObserver(fit);HERO.ro.observe(box);}
+      setTimeout(function(){ if(fr) fr.classList.add('on'); },3000); }
+    function stopVideo(){ if(fr){fr.remove();fr=null;} }
+    var bt=document.createElement('button'); bt.type='button'; bt.className='hero-toggle';
+    function label(){ bt.innerHTML=playing?t({en:'❚❚ Pause',pt:'❚❚ Pausar'}):t({en:'▶ Play',pt:'▶ Reproduzir'}); bt.setAttribute('aria-pressed',playing?'false':'true'); }
+    bt.addEventListener('click',function(){ playing=!playing; if(playing){startShow();startVideo();} else {stopShow();stopVideo();} label(); });
+    if(!reduce){ box.parentNode.appendChild(bt); label(); }
+    if(playing){ startShow(); startVideo(); }
+  }
   function showProject(p){
+    var oldT=document.querySelector('.p-hero .hero-toggle'); if(oldT) oldT.remove();
     document.getElementById('p-cover').innerHTML=coverHTML(p,true);
+    heroMedia(p);
     document.getElementById('v-project').className='view ns-'+p.series;
     document.getElementById('p-kicker').innerHTML='<span style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px">'+statusTag(p)+'</span>'+t(p.kicker);
     document.getElementById('p-title').innerHTML=t(p.title);
