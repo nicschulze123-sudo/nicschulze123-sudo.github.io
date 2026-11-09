@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-eYV4OkyPKCSmS0R78T+3Z/hWPEXaIZ4lGRgQ0Ppx0Ws=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-eYV4OkyPKCSmS0R78T+3Z/hWPEXaIZ4lGRgQ0Ppx0Ws=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI=' 'sha256-HSc9HwTLClXPDH5yysd2EPSbitnloMYrKvK46gvO4dg='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* Empresas e clientes */
 .orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (max-width:860px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -36,6 +36,45 @@
 .hero-toggle{position:absolute;right:16px;top:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(15,14,23,.62);color:#fff;font:600 13px/1 var(--sans,inherit);cursor:pointer;backdrop-filter:blur(6px)}
 .hero-toggle:hover{background:rgba(15,14,23,.8)}
 .hero-toggle:focus-visible{outline:3px solid var(--series);outline-offset:2px}
+
+/* 3D viewer (House Farm) */
+.v3d-wrap{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+@media (max-width:900px){.v3d-wrap{grid-template-columns:1fr}}
+.v3d{position:relative;aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:#1c1b21;border:1px solid var(--line);isolation:isolate}
+@media (max-width:760px){.v3d{aspect-ratio:4/5}}
+.v3d:fullscreen{border-radius:0;aspect-ratio:auto}
+.v3d-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;outline:none}
+.v3d-canvas:active{cursor:grabbing}
+.v3d-canvas:focus-visible{box-shadow:inset 0 0 0 3px var(--series)}
+.v3d-poster{position:absolute;inset:0;z-index:3;display:grid;place-items:center;text-align:center;padding:20px;color:#fff;
+  background:radial-gradient(120% 90% at 30% 20%,rgba(255,255,255,.10),transparent 60%),linear-gradient(160deg,#2a2833,#15141a)}
+.v3d-poster .cube{display:block;width:74px;height:74px;margin:0 auto 14px;opacity:.9}
+.v3d-poster button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--series);color:var(--on-series);font-weight:700;font-size:15px}
+.v3d-poster button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.v3d-poster small{display:block;margin-top:10px;font-size:12px;opacity:.75;font-family:var(--mono)}
+.v3d-bar{position:absolute;z-index:4;right:12px;top:12px;display:flex;gap:8px}
+.v3d-bar button{all:unset;cursor:pointer;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:rgba(15,14,23,.62);color:#fff;border:1px solid rgba(255,255,255,.25);font-size:16px;backdrop-filter:blur(6px)}
+.v3d-bar button:hover{background:rgba(15,14,23,.85)}
+.v3d-bar button:focus-visible{outline:3px solid var(--series);outline-offset:2px}
+.v3d-hint{position:absolute;z-index:4;left:12px;bottom:12px;right:12px;transition:opacity .5s;font-size:12px;color:rgba(255,255,255,.82);font-family:var(--mono);pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.v3d-demo{position:absolute;z-index:5;left:12px;top:12px;padding:5px 10px;border-radius:999px;background:#f5c542;color:#1b1a1f;font:700 11px/1 var(--mono);letter-spacing:.06em}
+.v3d-hs{all:unset;position:absolute;left:0;top:0;z-index:2;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  background:rgba(15,14,23,.78);color:#fff;font:700 13px/1 var(--mono);border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.45);transition:opacity .2s}
+.v3d-hs.back{opacity:.35}
+.v3d-hs:hover,.v3d-hs.on{background:var(--series);color:var(--on-series)}
+.v3d-hs:focus-visible{outline:3px solid var(--series);outline-offset:2px}
+.v3d-notes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;counter-reset:hs}
+.v3d-notes button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 12px;border-radius:var(--radius-md);border:1px solid var(--line);background:var(--paper,transparent)}
+.v3d-notes button:hover,.v3d-notes button.on{border-color:var(--series)}
+.v3d-notes button:focus-visible{outline:3px solid var(--series);outline-offset:2px}
+.v3d-notes .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper,#fff);font:700 12px/1 var(--mono)}
+.v3d-notes b{display:block;font-size:14px;color:var(--ink)}
+.v3d-notes span.d{display:block;font-size:13px;line-height:1.45;color:var(--ink-muted);margin-top:3px}
+.v3d-notes button:not(.on) span.d{display:none}
+.v3d-hint .s{display:none}
+@media (max-width:760px){.v3d-hint{font-size:11px}.v3d-hint .l{display:none}.v3d-hint .s{display:inline}}
+.v3d-bar[hidden],.v3d-hint[hidden]{display:none}
+.v3d-err{position:absolute;inset:0;display:grid;place-items:center;padding:20px;text-align:center;color:#fff;font-size:14px;z-index:6;background:#1c1b21}
 </style>
 <title>Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
@@ -947,6 +986,22 @@ pre.code + .muted{font-size:13px;margin-top:6px}
       <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="IOjivraheLg" aria-label="▶ Colheita de soja · visita técnica à Fazenda Três Rios / Soybean harvest · technical visit to Fazenda Três Rios"><img src="https://i.ytimg.com/vi/IOjivraheLg/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Soybean harvest · technical visit to Fazenda Três Rios</span><span class="pt">Colheita de soja · visita técnica à Fazenda Três Rios</span><br><a href="https://www.youtube.com/watch?v=IOjivraheLg" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
     </div>
   </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the RealDrive Agro project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto RealDrive Agro.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
+  </section>
 </div>
 <div class="full-block" data-project="schio" hidden>
   <section class="tight">
@@ -1017,6 +1072,22 @@ pre.code + .muted{font-size:13px;margin-top:6px}
       <figure class="ytv"><div class="ytframe"><button class="ytplay" type="button" data-yt="txl8HFSW2ig" aria-label="▶ Visita técnica à Schio / Technical visit to Schio"><img src="https://i.ytimg.com/vi/txl8HFSW2ig/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true">▶</i></button></div><figcaption><span class="en">Technical visit to Schio</span><span class="pt">Visita técnica à Schio</span><br><a href="https://www.youtube.com/watch?v=txl8HFSW2ig" target="_blank" rel="noopener noreferrer"><span class="en">Open on YouTube · RealDrive Tech</span><span class="pt">Abrir no YouTube · RealDrive Tech</span></a></figcaption></figure>
     </div>
   </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the Schio simulator project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto Simulador Schio.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
+  </section>
 </div>
 <div class="full-block" data-project="garagem" hidden>
   <section class="tight">
@@ -1043,6 +1114,22 @@ pre.code + .muted{font-size:13px;margin-top:6px}
       <p class="muted pt">Capturas do simulador. Clique em qualquer imagem para ampliar; use as setas do teclado para navegar.</p>
     </div>
     <div class="grid" data-gal="garagem"></div>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the Garagem project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto Garagem.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
   </section>
 </div>
 <div class="full-block" data-project="yellow" hidden>
@@ -1095,6 +1182,22 @@ pre.code + .muted{font-size:13px;margin-top:6px}
       <p class="muted pt">Capturas do simulador, julho de 2026. Mostram o projeto inteiro, feito pela equipe; a minha parte está descrita acima.</p>
     </div>
     <div class="grid" data-gal="yellow"></div>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the Yellow project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto Yellow.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
   </section>
 </div>
 
@@ -1187,6 +1290,22 @@ File.WriteAllBytes(path, shot.EncodeToPNG());</code></pre><p class="muted">Trech
       <dd><div class="en"><p>Assembly training for Cobra Correntes on Meta Quest 3. I integrated the team's assembly systems and tools into the VR flow and produced the content for more than ten industrial assemblies (chains, bearings, roller guides, clamps), with scenes, prefabs, work instructions and a technical clipboard. Client details are not public.</p></div><div class="pt"><p>Treinamento de montagem para a Cobra Correntes no Meta Quest 3. Integrei os sistemas de montagem e as ferramentas da equipe ao fluxo em VR e produzi o conteúdo de mais de dez conjuntos industriais (correntes, mancais, guias roletadas, abraçadeiras), com cenas, prefabs, instruções de trabalho e prancheta técnica. Os detalhes do cliente não são públicos.</p></div></dd>
 
     </dl>
+  </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the Cobra Correntes VR project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto VR Cobra Correntes.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
   </section>
 </div>
 
@@ -1288,6 +1407,22 @@ if (buttonsEnabled) {
     </div>
     <div class="grid" data-gal="crane"></div>
   </section>
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the Overhead crane VR project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto Ponte rolante VR.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
+    </div>
+  </section>
 </div>
 
 <div class="full-block" data-project="house-farm" hidden>
@@ -1363,6 +1498,23 @@ if (buttonsEnabled) {
         </div>
         <span class="cmp-note"><span class="en">Near-identical view, aligned from two editor captures. Shows the geometry and prop density behind the final frame.</span><span class="pt">Vista quase idêntica, alinhada a partir de duas capturas do editor. Mostra a geometria e a densidade de props por trás do quadro final.</span></span>
       </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="head">
+      <div><span class="label kicker"><span class="en">3D</span><span class="pt">3D</span></span><h2 class="en">Explore in 3D</h2><h2 class="pt">Explore em 3D</h2></div>
+      <p class="muted en">Rotate, zoom and click the numbered points to see the design decisions in the space. The model only loads when you click. This is a placeholder demo room; it will be replaced by the 3D model of the House Farm project.</p>
+      <p class="muted pt">Gire, dê zoom e clique nos pontos numerados para ver as decisões de design no espaço. O modelo só carrega quando você clica. Este é um ambiente provisório de demonstração; será trocado pelo modelo 3D do projeto House Farm.</p>
+    </div>
+    <div class="v3d-wrap">
+      <div class="v3d" data-v3d="3d/demo-room.glb" data-cfg='{"view":{"yaw":0.62,"pitch":0.42,"dist":1.75},"hotspots":[{"pos":[0.15,1.5,-2.5],"normal":[0,0,1],"view":{"yaw":0.25,"pitch":0.18,"dist":0.75,"target":[0.15,1.3,-2.3]},"label":"Janela \u00b7 luz do dia"},{"pos":[2.2,1.12,-1.9],"view":{"yaw":0.9,"pitch":0.3,"dist":0.55,"target":[2.0,0.9,-1.7]},"label":"Lumin\u00e1ria \u00b7 ponto focal quente"},{"pos":[-2.55,1.25,-1.4],"normal":[1,0,0],"view":{"yaw":1.25,"pitch":0.2,"dist":0.7,"target":[-2.4,1.1,-1.3]},"label":"Estante \u00b7 set dressing"},{"pos":[0.3,0.55,0.1],"normal":[0,1,0],"view":{"yaw":0.6,"pitch":0.7,"dist":0.8,"target":[0.3,0.3,-0.5]},"label":"Tapete e mesa \u00b7 composi\u00e7\u00e3o"}]}'>
+        <span class="v3d-demo">DEMO</span>
+        <div class="v3d-poster"><div><svg class="cube" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M32 6 56 19v26L32 58 8 45V19z"/><path d="M8 19l24 13 24-13M32 32v26"/></svg><button type="button" data-v3d-start>▶ <span class="en">Explore in 3D</span><span class="pt">Explorar em 3D</span></button><small><span class="en">Interactive model · WebGL</span><span class="pt">Modelo interativo · WebGL</span></small></div></div>
+        <div class="v3d-bar" hidden><button type="button" data-v3d-reset aria-label="Reset view / Voltar à vista inicial" title="Reset">⟲</button><button type="button" data-v3d-fs aria-label="Fullscreen / Tela cheia" title="Fullscreen">⛶</button></div>
+        <p class="v3d-hint" hidden><span class="l"><span class="en">Drag to rotate · scroll to zoom · right-click to pan · double-click to reset</span><span class="pt">Arraste para girar · role para zoom · botão direito para mover · duplo clique volta ao início</span></span><span class="s"><span class="en">Drag to rotate · pinch to zoom · two fingers to pan</span><span class="pt">Arraste para girar · pinça para zoom · dois dedos para mover</span></span></p>
+      </div>
+      <ol class="v3d-notes"><li><button type="button" data-hs="0"><span class="n">1</span><span><b><span class="en">Window · daylight</span><span class="pt">Janela · luz do dia</span></b><span class="d"><span class="en">The window is the main light source: the room is laid out so daylight falls across the sofa and rug.</span><span class="pt">A janela é a fonte principal de luz: a sala foi organizada para a luz do dia cair sobre o sofá e o tapete.</span></span></span></button></li><li><button type="button" data-hs="1"><span class="n">2</span><span><b><span class="en">Lamp · warm focal point</span><span class="pt">Luminária · ponto focal quente</span></b><span class="d"><span class="en">A warm lamp balances the cool daylight and pulls the eye to the corner of the room.</span><span class="pt">Uma luminária quente equilibra a luz fria do dia e puxa o olhar para o canto da sala.</span></span></span></button></li><li><button type="button" data-hs="2"><span class="n">3</span><span><b><span class="en">Shelf · set dressing</span><span class="pt">Estante · set dressing</span></b><span class="d"><span class="en">Small props with varied heights and colors make the space feel lived in, not assembled from isolated assets.</span><span class="pt">Props pequenos com alturas e cores variadas dão cara de habitado, em vez de um ambiente montado com assets isolados.</span></span></span></button></li><li><button type="button" data-hs="3"><span class="n">4</span><span><b><span class="en">Rug and table · composition</span><span class="pt">Tapete e mesa · composição</span></b><span class="d"><span class="en">The rug and table anchor the centre of the room and guide the path from the door to the sofa.</span><span class="pt">O tapete e a mesa ancoram o centro da sala e guiam o caminho da porta até o sofá.</span></span></span></button></li></ol>
     </div>
   </section>
 
@@ -2018,6 +2170,167 @@ if (buttonsEnabled) {
 
 <script>
 document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.ytplay');if(!b)return;var id=b.getAttribute('data-yt');if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label')||'YouTube';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.referrerPolicy='strict-origin-when-cross-origin';b.replaceWith(f);});
+</script>
+<script>/* NS 3D viewer: tiny self-contained glTF 2.0 (GLB) viewer, WebGL2, no external libraries. */
+(function(){
+'use strict';
+var M4={
+  id:function(){return [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];},
+  mul:function(a,b){var o=new Array(16);for(var c=0;c<4;c++)for(var r=0;r<4;r++){o[c*4+r]=a[r]*b[c*4]+a[4+r]*b[c*4+1]+a[8+r]*b[c*4+2]+a[12+r]*b[c*4+3];}return o;},
+  trs:function(t,q,s){t=t||[0,0,0];q=q||[0,0,0,1];s=s||[1,1,1];var x=q[0],y=q[1],z=q[2],w=q[3];
+    return [(1-2*(y*y+z*z))*s[0],(2*(x*y+z*w))*s[0],(2*(x*z-y*w))*s[0],0,(2*(x*y-z*w))*s[1],(1-2*(x*x+z*z))*s[1],(2*(y*z+x*w))*s[1],0,(2*(x*z+y*w))*s[2],(2*(y*z-x*w))*s[2],(1-2*(x*x+y*y))*s[2],0,t[0],t[1],t[2],1];},
+  persp:function(f,a,n,fa){var t=1/Math.tan(f/2);return [t/a,0,0,0,0,t,0,0,0,0,(fa+n)/(n-fa),-1,0,0,2*fa*n/(n-fa),0];},
+  look:function(e,c,u){var z=nrm(sub(e,c)),x=nrm(cross(u,z)),y=cross(z,x);return [x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,e),-dot(y,e),-dot(z,e),1];},
+  pt:function(m,p){return [m[0]*p[0]+m[4]*p[1]+m[8]*p[2]+m[12],m[1]*p[0]+m[5]*p[1]+m[9]*p[2]+m[13],m[2]*p[0]+m[6]*p[1]+m[10]*p[2]+m[14]];},
+  nmat:function(m){var a=m[0],b=m[1],c=m[2],d=m[4],e=m[5],f=m[6],g=m[8],h=m[9],i=m[10];var A=e*i-f*h,B=f*g-d*i,C=d*h-e*g,det=a*A+b*B+c*C||1;
+    return [A/det,B/det,C/det,(c*h-b*i)/det,(a*i-c*g)/det,(b*g-a*h)/det,(b*f-c*e)/det,(c*d-a*f)/det,(a*e-b*d)/det];}
+};
+function sub(a,b){return [a[0]-b[0],a[1]-b[1],a[2]-b[2]];}
+function dot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2];}
+function cross(a,b){return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];}
+function nrm(a){var l=Math.hypot(a[0],a[1],a[2])||1;return [a[0]/l,a[1]/l,a[2]/l];}
+
+var VS='#version 300 es\nlayout(location=0)in vec3 aP;layout(location=1)in vec3 aN;layout(location=2)in vec2 aT;layout(location=3)in vec4 aC;uniform mat4 uVP,uM;uniform mat3 uNM;out vec3 vW,vN;out vec2 vT;out vec4 vC;void main(){vec4 w=uM*vec4(aP,1.);vW=w.xyz;vN=uNM*aN;vT=aT;vC=aC;gl_Position=uVP*w;}';
+var FS='#version 300 es\nprecision highp float;in vec3 vW,vN;in vec2 vT;in vec4 vC;uniform vec4 uBase;uniform vec3 uEm,uEye;uniform float uRough,uMetal,uCut,uExp;uniform int uTex,uMode;uniform sampler2D uS;out vec4 o;'+
+'vec3 aces(vec3 x){return clamp((x*(2.51*x+.03))/(x*(2.43*x+.59)+.14),0.,1.);}'+
+'void main(){vec4 b=uBase*vC;if(uTex==1)b*=texture(uS,vT);if(uMode==1&&b.a<uCut)discard;vec3 n=normalize(vN);if(!gl_FrontFacing)n=-n;vec3 v=normalize(uEye-vW);'+
+'vec3 alb=b.rgb*(1.-uMetal);vec3 f0=mix(vec3(.04),b.rgb,uMetal);'+
+'vec3 amb=mix(vec3(.30,.27,.24),vec3(.62,.68,.78),n.y*.5+.5)*alb;'+
+'vec3 c=amb;vec3 L[2];L[0]=normalize(vec3(.45,.85,.35));L[1]=normalize(vec3(-.6,.35,-.5));vec3 Lc[2];Lc[0]=vec3(1.45,1.35,1.2);Lc[1]=vec3(.35,.4,.5);'+
+'for(int i=0;i<2;i++){float d=max(dot(n,L[i]),0.);vec3 h=normalize(L[i]+v);float sh=exp2(10.*(1.-uRough)+1.);float sp=pow(max(dot(n,h),0.),sh)*(sh+8.)/25.;vec3 F=f0+(1.-f0)*pow(1.-max(dot(h,v),0.),5.);c+=Lc[i]*d*(alb+F*sp*(1.-uRough*.7));}'+
+'c+=uEm;c=aces(c*uExp);o=vec4(pow(c,vec3(1./2.2)),uMode==2?b.a:1.);}';
+var GVS='#version 300 es\nlayout(location=0)in vec3 aP;uniform mat4 uVP;uniform vec3 uC;uniform float uR;out vec2 vU;void main(){vU=aP.xz;gl_Position=uVP*vec4(uC+vec3(aP.x*uR,0.,aP.z*uR),1.);}';
+var GFS='#version 300 es\nprecision highp float;in vec2 vU;uniform vec3 uBg;out vec4 o;void main(){float d=length(vU);float a=smoothstep(1.,.15,d)*.38;o=vec4(0.,0.,0.,a);}';
+
+function compile(gl,vs,fs){function sh(t,s){var x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(x));return x;}
+  var p=gl.createProgram();gl.attachShader(p,sh(gl.VERTEX_SHADER,vs));gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));
+  var u={},n=gl.getProgramParameter(p,gl.ACTIVE_UNIFORMS);for(var i=0;i<n;i++){var a=gl.getActiveUniform(p,i);u[a.name]=gl.getUniformLocation(p,a.name);}return {p:p,u:u};}
+
+var COMP={5120:Int8Array,5121:Uint8Array,5122:Int16Array,5123:Uint16Array,5125:Uint32Array,5126:Float32Array};
+var NC={SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16};
+
+function parseGLB(buf){var dv=new DataView(buf);if(dv.getUint32(0,true)!==0x46546C67)throw new Error('not a GLB');
+  var off=12,json=null,bin=null;while(off<buf.byteLength){var len=dv.getUint32(off,true),type=dv.getUint32(off+4,true);
+    if(type===0x4E4F534A)json=JSON.parse(new TextDecoder().decode(new Uint8Array(buf,off+8,len)));else if(type===0x004E4942)bin=buf.slice(off+8,off+8+len);off+=8+len;}
+  return {json:json,bin:bin};}
+
+function accessor(g,bin,i){var a=g.accessors[i],nc=NC[a.type],T=COMP[a.componentType],out=new T(a.count*nc);if(a.bufferView===undefined)return {data:out,nc:nc,a:a};
+  var v=g.bufferViews[a.bufferView],base=(v.byteOffset||0)+(a.byteOffset||0),es=T.BYTES_PER_ELEMENT,stride=v.byteStride||nc*es;
+  if(stride===nc*es){out.set(new T(bin,base,a.count*nc));}else{var src=new DataView(bin);for(var k=0;k<a.count;k++)for(var c=0;c<nc;c++){var p=base+k*stride+c*es;
+    out[k*nc+c]=T===Float32Array?src.getFloat32(p,true):T===Uint16Array?src.getUint16(p,true):T===Uint8Array?src.getUint8(p):T===Uint32Array?src.getUint32(p,true):T===Int16Array?src.getInt16(p,true):src.getInt8(p);}}
+  if(a.normalized&&T!==Float32Array){var f=new Float32Array(out.length),mx=T===Uint8Array?255:T===Uint16Array?65535:T===Int8Array?127:32767;for(var j=0;j<out.length;j++)f[j]=Math.max(out[j]/mx,-1);out=f;}
+  return {data:out,nc:nc,a:a};}
+
+function Viewer(host,opts){this.host=host;this.o=opts||{};this.hs=this.o.hotspots||[];this.dead=false;}
+Viewer.prototype.start=function(buf){
+  var self=this,host=this.host,cv=document.createElement('canvas');cv.className='v3d-canvas';host.appendChild(cv);this.cv=cv;
+  var gl=cv.getContext('webgl2',{antialias:true,alpha:false,preserveDrawingBuffer:false});if(!gl)throw new Error('webgl2');this.gl=gl;
+  var g=parseGLB(buf),G=g.json,bin=g.bin;this.prog=compile(gl,VS,FS);this.gprog=compile(gl,GVS,GFS);
+  var texs=[],pending=[];(G.textures||[]).forEach(function(t,i){var img=G.images[t.source];var tx=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tx);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([255,255,255,255]));texs[i]=tx;
+    var blob=img.bufferView!==undefined?new Blob([new Uint8Array(bin,(G.bufferViews[img.bufferView].byteOffset||0),G.bufferViews[img.bufferView].byteLength)],{type:img.mimeType||'image/png'}):null;
+    var srcP=blob?createImageBitmap(blob,{colorSpaceConversion:'none'}):(img.uri?fetch(new URL(img.uri,self.o.base||location.href)).then(function(r){return r.blob();}).then(function(b){return createImageBitmap(b,{colorSpaceConversion:'none'});}):null);
+    if(srcP)pending.push(srcP.then(function(bm){var s=(G.samplers||[])[t.sampler]||{};gl.bindTexture(gl.TEXTURE_2D,tx);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);
+      gl.texImage2D(gl.TEXTURE_2D,0,gl.SRGB8_ALPHA8,gl.RGBA,gl.UNSIGNED_BYTE,bm);gl.generateMipmap(gl.TEXTURE_2D);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,s.minFilter||gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,s.magFilter||gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,s.wrapS||gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,s.wrapT||gl.REPEAT);self.dirty=true;}).catch(function(){}));});
+  var draws=[],bmin=[1e9,1e9,1e9],bmax=[-1e9,-1e9,-1e9];
+  function visit(ni,parent){var n=G.nodes[ni],m=n.matrix?n.matrix.slice():M4.trs(n.translation,n.rotation,n.scale),w=M4.mul(parent,m);
+    if(n.mesh!==undefined)G.meshes[n.mesh].primitives.forEach(function(p){if(p.mode!==undefined&&p.mode!==4)return;var at=p.attributes;if(at.POSITION===undefined)return;
+      var vao=gl.createVertexArray();gl.bindVertexArray(vao);var pos=accessor(G,bin,at.POSITION);
+      function vb(loc,arr,nc){var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,arr instanceof Float32Array?arr:new Float32Array(arr),gl.STATIC_DRAW);gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,nc,gl.FLOAT,false,0,0);}
+      vb(0,pos.data,3);var idx=p.indices!==undefined?accessor(G,bin,p.indices).data:null;
+      var nr=at.NORMAL!==undefined?accessor(G,bin,at.NORMAL).data:computeNormals(pos.data,idx);vb(1,nr,3);
+      if(at.TEXCOORD_0!==undefined)vb(2,accessor(G,bin,at.TEXCOORD_0).data,2);else gl.vertexAttrib2f(2,0,0);
+      if(at.COLOR_0!==undefined){var cc=accessor(G,bin,at.COLOR_0);vb(3,cc.data,cc.nc);}else gl.vertexAttrib4f(3,1,1,1,1);
+      var count=pos.a.count,itype=null;if(idx){var ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);if(idx instanceof Uint8Array)idx=new Uint16Array(idx);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,idx,gl.STATIC_DRAW);count=idx.length;itype=idx instanceof Uint32Array?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT;}
+      gl.bindVertexArray(null);var mn=pos.a.min,mx=pos.a.max;if(mn&&mx){for(var cx=0;cx<8;cx++){var c=M4.pt(w,[cx&1?mx[0]:mn[0],cx&2?mx[1]:mn[1],cx&4?mx[2]:mn[2]]);for(var k=0;k<3;k++){bmin[k]=Math.min(bmin[k],c[k]);bmax[k]=Math.max(bmax[k],c[k]);}}}
+      var mat=(G.materials||[])[p.material]||{},pb=mat.pbrMetallicRoughness||{};var mode=mat.alphaMode==='BLEND'?2:mat.alphaMode==='MASK'?1:0;
+      var ctr=mn&&mx?M4.pt(w,[(mn[0]+mx[0])/2,(mn[1]+mx[1])/2,(mn[2]+mx[2])/2]):[0,0,0];
+      draws.push({vao:vao,count:count,itype:itype,m:w,nm:M4.nmat(w),base:pb.baseColorFactor||[1,1,1,1],tex:pb.baseColorTexture?texs[pb.baseColorTexture.index]:null,
+        rough:pb.roughnessFactor===undefined?1:pb.roughnessFactor,metal:pb.metallicFactor===undefined?1:pb.metallicFactor,em:(mat.emissiveFactor||[0,0,0]).map(function(x){return x*((mat.extensions&&mat.extensions.KHR_materials_emissive_strength&&mat.extensions.KHR_materials_emissive_strength.emissiveStrength)||1);}),
+        mode:mode,cut:mat.alphaCutoff===undefined?.5:mat.alphaCutoff,ds:!!mat.doubleSided,ctr:ctr});});
+    (n.children||[]).forEach(function(c){visit(c,w);});}
+  var sc=G.scenes?G.scenes[G.scene||0]:{nodes:G.nodes.map(function(_,i){return i;})};sc.nodes.forEach(function(n){visit(n,M4.id());});
+  draws.sort(function(a,b){return a.mode-b.mode;});this.draws=draws;
+  var c=[(bmin[0]+bmax[0])/2,(bmin[1]+bmax[1])/2,(bmin[2]+bmax[2])/2],r=Math.max(Math.hypot(bmax[0]-bmin[0],bmax[1]-bmin[1],bmax[2]-bmin[2])/2,1e-3);
+  this.ctr=c;this.rad=r;this.floorY=bmin[1];
+  var gq=gl.createVertexArray();gl.bindVertexArray(gq);var gb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,gb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,0,-1,1,0,-1,1,0,1,-1,0,-1,1,0,1,-1,0,1]),gl.STATIC_DRAW);gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,3,gl.FLOAT,false,0,0);gl.bindVertexArray(null);this.gq=gq;
+  var v0=this.o.view||{};this.home={yaw:v0.yaw!==undefined?v0.yaw:0.6,pitch:v0.pitch!==undefined?v0.pitch:0.45,dist:(v0.dist||2.1)*r,tgt:v0.target||c.slice()};
+  this.cam={yaw:this.home.yaw,pitch:this.home.pitch,dist:this.home.dist,tgt:this.home.tgt.slice()};this.goal=null;this.auto=this.o.autoRotate!==false;this.dirty=true;
+  this.controls();this.hotspots();Promise.all(pending).then(function(){self.dirty=true;});
+  var last=performance.now();function frame(t){if(self.dead)return;var dt=Math.min((t-last)/1000,.05);last=t;self.tick(dt);requestAnimationFrame(frame);}requestAnimationFrame(frame);
+  if(window.ResizeObserver){this.ro=new ResizeObserver(function(){self.dirty=true;});this.ro.observe(host);}
+};
+function computeNormals(p,idx){var n=new Float32Array(p.length),cnt=idx?idx.length:p.length/3;for(var i=0;i<cnt;i+=3){var a=idx?idx[i]:i,b=idx?idx[i+1]:i+1,c=idx?idx[i+2]:i+2;
+  var A=[p[a*3],p[a*3+1],p[a*3+2]],B=[p[b*3],p[b*3+1],p[b*3+2]],C=[p[c*3],p[c*3+1],p[c*3+2]],f=cross(sub(B,A),sub(C,A));[a,b,c].forEach(function(v){n[v*3]+=f[0];n[v*3+1]+=f[1];n[v*3+2]+=f[2];});}
+  for(var j=0;j<n.length;j+=3){var l=Math.hypot(n[j],n[j+1],n[j+2])||1;n[j]/=l;n[j+1]/=l;n[j+2]/=l;}return n;}
+Viewer.prototype.eye=function(){var c=this.cam,cp=Math.cos(c.pitch);return [c.tgt[0]+c.dist*cp*Math.sin(c.yaw),c.tgt[1]+c.dist*Math.sin(c.pitch),c.tgt[2]+c.dist*cp*Math.cos(c.yaw)];};
+Viewer.prototype.tick=function(dt){var c=this.cam;
+  if(this.goal){var g=this.goal,k=1-Math.pow(.0015,dt);var dy=((g.yaw-c.yaw+Math.PI*3)%(Math.PI*2))-Math.PI;c.yaw+=dy*k;c.pitch+=(g.pitch-c.pitch)*k;c.dist+=(g.dist-c.dist)*k;for(var i=0;i<3;i++)c.tgt[i]+=(g.tgt[i]-c.tgt[i])*k;
+    if(Math.abs(dy)<1e-3&&Math.abs(g.dist-c.dist)<this.rad*1e-3)this.goal=null;this.dirty=true;}
+  else if(this.auto&&!this.drag){this.at=(this.at||0)+dt;var sw=this.o.sway===undefined?.55:this.o.sway;if(sw>0)c.yaw=this.home.yaw+sw*Math.sin(this.at*.25);else c.yaw+=dt*.12;this.dirty=true;}
+  if(!this.dirty)return;this.dirty=false;this.draw();};
+Viewer.prototype.draw=function(){var gl=this.gl,cv=this.cv,dpr=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(cv.clientWidth*dpr)),h=Math.max(1,Math.round(cv.clientHeight*dpr));
+  if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;}gl.viewport(0,0,w,h);var bg=this.o.bg||[0.11,0.105,0.13];gl.clearColor(bg[0],bg[1],bg[2],1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  var e=this.eye(),r=this.rad,V=M4.look(e,this.cam.tgt,[0,1,0]),P=M4.persp(this.o.fov||0.75,w/h,Math.max(this.cam.dist-r*1.6,r*.01),this.cam.dist+r*2.5),VP=M4.mul(P,V);this.VP=VP;
+  gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);
+  var G=this.gprog;gl.useProgram(G.p);gl.uniformMatrix4fv(G.u.uVP,false,VP);gl.uniform3f(G.u.uC,this.ctr[0],this.floorY-r*.002,this.ctr[2]);gl.uniform1f(G.u.uR,r*1.15);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);gl.disable(gl.CULL_FACE);gl.bindVertexArray(this.gq);gl.drawArrays(gl.TRIANGLES,0,6);gl.depthMask(true);
+  var S=this.prog;gl.useProgram(S.p);gl.uniformMatrix4fv(S.u.uVP,false,VP);gl.uniform3fv(S.u.uEye,e);gl.uniform1f(S.u.uExp,this.o.exposure||1.0);gl.uniform1i(S.u.uS,0);gl.activeTexture(gl.TEXTURE0);
+  var blend=this.draws.filter(function(d){return d.mode===2;}).sort(function(a,b){return dot(sub(b.ctr,e),sub(b.ctr,e))-dot(sub(a.ctr,e),sub(a.ctr,e));});
+  var list=this.draws.filter(function(d){return d.mode!==2;}).concat(blend);
+  for(var i=0;i<list.length;i++){var d=list[i];if(d.mode===2){gl.enable(gl.BLEND);gl.depthMask(false);}else{gl.disable(gl.BLEND);gl.depthMask(true);}
+    if(d.ds)gl.disable(gl.CULL_FACE);else{gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);}
+    gl.uniformMatrix4fv(S.u.uM,false,d.m);gl.uniformMatrix3fv(S.u.uNM,false,d.nm);gl.uniform4fv(S.u.uBase,d.base);gl.uniform3fv(S.u.uEm,d.em);gl.uniform1f(S.u.uRough,d.rough);gl.uniform1f(S.u.uMetal,d.metal);gl.uniform1f(S.u.uCut,d.cut);gl.uniform1i(S.u.uMode,d.mode);
+    gl.uniform1i(S.u.uTex,d.tex?1:0);if(d.tex)gl.bindTexture(gl.TEXTURE_2D,d.tex);gl.bindVertexArray(d.vao);if(d.itype)gl.drawElements(gl.TRIANGLES,d.count,d.itype,0);else gl.drawArrays(gl.TRIANGLES,0,d.count);}
+  gl.depthMask(true);gl.bindVertexArray(null);this.placeHotspots();};
+Viewer.prototype.controls=function(){var self=this,cv=this.cv,pts={},startD=0,startDist=0,lastMid=null;cv.style.touchAction='none';
+  function stop(){self.auto=false;self.goal=null;if(self.o.onInteract)self.o.onInteract();}
+  cv.addEventListener('pointerdown',function(e){cv.setPointerCapture(e.pointerId);pts[e.pointerId]={x:e.clientX,y:e.clientY,b:e.button,sh:e.shiftKey};self.drag=true;stop();
+    var k=Object.keys(pts);if(k.length===2){var a=pts[k[0]],b=pts[k[1]];startD=Math.hypot(a.x-b.x,a.y-b.y);startDist=self.cam.dist;lastMid=[(a.x+b.x)/2,(a.y+b.y)/2];}});
+  cv.addEventListener('pointermove',function(e){var p=pts[e.pointerId];if(!p)return;var dx=e.clientX-p.x,dy=e.clientY-p.y,k=Object.keys(pts);
+    if(k.length===1){if(p.b===2||p.b===1||p.sh)self.pan(dx,dy);else{self.cam.yaw-=dx*.008;self.cam.pitch=Math.max(-0.2,Math.min(1.5,self.cam.pitch+dy*.006));}}
+    p.x=e.clientX;p.y=e.clientY;if(k.length===2){var a=pts[k[0]],b=pts[k[1]],d=Math.hypot(a.x-b.x,a.y-b.y),mid=[(a.x+b.x)/2,(a.y+b.y)/2];if(startD>0)self.cam.dist=self.clampDist(startDist*startD/d);
+      if(lastMid)self.pan(mid[0]-lastMid[0],mid[1]-lastMid[1]);lastMid=mid;}self.dirty=true;});
+  function up(e){delete pts[e.pointerId];if(!Object.keys(pts).length)self.drag=false;startD=0;lastMid=null;}
+  cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);cv.addEventListener('contextmenu',function(e){e.preventDefault();});
+  cv.addEventListener('wheel',function(e){e.preventDefault();stop();self.cam.dist=self.clampDist(self.cam.dist*Math.exp(e.deltaY*.0012));self.dirty=true;},{passive:false});
+  cv.addEventListener('dblclick',function(){self.reset();});
+  cv.tabIndex=0;cv.addEventListener('keydown',function(e){var c=self.cam,h=true;if(e.key==='ArrowLeft')c.yaw+=.08;else if(e.key==='ArrowRight')c.yaw-=.08;else if(e.key==='ArrowUp')c.pitch=Math.min(1.5,c.pitch+.06);else if(e.key==='ArrowDown')c.pitch=Math.max(-.2,c.pitch-.06);
+    else if(e.key==='+'||e.key==='=')c.dist=self.clampDist(c.dist*.9);else if(e.key==='-')c.dist=self.clampDist(c.dist*1.1);else h=false;if(h){e.preventDefault();stop();self.dirty=true;}});};
+Viewer.prototype.clampDist=function(d){return Math.max(this.rad*.25,Math.min(this.rad*5,d));};
+Viewer.prototype.pan=function(dx,dy){var c=this.cam,s=c.dist*.0015,cy=Math.cos(c.yaw),sy=Math.sin(c.yaw),right=[cy,0,-sy],up=[-Math.sin(c.pitch)*sy,Math.cos(c.pitch),-Math.sin(c.pitch)*cy];
+  for(var i=0;i<3;i++)c.tgt[i]+=(-dx*right[i]+dy*up[i])*s;this.dirty=true;};
+Viewer.prototype.reset=function(){this.goal={yaw:this.home.yaw,pitch:this.home.pitch,dist:this.home.dist,tgt:this.home.tgt.slice()};this.dirty=true;};
+Viewer.prototype.focus=function(h){var r=this.rad,v=h.view||{};this.auto=false;this.goal={yaw:v.yaw!==undefined?v.yaw:this.cam.yaw,pitch:v.pitch!==undefined?v.pitch:this.cam.pitch,dist:(v.dist||1)*r,tgt:(v.target||h.pos).slice()};this.dirty=true;};
+Viewer.prototype.hotspots=function(){var self=this;this.hsEls=this.hs.map(function(h,i){var b=document.createElement('button');b.type='button';b.className='v3d-hs';b.textContent=String(i+1);b.setAttribute('aria-label',(i+1)+'. '+(h.label||''));
+  b.addEventListener('click',function(){self.focus(h);if(self.o.onHotspot)self.o.onHotspot(i);});self.host.appendChild(b);return b;});};
+Viewer.prototype.placeHotspots=function(){if(!this.hsEls||!this.VP)return;var VP=this.VP,w=this.cv.clientWidth,h=this.cv.clientHeight,e=this.eye();
+  for(var i=0;i<this.hs.length;i++){var p=this.hs[i].pos,x=VP[0]*p[0]+VP[4]*p[1]+VP[8]*p[2]+VP[12],y=VP[1]*p[0]+VP[5]*p[1]+VP[9]*p[2]+VP[13],ww=VP[3]*p[0]+VP[7]*p[1]+VP[11]*p[2]+VP[15],el=this.hsEls[i];
+    if(ww<=0){el.style.display='none';continue;}el.style.display='';el.style.transform='translate('+((x/ww*.5+.5)*w)+'px,'+((1-(y/ww*.5+.5))*h)+'px) translate(-50%,-50%)';
+    var n=this.hs[i].normal;el.classList.toggle('back',!!n&&dot(n,sub(e,p))<0);}};
+Viewer.prototype.destroy=function(){this.dead=true;if(this.ro)this.ro.disconnect();var ext=this.gl&&this.gl.getExtension('WEBGL_lose_context');if(ext)ext.loseContext();};
+
+function b64buf(s){var bin=atob(s),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u.buffer;}
+window.NS3D={Viewer:Viewer,load:function(src){if(src.indexOf('data:')===0)return Promise.resolve(b64buf(src.slice(src.indexOf(',')+1)));
+  return fetch(src).then(function(r){if(!r.ok)throw new Error(r.status);return r.arrayBuffer();});}};
+})();
+
+(function(){
+function boot(box){if(box.__v)return;var src=box.getAttribute('data-v3d');if(src.charAt(0)==='#'){var el=document.getElementById(src.slice(1));src='data:model/gltf-binary;base64,'+el.textContent.trim();}
+  var cfg={};try{cfg=JSON.parse(box.getAttribute('data-cfg')||'{}');}catch(e){}
+  var poster=box.querySelector('.v3d-poster'),bar=box.querySelector('.v3d-bar'),hint=box.querySelector('.v3d-hint'),wrap=box.closest('.v3d-wrap'),notes=wrap?wrap.querySelectorAll('.v3d-notes button'):[];
+  var btn=poster.querySelector('button');btn.disabled=true;btn.style.opacity='.7';
+  function mark(i){notes.forEach(function(n,k){n.classList.toggle('on',k===i);});(v&&v.hsEls||[]).forEach(function(h,k){h.classList.toggle('on',k===i);});}
+  var v=new NS3D.Viewer(box,{view:cfg.view,hotspots:cfg.hotspots||[],onHotspot:mark,onInteract:function(){if(hint)hint.style.opacity='0';}});box.__v=v;
+  NS3D.load(src).then(function(buf){v.start(buf);poster.remove();bar.hidden=false;hint.hidden=false;
+    setTimeout(function(){if(hint)hint.style.opacity='0';},7000);
+    notes.forEach(function(n,k){n.onclick=function(){v.focus(v.hs[k]);mark(k);};});
+  }).catch(function(e){box.__v=null;var d=document.createElement('div');d.className='v3d-err';d.textContent=(document.documentElement.classList.contains('lang-pt')?'N\u00e3o foi poss\u00edvel abrir o modelo 3D neste navegador.':'Could not open the 3D model in this browser.');box.appendChild(d);});
+  bar.querySelector('[data-v3d-reset]').onclick=function(){v.reset();mark(-1);};
+  bar.querySelector('[data-v3d-fs]').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else if(box.requestFullscreen)box.requestFullscreen();};}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-v3d-start]');if(b)boot(b.closest('.v3d'));
+  var n=e.target.closest&&e.target.closest('.v3d-notes button');if(n){var box=n.closest('.v3d-wrap').querySelector('.v3d');if(!box.__v)boot(box);}});
+})();
 </script>
 </body>
 </html>
