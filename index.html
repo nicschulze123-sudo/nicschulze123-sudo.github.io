@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-eYV4OkyPKCSmS0R78T+3Z/hWPEXaIZ4lGRgQ0Ppx0Ws=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI=' 'sha256-dv3jhhUz8L0nQ4teCh5oQU+POyCM0CTd0nXNTIfiwn4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+<!doctype html><html lang="pt-BR" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0QNcEI+U6UVlbYm9eXnpMA6wl2U3cE6qh72EVooljXM=' 'sha256-QDiDVkoxjtlbOtFmkOBEgvgdqmR79UKnCM9Aj7ZAstc=' 'sha256-4DAC4oLkNVJOqHstHxiGljqUhstAESsoiiFx4a6IUHI=' 'sha256-dv3jhhUz8L0nQ4teCh5oQU+POyCM0CTd0nXNTIfiwn4=' 'sha256-9/Bki20AFHiE+N/XRI0xiq+dcaBwZaVmkQ+I8kuCFkU=' 'sha256-l/64sVSTRQr8vlxgcxTJ7QT7rOVvs0z+DiVXtMQ5qx0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; font-src 'self'; connect-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nicolas Schulze, Unity Developer for simulation, VR and games. Training simulators in Unity 6: vehicle physics, real cab controls, lessons, PDF reports, VR on Meta Quest and 4K performance."><meta name="robots" content="index,follow,noai,noimageai"><link rel="canonical" href="https://nicschulze123-sudo.github.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games"><meta property="og:description" content="Training simulators in Unity 6: agricultural, orchard, heavy-equipment and VR projects, built with a team."><meta property="og:url" content="https://nicschulze123-sudo.github.io/"><meta property="og:image" content="https://nicschulze123-sudo.github.io/img/full/ag_44.jpg"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0F0E17"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Schulze","jobTitle":"Unity Developer","url":"https://nicschulze123-sudo.github.io/","knowsAbout":["Unity","C#","HDRP","URP","Simulation","Virtual reality","Meta Quest","Vehicle physics","Training simulators"],"sameAs":["https://instagram.com/nicolas.sschulze","https://www.linkedin.com/in/nicolas-schulze-3407b929b/"]}</script><style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* Empresas e clientes */
 .orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (max-width:860px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -45,6 +45,191 @@
 .hf-q button[aria-pressed="true"]{background:var(--series);border-color:var(--series);color:var(--on-series)}
 .hf-q button:focus-visible{outline:3px solid var(--series);outline-offset:2px}
 .hf-q small{color:var(--muted);font-size:12px}
+
+/* ===== FX: depth, motion and 3D (desktop) ===== */
+@media (prefers-reduced-motion: no-preference){
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.32s}
+  ::view-transition-group(ns-cover){animation-duration:.6s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-old(ns-cover),::view-transition-new(ns-cover){height:100%;object-fit:cover;overflow:clip}
+}
+html.fx-on .rv{opacity:0;transform:translate3d(0,38px,0) perspective(1000px) rotateX(9deg);transform-origin:50% 100%}
+html.fx-on .rv.in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--rvd,0s)}
+.hero-grid{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:1}
+html.fx-on .home-hero .hero-bg .sc-layer{transition:transform .25s ease-out}
+html.fx-on .home-hero > .readout{transition:transform .25s ease-out;transform-style:preserve-3d}
+.tilt{transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;will-change:transform}
+.tilt.tilting{transition:transform .08s linear,box-shadow .2s}
+.tilt .glare{position:absolute;inset:0;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .3s;z-index:2;
+  background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.22),transparent 60%)}
+.tilt.tilting .glare{opacity:1}
+.feat-img.tilt.tilting{box-shadow:0 30px 60px -20px rgba(15,14,23,.45)}
+.feat-img.tilt img{transition:transform .35s ease-out}
+.org.tilt{position:relative}
+.org.tilt.tilting{box-shadow:0 22px 40px -18px rgba(15,14,23,.35);border-color:var(--series)}
+.org.tilt.tilting .logo img{transform:translateZ(24px) scale(1.06)}
+.org .logo img{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+
+/* ===== SOCIAL: mobile profile/feed ===== */
+#social{display:none}
+html.social #social{display:block;max-width:none!important;width:calc(100% + 2*var(--gut))!important;margin-inline:calc(-1*var(--gut))!important}
+html.social #v-home > :not(#social){display:none!important}
+html.social .bar nav{display:none}
+html.social body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+.so-tabbar{display:none}
+html.social .so-tabbar{display:flex}
+#social{margin-inline:calc(-1*var(--gut));width:calc(100% + 2*var(--gut));max-width:none;align-self:auto;color:var(--ink)}
+.so-prof{padding:18px 16px 10px;display:grid;grid-template-columns:86px 1fr;gap:6px 18px;align-items:center}
+.so-ava{width:86px;height:86px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#9D7CFF,#3CC2B2,#F28A2E,#9D7CFF);grid-row:span 2}
+.so-ava>div{width:100%;height:100%;border-radius:50%;background:var(--bg);display:grid;place-items:center;border:3px solid var(--bg)}
+.so-ava svg{width:46px;height:46px;color:var(--ink)}
+.so-stats{display:flex;justify-content:space-around;text-align:center}
+.so-stats b{display:block;font:800 20px/1.1 var(--display,inherit)}
+.so-stats span{font-size:12px;color:var(--muted)}
+.so-bio{padding:4px 16px 0;font-size:14px;line-height:1.45}
+.so-bio h1{font:800 17px/1.2 inherit;font-family:inherit;text-transform:none;letter-spacing:0;margin:0}
+.so-bio .role{color:var(--muted);font-size:13px;margin:2px 0 6px}
+.so-bio p{margin:0 0 4px}
+.so-bio .loc{color:var(--muted);font-size:13px}
+.so-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:12px 16px 6px}
+.so-btns a,.so-btns button{all:unset;box-sizing:border-box;text-align:center;padding:9px 6px;border-radius:10px;background:var(--surface-raised);font-weight:700;font-size:13px;cursor:pointer;color:var(--ink)}
+.so-btns .pri{background:#7C5CFF;color:#fff}
+.so-hl{display:flex;gap:14px;overflow-x:auto;padding:14px 16px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.so-hl::-webkit-scrollbar{display:none}
+.so-hl button{all:unset;cursor:pointer;display:grid;justify-items:center;gap:6px;flex:0 0 auto;width:70px}
+.so-ring{width:66px;height:66px;border-radius:50%;padding:2.5px;background:conic-gradient(from 210deg,var(--series),#9D7CFF,var(--series))}
+.so-hl button.seen .so-ring{background:var(--line-strong,#999)}
+.so-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2.5px solid var(--bg);display:block}
+.so-hl small{font-size:11px;max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.so-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);position:sticky;top:var(--so-top,58px);z-index:5;background:var(--bg)}
+.so-tabs button{all:unset;cursor:pointer;text-align:center;padding:11px 0;font-size:13px;font-weight:700;color:var(--muted);border-top:2px solid transparent;margin-top:-1px}
+.so-tabs button[aria-selected="true"]{color:var(--ink);border-top-color:var(--ink)}
+.so-panel[hidden]{display:none}
+.so-post{border-bottom:1px solid var(--line);padding-bottom:12px}
+.so-ph{display:flex;align-items:center;gap:10px;padding:12px 16px}
+.so-ph .mini{width:34px;height:34px;border-radius:50%;padding:2px;background:conic-gradient(var(--series),#9D7CFF,var(--series))}
+.so-ph .mini img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--bg);display:block}
+.so-ph b{font-size:14px;display:block;line-height:1.2}
+.so-ph small{font-size:12px;color:var(--muted)}
+.so-ph .ns-badge{margin-left:auto;font-size:10px}
+.so-car{position:relative}
+.so-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:4/5;background:#000}
+.so-track::-webkit-scrollbar{display:none}
+.so-track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.so-count{position:absolute;right:12px;top:12px;padding:4px 9px;border-radius:999px;background:rgba(0,0,0,.6);color:#fff;font:600 12px/1 var(--mono,monospace)}
+.so-dots{display:flex;justify-content:center;gap:4px;padding:10px 0 0}
+.so-dots i{width:6px;height:6px;border-radius:50%;background:var(--line-strong,#bbb);transition:background .2s,transform .2s}
+.so-dots i.on{background:#7C5CFF;transform:scale(1.2)}
+.so-act{display:flex;gap:8px;padding:10px 16px 4px;align-items:center}
+.so-act .btn{padding:8px 14px;font-size:13px}
+.so-act .ic{all:unset;cursor:pointer;margin-left:auto;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--ink)}
+.so-act .ic svg{width:22px;height:22px}
+.so-cap{padding:4px 16px 0;font-size:14px;line-height:1.45}
+.so-cap .tags{color:#7C5CFF;font-size:13px;margin-top:4px}
+.so-cap .when{display:block;color:var(--muted);font-size:12px;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.so-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.so-grid button{all:unset;cursor:pointer;aspect-ratio:1;position:relative;overflow:hidden;background:var(--surface-raised)}
+.so-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.so-grid button i{position:absolute;right:6px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--series);box-shadow:0 0 0 2px rgba(0,0,0,.35)}
+.so-about{padding:16px;display:grid;gap:16px;font-size:14px;line-height:1.5}
+.so-about h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.so-chips{display:flex;flex-wrap:wrap;gap:6px}
+.so-chips span{padding:6px 10px;border-radius:999px;background:var(--surface-raised);font-size:12px}
+.so-about .orgs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.so-about .org p{display:none}
+.so-classic{all:unset;display:block;margin:20px auto 10px;padding:8px 14px;font-size:12px;color:var(--muted);text-decoration:underline;cursor:pointer;text-align:center}
+.so-tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.so-tabbar a,.so-tabbar button{all:unset;cursor:pointer;display:grid;justify-items:center;gap:2px;font-size:10px;color:var(--muted);padding:4px 8px;min-width:52px}
+.so-tabbar svg{width:24px;height:24px}
+.so-tabbar .on{color:var(--ink)}
+.so-tabbar :focus-visible,.so-hl button:focus-visible,.so-grid button:focus-visible,.so-tabs button:focus-visible{outline:3px solid #7C5CFF;outline-offset:2px}
+#so-story{position:fixed;inset:0;z-index:100;background:#000;color:#fff;display:none;touch-action:none}
+#so-story.open{display:block}
+#so-story .bars{position:absolute;left:8px;right:8px;top:calc(8px + env(safe-area-inset-top,0px));display:flex;gap:4px;z-index:3}
+#so-story .bars i{flex:1;height:2.5px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+#so-story .bars i b{display:block;height:100%;width:0;background:#fff}
+#so-story .sh{position:absolute;left:12px;right:12px;top:calc(20px + env(safe-area-inset-top,0px));display:flex;align-items:center;gap:10px;z-index:3;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+#so-story .sh img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid #fff}
+#so-story .sh b{font-size:14px}
+#so-story .sh small{font-size:12px;opacity:.8;margin-left:4px}
+#so-story .sh button{all:unset;cursor:pointer;margin-left:auto;font-size:28px;line-height:1;padding:4px 8px}
+#so-story .simg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#so-story .shade{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.45),transparent 22%,transparent 65%,rgba(0,0,0,.7));pointer-events:none;z-index:1}
+#so-story .tap{position:absolute;top:0;bottom:0;z-index:2;width:35%}
+#so-story .tap.l{left:0}#so-story .tap.r{right:0;width:65%}
+#so-story .sf{position:absolute;left:16px;right:16px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:3;display:grid;gap:10px}
+#so-story .sf p,#so-story .sf p *{margin:0;font-size:14px;line-height:1.4;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+#so-story .sf .btn{justify-self:start;background:#fff;color:#111;border-color:#fff}
+
+html.social .edit-bar{bottom:calc(74px + env(safe-area-inset-bottom,0px))!important;transform:translateX(-50%) scale(.72)!important;transform-origin:50% 100%}
+.so-ph .mini{flex:0 0 34px}
+.so-ph > span:nth-child(2){flex:1;min-width:0}
+.so-ph > span:nth-child(2) small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.so-ph .ns-badge{flex:0 0 auto;max-width:42%;white-space:normal;text-align:center;font-size:9px;letter-spacing:.08em;line-height:1.25;padding:4px 7px}
+/* OS-specific adaptation (phones) */
+html.os-ios #social,html.os-ios .so-tabbar,html.os-ios #so-story{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+html.os-ios .so-tabbar{background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+html.os-ios .so-btns a,html.os-ios .so-btns button{border-radius:12px}
+html.os-ios .so-tabbar .on svg{stroke-width:2.6}
+html.os-android #social,html.os-android .so-tabbar,html.os-android #so-story{font-family:Roboto,"Google Sans","Noto Sans",system-ui,sans-serif}
+html.os-android .so-tabbar{background:var(--surface-raised);backdrop-filter:none;border-top:0;box-shadow:0 -1px 3px rgba(0,0,0,.12);padding-top:10px}
+html.os-android .so-tabbar svg{padding:4px 18px;border-radius:16px;box-sizing:content-box;transition:background .2s}
+html.os-android .so-tabbar .on svg{background:color-mix(in srgb,#7C5CFF 24%,transparent)}
+html.os-android .so-tabbar .on{color:var(--ink);font-weight:700}
+html.os-android .so-btns a,html.os-android .so-btns button{border-radius:20px}
+html.os-android .so-btns a:active,html.os-android .so-btns button:active,html.os-android .so-tabbar a:active,html.os-android .so-tabbar button:active{filter:brightness(.9)}
+html.os-android .so-tabs button[aria-selected="true"]{border-top-width:3px}
+#so-back{position:fixed;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;padding:10px 14px;border-radius:999px;border:0;background:#7C5CFF;color:#fff;font:700 13px/1 system-ui,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}
+html:has(.edit-bar) #so-back{bottom:auto;top:calc(76px + env(safe-area-inset-top,0px))}
+
+/* phone preview with simulated iOS / Android system UI (edit version only) */
+#dv-prev{position:fixed;inset:0;z-index:200;background:rgba(10,9,16,.88);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;gap:32px}
+#dv-prev.open{display:flex}
+#dv-prev .ph{flex:0 0 auto;position:relative;transform-origin:center;background:#0b0b0f;box-shadow:0 0 0 2px #3a3846,0 40px 90px rgba(0,0,0,.6)}
+#dv-prev .scr{position:relative;width:100%;height:100%;overflow:hidden;display:flex;flex-direction:column;background:#fff;color:#111;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,sans-serif}
+#dv-prev iframe{flex:1;width:100%;border:0;display:block;background:#fff;min-height:0}
+#dv-prev .sb{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;position:relative;font-weight:600;color:#111;background:#fff}
+#dv-prev .sb .ic{display:flex;gap:5px;align-items:center}
+#dv-prev .sb svg{display:block}
+/* iOS: iPhone 15 (393x852) */
+#dv-prev .ph.ios{width:393px;height:852px;padding:12px;border-radius:62px}
+#dv-prev .ph.ios .scr{border-radius:50px}
+#dv-prev .ios .sb{height:54px;padding:14px 30px 0 36px;font-size:16px;letter-spacing:-.2px}
+#dv-prev .ios .island{position:absolute;left:50%;top:11px;width:124px;height:36px;margin-left:-62px;border-radius:20px;background:#000}
+#dv-prev .ios .saf{flex:0 0 auto;background:rgba(246,246,248,.96);border-top:1px solid rgba(0,0,0,.12);padding:8px 12px 0}
+#dv-prev .ios .url{height:44px;border-radius:13px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;gap:6px;font-size:15px;color:#111}
+#dv-prev .ios .url small{color:#8e8e93;font-size:13px}
+#dv-prev .ios .tools{display:flex;justify-content:space-around;align-items:center;height:44px;color:#007AFF}
+#dv-prev .ios .tools svg{width:22px;height:22px}
+#dv-prev .ios .home{flex:0 0 auto;height:28px;background:rgba(246,246,248,.96);display:flex;justify-content:center;align-items:center}
+#dv-prev .ios .home i{width:134px;height:5px;border-radius:3px;background:#111}
+/* Android: Pixel 7 (412x915) */
+#dv-prev .ph.android{width:412px;height:915px;padding:10px;border-radius:44px}
+#dv-prev .ph.android .scr{border-radius:34px;font-family:Roboto,"Google Sans",system-ui,sans-serif}
+#dv-prev .android .sb{height:36px;padding:6px 22px 0;font-size:14px;font-weight:500}
+#dv-prev .android .hole{position:absolute;left:50%;top:9px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#000}
+#dv-prev .android .chr{flex:0 0 auto;height:56px;display:flex;align-items:center;gap:10px;padding:0 10px;background:#fff;border-bottom:1px solid rgba(0,0,0,.08)}
+#dv-prev .android .chr .url{flex:1;height:40px;border-radius:20px;background:#eef1f6;display:flex;align-items:center;gap:8px;padding:0 14px;font-size:15px;color:#202124;overflow:hidden;white-space:nowrap}
+#dv-prev .android .chr .tabs{width:20px;height:20px;border:2px solid #444;border-radius:4px;font:600 11px/16px Roboto,sans-serif;text-align:center;color:#444}
+#dv-prev .android .chr svg{width:22px;height:22px;color:#444}
+#dv-prev .android .nav{flex:0 0 auto;height:24px;background:#fff;display:flex;justify-content:center;align-items:center}
+#dv-prev .android .nav i{width:108px;height:4px;border-radius:2px;background:#333}
+#dv-prev .side{display:grid;gap:10px;color:#EDEBF5;font:14px/1.4 var(--body,inherit);max-width:230px}
+#dv-prev .side b{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#9D7CFF}
+#dv-prev .side button{all:unset;cursor:pointer;padding:9px 14px;border-radius:10px;background:#17152A;border:1px solid #4A4663;text-align:center;font-weight:600}
+#dv-prev .side button:hover{border-color:#9D7CFF}
+#dv-prev .side button[aria-pressed="true"]{background:#7C5CFF;border-color:#7C5CFF}
+#dv-prev .side button:focus-visible{outline:3px solid #9D7CFF;outline-offset:2px}
+@media (max-width:760px){#dv-prev .side{position:absolute;top:10px;right:10px;max-width:none}#dv-prev .side small,#dv-prev .side b{display:none}}
+
+
+#dv-bar{position:fixed;left:16px;bottom:16px;z-index:150;display:none;gap:6px;align-items:center;padding:8px 10px;border-radius:14px;background:#17152A;color:#EDEBF5;border:1px solid #4A4663;box-shadow:0 10px 30px rgba(0,0,0,.35);font:600 12px/1 system-ui,sans-serif}
+#dv-bar.on{display:flex}
+#dv-bar b{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#F28A2E;margin-right:4px}
+#dv-bar button{cursor:pointer;padding:7px 10px;border-radius:9px;border:1px solid #4A4663;background:#0F0E17;color:#EDEBF5;font:600 12px/1 system-ui,sans-serif}
+#dv-bar button:hover{border-color:#9D7CFF}
+html.in-phone #dv-bar{display:none!important}
+html.social #dv-bar{bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 </style>
 <title>Nicolas Schulze · Unity Developer · Simulation, VR &amp; Games</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22560%20296%201089%201117%22%3E%3Cpath%20fill%3D%22%239D7CFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M586%20322H854L1148%20660L1623%201184V1387H1378L828%20697V1153H956L1135%201387H586Z%20M1090%20322H1623V1000L1382%20746V553H1268Z%22/%3E%3C/svg%3E">
@@ -1851,6 +2036,7 @@ if (buttonsEnabled) {
   }
   document.getElementById('home-cards').innerHTML=HOME_ORDER.map(byId).filter(Boolean).map(featHTML).join('');
   document.getElementById('plist').innerHTML=P.map(rowHTML).join('');
+  try{ window.__NS={P:P,t:t,byId:byId,statusTag:statusTag,L:L,go:go,esc:(typeof esc==='function'?esc:function(s){return String(s).replace(/"/g,'&quot;');}),ptxt:(typeof ptxt==='function'?ptxt:function(o){return typeof o==='string'?o:(o[L()]||o.en);})}; }catch(e){}
 
   /* ================= HERO SHOWCASE ================= */
   (function(){
@@ -1962,6 +2148,7 @@ if (buttonsEnabled) {
   }
   function go(name,opts){
     try{ if(location.hash.slice(1)!==name) history.pushState(null,'','#'+name); }catch(e){}
+    if(window.__vt){ window.__vt(function(){ route(name,opts); },name); return; }
     route(name,opts);
   }
   window.addEventListener('popstate',function(){ route(currentHash()); });
@@ -2050,6 +2237,248 @@ document.querySelectorAll('.hf-q [data-q]').forEach(function(b){b.addEventListen
   var t=v.currentTime||0,play=!v.paused;v.querySelector('source').setAttribute('src',src);v.load();
   v.addEventListener('loadedmetadata',function f(){v.removeEventListener('loadedmetadata',f);try{v.currentTime=t;}catch(e){}if(play)v.play().catch(function(){});});
 });});})();
+</script>
+<script>
+(function(){
+'use strict';
+var NS=window.__NS; if(!NS) return;
+var root=document.documentElement;
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+var DEV=(function(){var ua=navigator.userAgent||'',uad=navigator.userAgentData,f=window.__forceDevice;
+  try{var fe=window.frameElement;if(!f&&fe&&fe.getAttribute('data-force-device')){f=fe.getAttribute('data-force-device');root.classList.add('in-phone');}}catch(e){}
+  if(f)return {phone:true,os:f};
+  var ipad=/iPad/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+  var ios=/iPhone|iPod/.test(ua),android=/Android/i.test(ua);
+  var mobile=(uad&&typeof uad.mobile==='boolean')?uad.mobile:(ios||(android&&/Mobile/i.test(ua))||/Mobi|Windows Phone/i.test(ua));
+  var small=Math.min(screen.width||9999,screen.height||9999)<600;
+  var phone=!ipad&&(mobile||(small&&matchMedia('(pointer:coarse)').matches));
+  return {phone:phone,os:ios?'ios':android?'android':(phone?'other':'pc')};})();
+root.classList.add(DEV.phone?'dev-phone':'dev-pc');root.classList.add('os-'+DEV.os);
+function tt(o){return NS.t(o);}
+function lang(){return NS.L();}
+
+/* ---------- page transitions (card -> case) ---------- */
+var vtSrc=null;
+document.addEventListener('pointerdown',function(e){var a=e.target.closest&&e.target.closest('[data-go]');if(!a){vtSrc=null;return;}
+  var art=a.closest('.feat,.so-post');vtSrc=art?art.querySelector('.feat-img img,.so-track img'):null;},true);
+window.__vt=function(fn,name){
+  if(reduce||!document.startViewTransition){fn();return;}
+  var src=vtSrc&&NS.byId(name)?vtSrc:null;vtSrc=null;
+  if(src)src.style.viewTransitionName='ns-cover';
+  var tr=document.startViewTransition(function(){if(src)src.style.viewTransitionName='';fn();
+    var c=document.getElementById('p-cover');if(c&&src&&NS.byId(name)){var im=c.querySelector('img');(im||c).style.viewTransitionName='ns-cover';}});
+  tr.finished.then(function(){var c=document.getElementById('p-cover');if(c){c.style.viewTransitionName='';var im=c.querySelector('img');if(im)im.style.viewTransitionName='';}}).catch(function(){});
+};
+
+/* ---------- scroll reveal + count-up ---------- */
+if(!reduce&&'IntersectionObserver' in window){
+  root.classList.add('fx-on');
+  var SEL='.feat,#home-orgs .org,#home-skills .mx-wrap,.about-teaser,main section > .head,.full-block section > *:not(.head),.tracks .track,.plist > *';
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);countIn(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  function arm(){document.querySelectorAll(SEL).forEach(function(el,i){if(el.classList.contains('rv'))return;if(el.closest('#social'))return;
+      var r=el.getBoundingClientRect();if(r.top<innerHeight*.92&&r.bottom>0&&r.height>0){countIn(el);return;}
+      el.classList.add('rv');var sib=el.parentNode?[].indexOf.call(el.parentNode.children,el):0;el.style.setProperty('--rvd',Math.min(sib%3,2)*0.08+'s');io.observe(el);});}
+  window.addEventListener('load',arm);setTimeout(arm,60);window.addEventListener('hashchange',function(){setTimeout(arm,60);});window.addEventListener('popstate',function(){setTimeout(arm,60);});
+  document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('[data-go],[data-set-mode]'))setTimeout(arm,80);});
+}
+var counted=new WeakSet();
+function countIn(scope){if(reduce)return;var els=scope.matches&&scope.matches('.feat-stat strong,.ro-row .v')?[scope]:scope.querySelectorAll?scope.querySelectorAll('.feat-stat strong,.ro-row .v'):[];
+  [].forEach.call(els,function(el){if(counted.has(el))return;counted.add(el);
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),n,list=[];while((n=w.nextNode()))if(/\d/.test(n.nodeValue))list.push(n);
+    list.forEach(function(node){var orig=node.nodeValue,m=orig.match(/(\d+)([.,](\d+))?/);if(!m)return;var dec=m[3]?m[3].length:0,sep=m[2]?m[2][0]:'.',target=parseFloat(m[1]+(dec?'.'+m[3]:''));
+      var t0=performance.now(),D=1100;(function step(t){var k=Math.min(1,(t-t0)/D),v=target*(1-Math.pow(1-k,3));var s=dec?v.toFixed(dec).replace('.',sep):String(Math.round(v));
+        node.nodeValue=orig.slice(0,m.index)+s+orig.slice(m.index+m[0].length);if(k<1)requestAnimationFrame(step);else node.nodeValue=orig;})(t0);});});}
+setTimeout(function(){var ro=document.querySelector('.home-hero .readout');if(ro&&!root.classList.contains('social'))countIn(ro);},400);
+
+/* ---------- 3D tilt (cards and logos) ---------- */
+function tilt(el,max){if(el.__tilt)return;el.__tilt=1;el.classList.add('tilt');var g=document.createElement('span');g.className='glare';el.appendChild(g);var img=el.querySelector('img');
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    el.classList.add('tilting');el.style.transform='perspective(1000px) rotateX('+((.5-y)*max).toFixed(2)+'deg) rotateY('+((x-.5)*max).toFixed(2)+'deg) translateZ(0)';
+    el.style.setProperty('--gx',(x*100).toFixed(1)+'%');el.style.setProperty('--gy',(y*100).toFixed(1)+'%');
+    if(img&&el.classList.contains('feat-img'))img.style.transform='scale(1.07) translate('+((.5-x)*14).toFixed(1)+'px,'+((.5-y)*10).toFixed(1)+'px)';});
+  el.addEventListener('pointerleave',function(){el.classList.remove('tilting');el.style.transform='';if(img)img.style.transform='';});}
+function armTilt(){if(!fine||reduce)return;document.querySelectorAll('.feat-img,#home-orgs .org').forEach(function(el){tilt(el,el.classList.contains('org')?10:7);});}
+armTilt();setTimeout(armTilt,500);
+
+/* ---------- hero: parallax layers + Unity-style grid ---------- */
+(function(){var hero=document.querySelector('.home-hero');if(!hero||reduce)return;var bg=hero.querySelector('.hero-bg'),ro=hero.querySelector('.readout');
+  var mx=0,my=0,sy=0,cv=null,ctx=null,run=false,vis=true,t0=performance.now();
+  if(fine){hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;apply();});
+    hero.addEventListener('pointerleave',function(){mx=my=0;apply();});}
+  function apply(){if(root.classList.contains('social'))return;if(bg)bg.querySelectorAll('.sc-layer').forEach(function(l){l.style.transform='scale(1.06) translate3d('+(-mx*18).toFixed(1)+'px,'+(-my*12).toFixed(1)+'px,0)';});
+    if(ro)ro.style.transform='perspective(900px) translate3d('+(mx*14).toFixed(1)+'px,'+(my*10).toFixed(1)+'px,0) rotateY('+(mx*-7).toFixed(2)+'deg) rotateX('+(my*5).toFixed(2)+'deg)';}
+  if(!bg)return;cv=document.createElement('canvas');cv.className='hero-grid';cv.setAttribute('aria-hidden','true');var scrim=bg.querySelector('.hero-scrim');bg.insertBefore(cv,scrim?scrim.nextSibling:null);ctx=cv.getContext('2d');
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis&&!run)loop();}).observe(hero);
+  function draw(t){var dpr=Math.min(devicePixelRatio||1,2),w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;if(cv.width!==Math.round(w*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);}
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);var hz=h*(.6+my*.04),vx=w*(.62-mx*.12),z0=((t-t0)/1000*.35+scrollY*.004)%1;
+    ctx.lineWidth=1;var col=getComputedStyle(bg).getPropertyValue('--series').trim()||'#9D7CFF';
+    // depth lines (converging)
+    for(var i=-24;i<=24;i++){var xb=vx+i*w*.09;ctx.strokeStyle=col;ctx.globalAlpha=.13;ctx.beginPath();ctx.moveTo(vx+(xb-vx)*.02,hz);ctx.lineTo(xb+(xb-vx)*1.2,h);ctx.stroke();}
+    // horizontal lines with perspective
+    for(var k=0;k<16;k++){var z=k+1-z0,d=1/(1+z*.55),y=hz+(h-hz)*d;ctx.globalAlpha=.22*d+.03;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+    ctx.globalAlpha=1;
+    // Unity-style axis gizmo
+    var gx=w-34,gy=h-34;ctx.globalAlpha=.8;ctx.lineWidth=2;[['#E5484D',[1,0]],['#46A758',[0,-1]],['#3E63DD',[-.55,.45]]].forEach(function(a){ctx.strokeStyle=a[0];ctx.beginPath();ctx.moveTo(gx,gy);ctx.lineTo(gx+a[1][0]*18,gy+a[1][1]*18);ctx.stroke();});ctx.globalAlpha=1;}
+  function loop(){if(!vis||document.hidden||root.classList.contains('social')){run=false;return;}run=true;draw(performance.now());requestAnimationFrame(loop);}
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&!run)loop();});loop();
+})();
+
+/* ================= SOCIAL (mobile) ================= */
+var SHORT={agro:'Agro',garagem:'Garagem',schio:'Schio',yellow:'Yellow',vr:'VR',crane:{en:'Crane',pt:'Ponte'},'house-farm':'House Farm'};
+var ORDER=['agro','garagem','schio','yellow','vr','crane','house-farm'].filter(function(id){return NS.byId(id);});
+function imgs(p){var out=[];(p.strip||[]).forEach(function(k){out.push('img/full/'+k+'.jpg');});
+  if(out.length<3){var fb=document.querySelector('.full-block[data-project="'+p.id+'"]');if(fb)[].forEach.call(fb.querySelectorAll('img'),function(im){var s=im.getAttribute('src')||'';if(/^img\/(thumb|full)\//.test(s)){s=s.replace('img/thumb/','img/full/');if(out.indexOf(s)<0&&out.length<6)out.push(s);}});}
+  [p.cover,p.cardCover].forEach(function(c){if(c&&out.indexOf(c)<0)out.unshift(c);});return out.slice(0,7);}
+document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&t.closest&&t.closest('#social,#so-story')){var s=t.getAttribute('src')||'';if(s.indexOf('img/thumb/')===0)t.src=s.replace('img/thumb/','img/full/');}},true);
+function thumb(s){return s.replace('img/full/','img/thumb/');}
+var seen={};try{seen=JSON.parse(localStorage.getItem('ns-seen')||'{}');}catch(e){}
+var ICON={home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg>',
+  grid:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>',
+  user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
+  cv:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  share:DEV.os==='ios'?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>'
+    :DEV.os==='android'?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>'
+    :'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 3 11 14M22 3l-7 19-4-8-8-4z"/></svg>'};
+function build(){if(document.getElementById('social'))return;var home=document.getElementById('v-home');if(!home)return;
+  var logo=document.querySelector('.ns-logo svg'),logoHTML=logo?logo.outerHTML:'N';
+  var ledePt=document.querySelector('.home-hero .lede.pt'),ledeEn=document.querySelector('.home-hero .lede.en'),logPt=document.querySelector('.home-hero .logi.pt'),logEn=document.querySelector('.home-hero .logi.en');
+  var orgN=document.querySelectorAll('#home-orgs .org').length;
+  var s=document.createElement('div');s.id='social';
+  var hl=ORDER.map(function(id){var p=NS.byId(id),im=imgs(p);return '<button type="button" class="ns-'+p.series+(seen[id]?' seen':'')+'" data-story="'+id+'"><span class="so-ring"><img src="'+thumb(im[0])+'" alt="" loading="lazy"></span><small>'+tt(SHORT[id]||p.title)+'</small></button>';}).join('');
+  var posts=ORDER.map(function(id){var p=NS.byId(id),im=imgs(p);
+    return '<article class="so-post ns-'+p.series+'" data-id="'+id+'"><div class="so-ph"><span class="mini"><img src="'+thumb(im[0])+'" alt="" loading="lazy"></span><span><b>'+tt(p.title)+'</b><small>'+tt(p.kicker)+'</small></span>'+NS.statusTag(p)+'</div>'+
+      '<div class="so-car"><div class="so-track">'+im.map(function(src,i){return '<img src="'+src+'" alt="" loading="lazy"'+(i?'':' data-first')+'>';}).join('')+'</div>'+(im.length>1?'<span class="so-count">1/'+im.length+'</span>':'')+'</div>'+
+      (im.length>1?'<div class="so-dots">'+im.map(function(_,i){return '<i'+(i?'':' class="on"')+'></i>';}).join('')+'</div>':'')+
+      '<div class="so-act"><button class="btn primary" type="button" data-go="'+id+'" data-mode="full">'+tt({en:'Open case',pt:'Abrir case'})+'</button><button class="btn" type="button" data-preview="'+id+'">'+tt({en:'Preview',pt:'Pré-visualizar'})+'</button>'+
+      '<button class="ic" type="button" data-share="'+id+'" aria-label="Share / Compartilhar">'+ICON.share+'</button></div>'+
+      '<div class="so-cap"><b>'+tt(SHORT[id]||p.title)+'</b> '+tt(p.summary||p.lede)+'<div class="tags">'+(p.tags||[]).map(function(x){return '#'+String(x).replace(/[^A-Za-z0-9]/g,'');}).join(' ')+'</div><span class="when">'+tt(p.period||'')+'</span></div></article>';}).join('');
+  var grid=[];ORDER.forEach(function(id){var p=NS.byId(id);imgs(p).forEach(function(src,i){grid.push('<button type="button" class="ns-'+p.series+'" data-story="'+id+'" data-i="'+i+'" aria-label="'+NS.esc(NS.ptxt(p.title))+' '+(i+1)+'"><img src="'+thumb(src)+'" alt="" loading="lazy">'+(i?'':'<i></i>')+'</button>');});});
+  var skills=[].map.call(document.querySelectorAll('#home-skills tbody th'),function(th){var en=th.querySelector('.en'),pt=th.querySelector('.pt');return '<span>'+tt({en:en?en.textContent:'',pt:pt?pt.textContent:''})+'</span>';}).join('');
+  var orgs=document.querySelector('#home-orgs .orgs');
+  s.innerHTML='<div class="so-prof"><div class="so-ava"><div>'+logoHTML+'</div></div><div class="so-stats"><div><b>'+ORDER.length+'</b><span>'+tt({en:'projects',pt:'projetos'})+'</span></div><div><b>~5</b><span>'+tt({en:'years',pt:'anos'})+'</span></div><div><b>'+orgN+'</b><span>'+tt({en:'companies',pt:'empresas'})+'</span></div></div></div>'+
+    '<div class="so-bio"><h1>Nicolas Schulze</h1><div class="role">'+tt({en:'Unity Developer · Simulation, VR & Games',pt:'Desenvolvedor Unity · Simulação, VR e Jogos'})+'</div>'+
+    (ledePt&&ledeEn?'<p>'+tt({en:ledeEn.innerHTML,pt:ledePt.innerHTML})+'</p>':'')+(logPt&&logEn?'<div class="loc">📍 '+tt({en:logEn.innerHTML,pt:logPt.innerHTML})+'</div>':'')+'</div>'+
+    '<div class="so-btns"><a class="pri en" href="cv/Nicolas_Schulze_CV_EN.pdf" download>CV (PDF)</a><a class="pri pt" href="cv/Nicolas_Schulze_CV_PT-BR.pdf" download>Currículo</a><a href="mailto:nicolas.schulze.dev@gmail.com">Email</a><a href="https://www.linkedin.com/in/nicolas-schulze-3407b929b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>'+
+    '<div class="so-hl" role="list">'+hl+'</div>'+
+    '<div class="so-tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-tab="feed">'+tt({en:'Feed',pt:'Feed'})+'</button><button type="button" role="tab" aria-selected="false" data-tab="grid">'+tt({en:'Gallery',pt:'Galeria'})+'</button><button type="button" role="tab" aria-selected="false" data-tab="info">'+tt({en:'About',pt:'Sobre'})+'</button></div>'+
+    '<div class="so-panel" data-panel="feed">'+posts+'</div><div class="so-panel" data-panel="grid" hidden><div class="so-grid">'+grid.join('')+'</div></div>'+
+    '<div class="so-panel" data-panel="info" hidden><div class="so-about"><h3>Skills</h3><div class="so-chips">'+skills+'</div><h3>'+tt({en:'Companies and clients',pt:'Empresas e clientes'})+'</h3>'+(orgs?'<div class="orgs">'+orgs.innerHTML+'</div>':'')+
+      '<div><button class="btn primary" type="button" data-go="about">'+tt({en:'All about me →',pt:'Tudo sobre mim →'})+'</button></div></div></div>'+
+    '<button type="button" class="so-classic" data-classic="1">'+tt({en:'View the full website',pt:'Ver o site completo'})+'</button>';
+  home.insertBefore(s,home.firstChild);
+  var bar=document.createElement('nav');bar.className='so-tabbar';bar.setAttribute('aria-label','App');
+  bar.innerHTML='<button type="button" data-tb="home" class="on">'+ICON.home+tt({en:'Home',pt:'Início'})+'</button><button type="button" data-tb="grid">'+ICON.grid+tt({en:'Gallery',pt:'Galeria'})+'</button>'+
+    '<a class="en" href="cv/Nicolas_Schulze_CV_EN.pdf" download>'+ICON.cv+'CV</a><a class="pt" href="cv/Nicolas_Schulze_CV_PT-BR.pdf" download>'+ICON.cv+'Currículo</a>'+
+    '<button type="button" data-tb="about">'+ICON.user+tt({en:'About',pt:'Sobre'})+'</button><button type="button" data-tb="contact">'+ICON.mail+tt({en:'Contact',pt:'Contato'})+'</button>';
+  document.body.appendChild(bar);
+  var st=document.createElement('div');st.id='so-story';st.setAttribute('role','dialog');st.setAttribute('aria-modal','true');document.body.appendChild(st);
+  wire(s,bar,st);if(window.__applyLangNow)window.__applyLangNow();}
+function tab(name){var s=document.getElementById('social');if(!s)return;s.querySelectorAll('.so-tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.tab===name?'true':'false');});
+  s.querySelectorAll('.so-panel').forEach(function(p){p.hidden=p.dataset.panel!==name;});}
+function wire(s,bar,st){
+  s.addEventListener('click',function(e){var tb=e.target.closest('.so-tabs button');if(tb){tab(tb.dataset.tab);return;}
+    var sh=e.target.closest('[data-share]');if(sh){var u=location.href.split('#')[0]+'#'+sh.dataset.share,ti=NS.ptxt(NS.byId(sh.dataset.share).title)+' · Nicolas Schulze';
+      if(navigator.share)navigator.share({title:ti,url:u}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(u).then(function(){sh.style.color='#3CC2B2';setTimeout(function(){sh.style.color='';},1200);});return;}
+    var so=e.target.closest('[data-story]');if(so){openStory(so.dataset.story,+(so.dataset.i||0));return;}
+    if(e.target.closest('[data-classic]')){try{localStorage.setItem('ns-classic','1');}catch(x){}setMode();window.scrollTo(0,0);}});
+  s.querySelectorAll('.so-track').forEach(function(tr){var post=tr.closest('.so-post'),dots=post.querySelectorAll('.so-dots i'),cnt=post.querySelector('.so-count'),n=tr.children.length;
+    tr.addEventListener('scroll',function(){var i=Math.round(tr.scrollLeft/tr.clientWidth);dots.forEach(function(d,k){d.classList.toggle('on',k===i);});if(cnt)cnt.textContent=(i+1)+'/'+n;},{passive:true});});
+  bar.addEventListener('click',function(e){var b=e.target.closest('[data-tb]');if(!b)return;var k=b.dataset.tb;
+    if(k==='home'||k==='grid'){NS.go('home');tab(k==='grid'?'grid':'feed');setTimeout(function(){var sv=document.getElementById('social');if(k==='grid'&&sv){var tb2=sv.querySelector('.so-tabs');window.scrollTo(0,tb2.getBoundingClientRect().top+scrollY-60);}else window.scrollTo(0,0);},30);}
+    else if(k==='about')NS.go('about');else if(k==='contact')NS.go('about',{scroll:'contact'});});
+  window.addEventListener('hashchange',markBar);window.addEventListener('popstate',markBar);document.addEventListener('click',function(){setTimeout(markBar,50);});
+  // story viewer
+  var cur=null,idx=0,list=[],timer=0,tStart=0,paused=false,DUR=4500,raf=0,elapsed=0;
+  function openStory(id,i){var p=NS.byId(id);if(!p)return;cur=p;list=imgs(p);idx=Math.min(i||0,list.length-1);seen[id]=1;try{localStorage.setItem('ns-seen',JSON.stringify(seen));}catch(e){}
+    s.querySelectorAll('.so-hl [data-story="'+id+'"]').forEach(function(b){b.classList.add('seen');});
+    st.innerHTML='<div class="bars">'+list.map(function(){return '<i><b></b></i>';}).join('')+'</div><div class="sh"><img src="'+thumb(list[0])+'" alt=""><b>'+tt(SHORT[id]||p.title)+'</b><small>'+tt(p.period||'')+'</small><button type="button" data-close aria-label="Close / Fechar">×</button></div>'+
+      '<img class="simg" alt=""><div class="shade"></div><button class="tap l" type="button" aria-label="Previous / Anterior"></button><button class="tap r" type="button" aria-label="Next / Próximo"></button>'+
+      '<div class="sf"><p>'+tt(p.lede||p.summary)+'</p><button class="btn" type="button" data-go="'+id+'" data-mode="full">'+tt({en:'Open the case →',pt:'Abrir o case →'})+'</button></div>';
+    st.querySelectorAll('.tap').forEach(function(b){b.style.all='unset';b.style.position='absolute';b.style.top='0';b.style.bottom='0';b.style.zIndex='2';b.style.cursor='pointer';});
+    st.querySelector('.tap.l').style.left='0';st.querySelector('.tap.l').style.width='35%';st.querySelector('.tap.r').style.right='0';st.querySelector('.tap.r').style.width='65%';
+    st.classList.add('open');document.body.style.overflow='hidden';if(window.__applyLangNow)window.__applyLangNow();show();st.querySelector('[data-close]').focus();}
+  function show(){var im=st.querySelector('.simg');im.src=list[idx];st.querySelectorAll('.bars b').forEach(function(b,k){b.style.width=k<idx?'100%':'0';});elapsed=0;tStart=performance.now();cancelAnimationFrame(raf);tick();}
+  function tick(){raf=requestAnimationFrame(function(t){if(!st.classList.contains('open'))return;if(paused){tStart=t-elapsed;tick();return;}elapsed=t-tStart;var k=Math.min(1,elapsed/DUR);var b=st.querySelectorAll('.bars b')[idx];if(b)b.style.width=(k*100)+'%';if(k>=1)next();else tick();});}
+  function next(){if(idx<list.length-1){idx++;show();}else{var i=ORDER.indexOf(cur.id);if(i<ORDER.length-1)openStory(ORDER[i+1],0);else close();}}
+  function prev(){if(idx>0){idx--;show();}else{var i=ORDER.indexOf(cur.id);if(i>0)openStory(ORDER[i-1],0);else show();}}
+  function buzz(){if(DEV.os==='android'&&navigator.vibrate)try{navigator.vibrate(8);}catch(e){}}
+  function close(){st.classList.remove('open');cancelAnimationFrame(raf);document.body.style.overflow='';st.innerHTML='';}
+  st.addEventListener('click',function(e){if(e.target.closest('[data-close]')){close();return;}if(e.target.closest('.tap.r')){buzz();next();return;}if(e.target.closest('.tap.l')){buzz();prev();return;}if(e.target.closest('[data-go]'))close();});
+  st.addEventListener('pointerdown',function(e){if(!e.target.closest('button'))paused=true;});st.addEventListener('pointerup',function(){paused=false;});st.addEventListener('pointercancel',function(){paused=false;});
+  document.addEventListener('keydown',function(e){if(!st.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')next();else if(e.key==='ArrowLeft')prev();});
+  var sx=null;st.addEventListener('touchstart',function(e){sx=e.touches[0].clientY;},{passive:true});st.addEventListener('touchend',function(e){if(sx!==null&&e.changedTouches[0].clientY-sx>90)close();sx=null;},{passive:true});
+}
+function markBar(){var bar=document.querySelector('.so-tabbar');if(!bar)return;var h=location.hash.slice(1).replace(/\.(pt|en)$/,'')||'home';
+  bar.querySelectorAll('[data-tb]').forEach(function(b){b.classList.toggle('on',(b.dataset.tb==='home'&&(h==='home'||h==='projects'||!!NS.byId(h)))||(b.dataset.tb==='about'&&h==='about'));});}
+function setMode(){var classic=false;try{classic=localStorage.getItem('ns-classic')==='1';}catch(e){}
+  var on=DEV.phone&&!classic;if(on)build();root.classList.toggle('social',on);
+  var bar=document.querySelector('.bar');if(bar)document.documentElement.style.setProperty('--so-top',(bar.offsetHeight||58)+'px');
+  var back=document.getElementById('so-back');
+  if(DEV.phone&&classic&&!back){back=document.createElement('button');back.id='so-back';back.type='button';back.innerHTML=tt({en:'📱 View as app',pt:'📱 Ver como app'});
+    back.addEventListener('click',function(){try{localStorage.removeItem('ns-classic');}catch(e){}back.remove();setMode();window.scrollTo(0,0);});document.body.appendChild(back);}
+  if(on&&back)back.remove();}
+setMode();
+})();
+</script>
+<script>
+
+(function(){
+  var LOCAL=location.protocol==='file:'||/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  if(!LOCAL||window.frameElement) return;
+  var ov=null, fr=null, last='edit', dev='ios', clock=0;
+  var HOST='nicschulze123-sudo.github.io';
+  var SIG='<svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>';
+  var WIFI='<svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 12 5.6 9.4a3.4 3.4 0 0 1 4.8 0z"/><path d="M3.6 7.3a6.3 6.3 0 0 1 8.8 0l-1.3 1.3a4.5 4.5 0 0 0-6.2 0z"/><path d="M1.2 4.9a9.7 9.7 0 0 1 13.6 0l-1.3 1.3a7.9 7.9 0 0 0-11 0z"/></svg>';
+  var BAT_IOS='<svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="18" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".4"/></svg>';
+  var BAT_AND='<svg width="12" height="18" viewBox="0 0 12 18" fill="currentColor"><rect x="4" y="0" width="4" height="2" rx="1"/><rect x="0" y="2" width="12" height="16" rx="2" opacity=".35"/><rect x="0" y="6" width="12" height="12" rx="2"/></svg>';
+  function now(){var d=new Date();return d.getHours()+':'+('0'+d.getMinutes()).slice(-2);}
+  function chrome(){
+    if(dev==='ios') return '<div class="ph ios"><div class="scr"><div class="sb"><span class="t">'+now()+'</span><span class="island"></span><span class="ic">'+SIG+WIFI+BAT_IOS+'</span></div>'+
+      '<iframe title="Prévia iOS" referrerpolicy="no-referrer"></iframe>'+
+      '<div class="saf"><div class="url"><small>aA</small>🔒 '+HOST+'</div><div class="tools">'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5 8 12l7 7"/></svg>'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".35"><path d="m9 5 7 7-7 7"/></svg>'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h16"/></svg>'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="13" height="13" rx="2"/><path d="M8 4h10a2 2 0 0 1 2 2v10"/></svg></div></div>'+
+      '<div class="home"><i></i></div></div></div>';
+    return '<div class="ph android"><div class="scr"><div class="sb"><span class="t">'+now()+'</span><span class="hole"></span><span class="ic">'+WIFI+SIG+BAT_AND+'</span></div>'+
+      '<div class="chr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg><div class="url">🔒 '+HOST+'</div><span class="tabs">1</span>'+
+      '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>'+
+      '<iframe title="Prévia Android" referrerpolicy="no-referrer"></iframe><div class="nav"><i></i></div></div></div>';
+  }
+  function snapshot(){
+    var d=document.documentElement.cloneNode(true);
+    d.querySelectorAll('#dv-prev,#dv-bar,.hero-grid,.glare,#social,.so-tabbar,#so-story,#so-back,canvas.v3d-canvas,.v3d-err').forEach(function(n){n.remove();});
+    d.querySelectorAll('.rv,.in,.tilt,.tilting').forEach(function(n){n.classList.remove('rv','in','tilt','tilting');n.style.removeProperty('transform');});
+    d.className=''; d.removeAttribute('data-theme');
+    return '<!doctype html>'+d.outerHTML;
+  }
+  function size(){ return dev==='ios'?[393,852]:[412,915]; }
+  function fit(){ if(!ov) return; var ph=ov.querySelector('.ph'),z=size(); var s=Math.min(1,(innerHeight-32)/z[1],(innerWidth-300)/z[0]); if(innerWidth<760) s=Math.min(1,(innerHeight-32)/z[1],(innerWidth-20)/z[0]);
+    ph.style.transform='scale('+s+')'; ph.style.margin=(-(1-s)*z[1]/2)+'px '+(-(1-s)*z[0]/2)+'px'; }
+  function render(){ var old=ov.querySelector('.ph'); if(old) old.remove(); ov.insertAdjacentHTML('afterbegin',chrome()); fr=ov.querySelector('iframe'); fr.setAttribute('data-force-device',dev);
+    ov.querySelectorAll('[data-ph=ios],[data-ph=android]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.ph===dev?'true':'false');});
+    fr.srcdoc=snapshot(); fit(); mark(dev); }
+  function open(d){
+    dev=d||dev;
+    if(!ov){ ov=document.createElement('div'); ov.id='dv-prev'; ov.setAttribute('role','dialog'); ov.setAttribute('aria-label','Prévia no celular');
+      ov.innerHTML='<div class="side"><b>Simulação de celular</b><small>O site detecta o aparelho: no PC abre normal; no celular abre o modo app, adaptado ao iOS ou ao Android. Aqui a moldura simula o sistema (barra de status, Safari ou Chrome, barra de gestos).</small><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><button type="button" data-ph="ios">iOS · iPhone</button><button type="button" data-ph="android">Android</button></div><button type="button" data-ph="reload">↻ Recarregar</button><button type="button" data-ph="close">× Sair</button></div>';
+      document.body.appendChild(ov);
+      ov.addEventListener('click',function(e){var b=e.target.closest('[data-ph]');if(!b)return;var k=b.dataset.ph;if(k==='ios'||k==='android'){dev=k;render();}else if(k==='reload'){fr.srcdoc=snapshot();}else close();});
+      addEventListener('resize',fit); }
+    ov.classList.add('open'); document.body.style.overflow='hidden'; render();
+    clearInterval(clock); clock=setInterval(function(){var t=ov.querySelector('.sb .t'); if(t) t.textContent=now();},15000);
+  }
+  function close(){ if(ov){ ov.classList.remove('open'); if(fr) fr.srcdoc='about:blank'; } clearInterval(clock); document.body.style.overflow=''; mark(last); }
+  function mark(m){ document.querySelectorAll('#dv-bar [data-dv]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.dv===m?'true':'false'); }); }
+  var bar=document.createElement('div'); bar.id='dv-bar'; bar.className='on'; bar.innerHTML='<b>Prévia local</b><button type="button" data-dv="ios">iOS</button><button type="button" data-dv="android">Android</button>';
+  document.body.appendChild(bar);
+  bar.addEventListener('click',function(e){ var b=e.target.closest('[data-dv]'); if(b) open(b.dataset.dv); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov&&ov.classList.contains('open')) close(); });
+})();
 </script>
 </body>
 </html>
